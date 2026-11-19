@@ -292,8 +292,12 @@ function readPractice(){
     db.members.push({id:3,handle:"finance",name:"Finance · כספים",role:"manager",active:1});migrated=true
   }
   const byId=new Map(db.projects.map(p=>[p.id,p]));
-  const synced=PLAN.projects.map(p=>byId.get(p.id)||{...p,rev:0,owner:"",schedule:"",scope:"",fallback:"",lines:[],checks:[],approved:false});
-  if(synced.length!==db.projects.length||synced.some((p,i)=>db.projects[i]?.id!==p.id)){db.projects=synced;migrated=true}
+  const synced=PLAN.projects.map(p=>{
+    const prev=byId.get(p.id);
+    if(!prev)return {...p,rev:0,owner:"",schedule:"",scope:"",fallback:"",lines:[],checks:[],approved:false};
+    return prev.rev===0&&prev.goal!==p.goal?{...prev,goal:p.goal}:prev;
+  });
+  if(synced.length!==db.projects.length||synced.some((p,i)=>db.projects[i]?.id!==p.id||db.projects[i]?.goal!==p.goal)){db.projects=synced;migrated=true}
   for(const lead of db.leads){if(!PROJECT[lead.project]){lead.project="youth";migrated=true}}
   if(migrated)writePractice(db);
   return db;
