@@ -1,0 +1,1141 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-mode="standalone">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#25235b">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Adorim · אדורים">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Adorim · Community Fund</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'%3E%3Crect width='52' height='52' rx='16' fill='%23302b6f'/%3E%3Cpath d='M11 34c4-5 8-17 14-17 7 0 10 13 16 17M13 38c6-7 9-12 13-12s8 6 13 9' fill='none' stroke='%23d3f790' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='36' cy='15' r='4.3' fill='%23bcb0ff'/%3E%3C/svg%3E">
+  <style>
+:root{color-scheme:light;--ink:#1d3029;--muted:#52635a;--faint:#e4e6d9;--paper:#f6f5ee;--white:#fffef9;--forest:#193e36;--green:#31644f;--sage:#dfead7;--honey:#f3c776;--clay:#ab5c40;--line:#d5d9c9;--serif:Georgia,"Times New Roman",serif;--sans:"Segoe UI",Arial,sans-serif;--r:15px;--rail:224px}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--paper);font:15px/1.53 var(--sans);overflow-wrap:break-word}
+button,input,select,textarea{font:inherit;color:inherit}button,a{touch-action:manipulation}button{cursor:pointer}a{color:inherit}button:disabled{opacity:.52;cursor:not-allowed}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #b66c20;outline-offset:3px}
+h1,h2,h3,h4,p{margin:0}h1,h2,.display{font-family:var(--serif);font-weight:500;letter-spacing:-.043em;line-height:1.08}h1{font-size:clamp(34px,4vw,58px)}h2{font-size:clamp(26px,2.4vw,36px)}h3{font-size:18px;line-height:1.26;letter-spacing:-.02em}h4{font-size:15px}
+[dir=rtl]{--serif:"Times New Roman","David",serif;--sans:"Segoe UI",Arial,sans-serif}[dir=rtl] h1,[dir=rtl] h2,[dir=rtl] .display,[dir=rtl] .eyebrow,[dir=rtl] .nav-label,[dir=rtl] .brand-small{letter-spacing:0}
+.icon{width:19px;height:19px;flex:none;display:inline-block;vertical-align:middle;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.icon.sm{width:16px;height:16px}[dir=rtl] .directional{transform:scaleX(-1)}
+.skip{position:fixed;inset-block-start:-70px;inset-inline-start:15px;z-index:10;background:var(--white);padding:10px 18px}.skip:focus{inset-block-start:8px}.boot{padding:10vw}.shell{min-height:100vh;display:grid;grid-template-columns:var(--rail) minmax(0,1fr)}
+.rail{position:sticky;top:0;height:100dvh;display:flex;flex-direction:column;background:#eeefe5;border-inline-end:1px solid var(--line);padding:28px 15px 16px;z-index:2;overflow:auto}
+.brand{display:inline-flex;align-items:center;gap:11px;text-decoration:none}.brand-title{font:600 26px/.98 var(--serif);letter-spacing:-.05em}.brand-small{font-size:9px;font-weight:750;text-transform:uppercase;letter-spacing:.17em;line-height:1.8}.brand .mark{width:43px;height:43px;flex:none}.rail>.brand{margin-inline:9px}
+.nav{margin-top:42px;display:grid;gap:4px}.nav-label,.eyebrow{font-size:10px;font-weight:750;line-height:1.4;letter-spacing:.15em;text-transform:uppercase}.nav-label{color:var(--muted);margin:0 12px 7px}.nav-label.second{margin-top:23px}
+.nav a{min-height:42px;display:flex;align-items:center;gap:12px;padding:8px 13px;border-radius:8px;text-decoration:none;color:#40534a;font-size:14px;font-weight:550;white-space:nowrap}.nav a:hover{background:#e2e6d9}.nav a.active{background:var(--forest);color:#fffdf0}.nav a.active:after{content:"";width:6px;height:6px;border-radius:50%;background:var(--honey);margin-inline-start:auto}
+.rail-foot{margin-top:auto;padding-top:28px}.rail-note{margin:0 5px 16px;padding:13px;border:1px solid #cdd6c2;border-radius:10px;background:#e6eadc}.rail-note h4{font-size:13px;margin:6px 0 3px}.rail-note p{font-size:12px;line-height:1.45;color:#45574c}.profile{display:flex;align-items:center;gap:9px;border-top:1px solid var(--line);padding:15px 4px 0}.avatar{display:grid;place-items:center;background:var(--forest);color:#f5dc9a;border-radius:50%;width:33px;height:33px;font:600 16px var(--serif);flex:none}.profile>div:nth-child(2){min-width:0;flex:1}.profile strong,.profile small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.profile strong{font-size:13px}.profile small{font-size:11px;color:var(--muted)}
+.workspace{min-width:0}.bar{min-height:60px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px clamp(18px,3.3vw,54px);background:#faf9f2}.crumb,.bar-actions,.actions,.inline,.meta,.tags{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.crumb{color:var(--muted);font-size:12px;gap:9px}.crumb strong{color:var(--ink)}.bar-actions{justify-content:flex-end;gap:9px}
+.page{max-width:1530px;margin:auto;padding:28px clamp(18px,3.3vw,54px) 34px}.page:focus{outline:none}.topline{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:16px}.topline .meta{font-size:12px}.eyebrow{color:var(--green)}.eyebrow .line{display:inline-block;width:25px;height:2px;vertical-align:middle;margin-inline-end:9px;background:var(--clay)}
+.hero{background:var(--forest);color:#fffcef;border-radius:18px;overflow:hidden;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);box-shadow:0 3px 0 #d9dece}.hero-copy{padding:clamp(26px,3.2vw,48px);align-self:center}.hero .eyebrow{color:#f1cf83;margin-bottom:12px;display:flex;align-items:center;gap:8px}.hero h1{font-size:clamp(37px,3.75vw,62px);max-width:15ch;line-height:1.02}.hero p{color:#d9e5d7;font-size:15px;max-width:45ch;margin:15px 0 21px}.hero-art{min-height:245px;position:relative;background:#b8ad86 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNDEwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSI+DQogIDxkZWZzPg0KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2t5IiB4Mj0iMC4yMiIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiNmNmRiOWQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNlY2QwYTIiLz48L2xpbmVhckdyYWRpZW50Pg0KICAgIDxwYXR0ZXJuIGlkPSJwYXBlciIgd2lkdGg9IjExIiBoZWlnaHQ9IjEzIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48Y2lyY2xlIGN4PSIyIiBjeT0iMyIgcj0iLjY1IiBmaWxsPSIjNjA0YzM1IiBvcGFjaXR5PSIuMTkiLz48Y2lyY2xlIGN4PSI3IiBjeT0iMTAiIHI9Ii43IiBmaWxsPSIjZmZmMmM5IiBvcGFjaXR5PSIuMzIiLz48L3BhdHRlcm4+DQogICAgPHBhdHRlcm4gaWQ9InJvd3MiIHdpZHRoPSI5IiBoZWlnaHQ9IjgiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSgtMTYpIj48cGF0aCBkPSJNMCA2aDkiIHN0cm9rZT0iIzY3NGYzMyIgb3BhY2l0eT0iLjI1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+DQogICAgPHBhdHRlcm4gaWQ9ImZpZWxkIiB3aWR0aD0iMTIiIGhlaWdodD0iOCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgcGF0dGVyblRyYW5zZm9ybT0icm90YXRlKDE4KSI+PHBhdGggZD0iTTAgNWgxMiIgc3Ryb2tlPSIjZTRiZDdkIiBvcGFjaXR5PSIuNTUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj4NCiAgICA8ZyBpZD0idHJlZSI+PHBhdGggZD0iTS0xIDBsMS0xNSAyIDE1IiBmaWxsPSIjNTE0NTJlIi8+PHBhdGggZD0iTTAtNTdjLTIgMTItMTAgMzAtNyA0MCAyIDkgMTAgOSAxMyAxIDMtMTAtNC0yNS02LTQxWiIgZmlsbD0iIzI5NGUzZSIvPjxwYXRoIGQ9Ik0wLTQ4cS03IDI4LTQgMzIiIHN0cm9rZT0iIzU1NzA1NCIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48L2c+DQogICAgPGcgaWQ9ImNvdHRhZ2UiPjxwYXRoIGQ9Ik0wIDFsMTctMTAgMjQgMTEtMiA0SDFaIiBmaWxsPSIjOTg1YzQwIi8+PHBhdGggZD0iTTMgNWgzNHYxOEgzeiIgZmlsbD0iI2YzZGRiMCIvPjxwYXRoIGQ9Ik0yNiA1aDExdjE4SDI2WiIgZmlsbD0iI2NmYWE3YiIvPjxwYXRoIGQ9Ik0xMCAxNWg1djhoLTV6bTktNGg1djVoLTV6IiBmaWxsPSIjNzA2YjUwIi8+PC9nPg0KICAgIDxnIGlkPSJvbGl2ZSI+DQogICAgICA8cGF0aCBkPSJNLTUgMHExLTE2IDUtMjhsLTEwLTE1IDQtMiA5IDExIDExLTE3IDMgMi0xMSAyMlE1LTE1IDQgMFoiIGZpbGw9IiM2NTU1MzkiLz4NCiAgICAgIDxnIGZpbGw9IiM0YTYyNDYiPjxlbGxpcHNlIGN4PSItMTMiIGN5PSItNDYiIHJ4PSIxNyIgcnk9IjEyIi8+PGVsbGlwc2UgY3g9IjkiIGN5PSItNTEiIHJ4PSIxOCIgcnk9IjE0Ii8+PGVsbGlwc2UgY3g9IjIwIiBjeT0iLTQzIiByeD0iMTMiIHJ5PSIxMCIvPjxlbGxpcHNlIGN4PSItMiIgY3k9Ii00MiIgcng9IjE3IiByeT0iMTIiLz48L2c+DQogICAgICA8ZyBmaWxsPSIjNzE4MDVhIj48ZWxsaXBzZSBjeD0iLTE4IiBjeT0iLTUwIiByeD0iMTAiIHJ5PSI2Ii8+PGVsbGlwc2UgY3g9IjIiIGN5PSItNTciIHJ4PSIxMiIgcnk9IjciLz48ZWxsaXBzZSBjeD0iMTUiIGN5PSItNTQiIHJ4PSI5IiByeT0iNSIvPjwvZz4NCiAgICA8L2c+DQogIDwvZGVmcz4NCiAgPHBhdGggZmlsbD0idXJsKCNza3kpIiBkPSJNMCAwaDY0MHY0MTBIMHoiLz4NCiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZDRhZTczIiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHk9Ii43Ij48Y2lyY2xlIGN4PSI0MTkiIGN5PSI4OCIgcj0iNDgiLz48Y2lyY2xlIGN4PSI0MTkiIGN5PSI4OCIgcj0iNTQiLz48L2c+DQogIDxjaXJjbGUgY3g9IjQxOSIgY3k9Ijg4IiByPSI0MCIgZmlsbD0iI2ZkZjBiZSIvPg0KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9IiM3NDY3NDkiIHN0cm9rZS13aWR0aD0iMS44IiBzdHJva2UtbGluZWNhcD0icm91bmQiPjxwYXRoIGQ9Ik0yNDAgODJxNi0zIDEwIDIgMi02IDgtN20yMCAxM3E0LTMgNyAwIDItNCA2LTVNNDg4IDU0cTQtMiA3IDIgMi00IDYtNCIvPjwvZz4NCiAgPHBhdGggZD0iTTAgMTcwcTU0LTI1IDEwMC0yMGM1MCA3IDczLTI1IDEyMS0yNiA3MS0xIDkxIDM3IDE1MSAyNXM4OC00MSAxMzYtMzZjNjEgOSA5NiA2IDEzMi05djE1NEgwWiIgZmlsbD0iI2MxYjU5MCIvPg0KICA8cGF0aCBkPSJNMCAxNTdxNDggMyAxMTEgMzNjNjQgMjQgMTEyIDYgMTYxLTEzIDU5LTI0IDExOC0yOSAxNzQtMTMgNzYgMTYgMTE3IDQgMTk0LTI2djE0MEgwWiIgZmlsbD0iI2E1YTU4OCIvPg0KICA8cGF0aCBkPSJNMCAyMTBjNzktMjEgMTI2LTQwIDIyMy0zNHMxNDggNDEgMjAyIDMzIDEzMC01MiAyMTUtNDB2MTI4SDBaIiBmaWxsPSIjZDBhZDc2Ii8+DQogIDxwYXRoIGQ9Ik0wIDIxMGM3OS0yMSAxMjYtNDAgMjIzLTM0czE0OCA0MSAyMDIgMzMgMTMwLTUyIDIxNS00MHYxMjhIMFoiIGZpbGw9InVybCgjcm93cykiLz4NCiAgPHBhdGggZD0iTTAgMjUxYzg0LTEzIDE0Ni0yNCAyMTMtNDMgOTItMjYgMTUwLTMgMjEwIDggODAgMTUgMTQ4IDIgMjE3LTEwdjk1SDBaIiBmaWxsPSIjYjc3OTUyIi8+DQogIDxwYXRoIGQ9Ik0wIDIzNmM4OCA3IDE1MiAxOSAyMzEgMTNzMTMxLTM1IDIxMi0yNGM5MiAxMSAxNTAgOCAxOTctMXY5MkgwWiIgZmlsbD0iI2UxYzk4YiIvPg0KICA8ZyBzdHJva2U9IiNjM2E0NmIiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSI+PHBhdGggZD0iTTAgMjQ1cTExOSAxOCAyMDQgMTN0MTcwLTI1TTAgMjU2cTEyOCAxOCAyMTMgOXQxNTQtMjVNMCAyNjhxMTI5IDE3IDIzMiAwIi8+PC9nPg0KICA8cGF0aCBkPSJNMCAyNjljNzctMjEgMTcxIDEwIDI1MiAzIDgzLTcgMTU0LTI2IDIyNi0yOCA0OC0xIDk4IDMgMTYyIDEydjE1NEgwWiIgZmlsbD0iIzg5OTA2YiIvPg0KICA8cGF0aCBkPSJNMCAyNjljNzctMjEgMTcxIDEwIDI1MiAzIDgzLTcgMTU0LTI2IDIyNi0yOCA0OC0xIDk4IDMgMTYyIDEydjE1NEgwWiIgZmlsbD0idXJsKCNmaWVsZCkiLz4NCiAgPGc+PHVzZSBocmVmPSIjY290dGFnZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTI5IDIyMikgc2NhbGUoLjgpIi8+PHVzZSBocmVmPSIjY290dGFnZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTU4IDIxOCkgc2NhbGUoLjY0KSIvPjx1c2UgaHJlZj0iI2NvdHRhZ2UiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE3OSAyMjcpIHNjYWxlKC43MykiLz48dXNlIGhyZWY9IiN0cmVlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMjAgMjQ1KSBzY2FsZSguNjIpIi8+PHVzZSBocmVmPSIjdHJlZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTEyIDI0NSkgc2NhbGUoLjQ4KSIvPjx1c2UgaHJlZj0iI3RyZWUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIxMiAyNDMpIHNjYWxlKC42MikiLz48L2c+DQogIDxwYXRoIGQ9Ik02NDAgMjQxYy0xMzAtOS0xOTcgMzMtMjkyIDcyQzI0MiAzNTUgMTI4IDM1MCAwIDMzMnY3OGg2NDBaIiBmaWxsPSIjNjg3ODU3Ii8+DQogIDxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzlhOWI3MCIgc3Ryb2tlLXdpZHRoPSIyIj48cGF0aCBkPSJNNjQwIDI0NmMtMTIyLTctMTg0IDI5LTI2NSA2Mk02NDAgMjUzYy05OS02LTE0OSAxNC0yMTYgNDFNNjQwIDI2MHEtNzMtMS0xMzEgMTgiLz48L2c+DQogIDxwYXRoIGQ9Ik0wIDI4NmM3My0xOSAxNDctMTAgMjIxIDE3IDkxIDM0IDE1MCA0MyAyNTIgMzUgNzEtNSAxMTMtMTkgMTY3LTE4djkwSDBaIiBmaWxsPSIjYzVhNDY5Ii8+DQogIDxwYXRoIGQ9Ik0wIDI5MWM2OS0xNCAxNDUtNiAyMTQgMTkgODUgMzQgMTU4IDUyIDI2NCA0ME0wIDMwMmM3My0xNCAxMzQtNCAyMDUgMjAgODAgMjYgMTQ4IDQ3IDIzMyA0M00wIDMxNmM3Mi0xMiAxNDAgMCAyMDEgMjAgNzEgMjQgMTE4IDM5IDE5MyA0MiIgc3Ryb2tlPSIjOTg3ZDUxIiBzdHJva2Utd2lkdGg9IjMiIGZpbGw9Im5vbmUiLz4NCiAgPHBhdGggZD0iTTAgMzUxYzg5LTMzIDE1My0yNCAyNDYgMTAgNjAgMjIgMTA3IDMzIDE2MCAzMSA5Mi01IDE3NS00MyAyMzQtNTF2NjlIMFoiIGZpbGw9IiM0ODY2NGYiLz4NCiAgPHBhdGggZD0iTTAgMzc1Yzc3LTI2IDEzMS0yOCAyMjEtMnMxMTggMzMgMTcwIDM3SDBaIiBmaWxsPSIjMzA0ZTQwIi8+DQogIDx1c2UgaHJlZj0iI29saXZlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2NSAzMzQpIHNjYWxlKC45NikiLz48dXNlIGhyZWY9IiNvbGl2ZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTA0IDMyNCkgc2NhbGUoLjYyKSIvPg0KICA8Zz48dXNlIGhyZWY9IiN0cmVlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0OTEgMjg3KSBzY2FsZSgxLjQ2KSIvPjx1c2UgaHJlZj0iI3RyZWUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUwOSAyODUpIHNjYWxlKDEuMSkiLz48dXNlIGhyZWY9IiN0cmVlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MjYgMjgyKSBzY2FsZSguODgpIi8+PC9nPg0KICA8cGF0aCBkPSJNMzQwIDQxMGM1MS0yNCAxMDYtMzkgMTc3LTU1IDI3LTYgNjAtMTYgNzYtMjMtMTggMTUtNDkgMjctNzMgMzQtNTEgMTUtOTQgMzItMTE5IDQ0WiIgZmlsbD0iI2Q1YjY3YyIvPg0KICA8cGF0aCBkPSJNMCAwaDY0MHY0MTBIMHoiIGZpbGw9InVybCgjcGFwZXIpIi8+DQo8L3N2Zz4NCg==") center/cover no-repeat;isolation:isolate}.hero-art:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#18352c2b,transparent 30%);z-index:-1}.art-stamp{position:absolute;inset-inline-end:17px;bottom:15px;color:#fff4d8;background:#243f32df;border:1px solid #e3cb9c88;padding:4px 10px;border-radius:20px;font-size:10px;font-weight:650;letter-spacing:.09em}
+.btn,.icon-btn,.pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:8px;border:1px solid transparent;text-decoration:none;font-weight:650;line-height:1.25}.btn{padding:10px 15px;min-height:41px;font-size:13px;background:var(--white);border-color:#cdd4c4}.btn:hover:not(:disabled){border-color:#839b80;background:#eff2e7}.btn.primary{background:var(--forest);color:var(--white);border-color:var(--forest)}.btn.primary:hover:not(:disabled){background:#285646}.btn.gold{background:var(--honey);border-color:var(--honey);color:#283b2c}.btn.gold:hover{background:#ffda8b}.btn.bare{background:transparent;border-color:transparent;color:var(--green);padding-inline:7px}.btn.small{font-size:12px;min-height:33px;padding:6px 10px}.btn.danger{color:#893e31;border-color:#dcbaae}.icon-btn{width:35px;height:35px;border-color:var(--line);background:transparent;flex:none}.icon-btn:hover,.pill:hover:is(button){background:#e6eadb}
+.pill,.badge{display:inline-flex;align-items:center;gap:6px;max-width:100%;border-radius:20px;padding:4px 9px;font-size:11px;font-weight:650;line-height:1.4}.pill{border-color:var(--line);background:var(--white)}.badge{background:#e9ecdf;color:#415347}.badge.green{background:#dcecd9;color:#305a3d}.badge.amber,.pill.practice{background:#f8eaca;color:#654716;border-color:#e4d1a5}.badge.clay{background:#f1e0d6;color:#763f2b}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:17px 0 26px}.stat,.card,.panel,details.sheet{background:var(--white);border:1px solid var(--line);border-radius:var(--r)}.stat{padding:16px 18px 17px}.stat-top{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);font-weight:650}.stat-top .icon{color:var(--green);width:16px}.stat-value{display:block;font:500 clamp(23px,2.1vw,36px)/1.15 var(--serif);letter-spacing:-.035em;margin:8px 0 3px;font-variant-numeric:tabular-nums}.stat small,.meta,.muted,.field small,small.help{color:var(--muted)}.stat small{font-size:11px}
+.split{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:17px}.equal{grid-template-columns:repeat(2,minmax(0,1fr))}.stack{display:grid;gap:15px}.panel{padding:clamp(18px,2vw,28px);min-width:0}.panel.sage{background:#e9efdf;border-color:#d3dec8}.panel.tinted{background:#f5ecd7;border-color:#e2d4b8}.panel h2,.panel h3{margin:3px 0 8px}.section-line{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin:30px 0 14px;flex-wrap:wrap}.section-line h2,.title-block h1,.section-kicker+h2{margin-top:4px}.section-line p,.title-block>p,.lede{color:var(--muted);max-width:71ch;margin:8px 0 0}.title-block{margin:2px 0 24px}.title-block h1{font-size:clamp(36px,4vw,56px)}.title-row,.card-head,.section-head,.between{display:flex;align-items:center;justify-content:space-between;gap:12px}.title-row{align-items:flex-end;flex-wrap:wrap}.section-head{align-items:flex-start;margin-bottom:13px}.section-head .eyebrow{margin-bottom:5px}.section-head h2{margin:0}.section-head h3{margin:0}
+.grid-3,.grid-4,.grid-2{display:grid;gap:14px}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.card{padding:18px;min-width:0}.card p{color:var(--muted);margin:7px 0 12px}.project-art{height:88px;border-radius:9px 9px 0 0;overflow:hidden;display:flex;align-items:center;justify-content:space-between;padding:15px 17px}.project-art .art-icon{width:66px;height:61px}.project-art .folio{font:italic 24px var(--serif);opacity:.69;align-self:flex-start}.project-card{overflow:hidden;padding:0;display:flex;flex-direction:column}.project-card .inside{padding:18px;display:flex;flex:1;flex-direction:column;align-items:flex-start}.project-card .inside>p{flex:1}.project-card .actions{margin-top:10px}.tone-youth{background:#e7d4a0;color:#745831}.tone-business{background:#e6c6b3;color:#744632}.tone-safety{background:#cedccb;color:#335d4b}.tone-delivery{background:#dad8cc;color:#565c4c}
+.tile-icon{background:var(--sage);color:var(--green);border-radius:10px;width:40px;height:40px;display:inline-grid;place-items:center;flex:none}.tile-icon.warm{background:#f2deb4;color:#785a29}.tile-icon.terra{background:#edd6ca;color:#844c37}
+.mission{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:17px 0}.mission-item{padding-inline-end:7px;border-inline-end:1px solid var(--line)}.mission-item:last-child{border:0}.mission-item b{display:block;font-size:13px;margin-top:8px}.mission-item small{font-size:11px;color:var(--muted)}.ticks{display:flex;gap:4px}.ticks i{display:block;height:5px;max-width:27px;flex:1;background:#cbd6c0;border-radius:8px}.ticks i.hit{background:#437352}
+.rows{display:grid}.list-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--faint)}.list-row:first-child{padding-top:2px}.list-row:last-child{border-bottom:0}.row-main{min-width:0;flex:1}.row-main strong,.row-main small{display:block}.row-main small{color:var(--muted);font-size:12px}.row-main strong{font-size:14px}.round-num{font:italic 19px var(--serif);color:var(--green);min-width:27px}.empty{padding:23px 16px;border:1px dashed #bfc9b7;border-radius:11px;text-align:center;background:#f8f9f0}.empty h3{margin:5px 0}.empty p{color:var(--muted);margin:5px auto 13px;max-width:55ch}.empty .icon{color:var(--green)}
+.note{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;border:1px solid #d6deca;background:#edf2e4;color:#3f5342;border-radius:9px;font-size:13px;line-height:1.46}.note .icon{width:17px;margin-top:1px}.note.warm{background:#fbf0d9;border-color:#e8d7b4;color:#674c28}.note.error,.form-error:not(:empty){background:#f9e7df;border-color:#d9b2a1;color:#823e2b}.note+.note,.actions+.note{margin-top:10px}.page-foot{border-top:1px solid var(--line);margin-top:32px;padding-top:14px;display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:11px;flex-wrap:wrap}
+.toolbar{display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap;margin-bottom:15px}.toolbar .field{flex:1;min-width:125px}.toolbar .field.search{flex:2;min-width:170px}.field{display:grid;gap:5px;align-content:start;margin:0;font-size:13px;font-weight:650}.field input,.field select,.field textarea,.plain-input{width:100%;min-height:40px;padding:8px 10px;border:1px solid #bcc7b8;border-radius:7px;background:#fffefa;font-weight:400}.field textarea{min-height:76px;resize:vertical}.field small{font-size:11px;font-weight:400}.field input:disabled,.field select:disabled{background:#edeee5;color:#59655a}.field.full,.form-grid>.full{grid-column:1/-1}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.checkbox{display:flex;align-items:flex-start;gap:9px;font-size:13px;line-height:1.45}.checkbox input{width:17px;height:17px;accent-color:var(--green);margin:1px 0 0;flex:none}.checklist{display:grid;gap:10px}.checklist.compact{gap:7px}.checkline{display:flex;align-items:flex-start;gap:8px;color:var(--muted);font-size:13px}.checkline.done{color:var(--green)}.checkline .icon{width:16px;height:18px}
+.tabs{display:flex;gap:4px;flex-wrap:wrap;padding:4px;border-radius:10px;background:#e9ecdf;width:fit-content;max-width:100%;margin-bottom:16px}.tabs button{border:0;background:transparent;padding:8px 12px;border-radius:7px;font-size:13px;font-weight:620}.tabs button[aria-pressed=true]{background:var(--white);color:var(--forest);box-shadow:0 1px 3px #344c351c}
+.table-wrap{overflow:auto;max-width:100%}table{width:100%;border-collapse:collapse;font-size:13px;text-align:start}th,td{text-align:start;padding:10px 9px;border-bottom:1px solid var(--faint);vertical-align:top}th{font-size:11px;color:var(--muted)}td bdi{white-space:nowrap}tr:last-child td{border-bottom:0}progress{appearance:none;width:100%;height:8px;background:#e2e6d8;border:0;border-radius:10px;display:block;overflow:hidden;color:var(--green);accent-color:var(--green)}progress::-webkit-progress-bar{background:#e2e6d8;border-radius:10px}progress::-webkit-progress-value{background:var(--green);border-radius:10px}progress::-moz-progress-bar{background:var(--green);border-radius:10px}.spaced{margin:13px 0}.top-gap{margin-top:17px}.bottom-gap{margin-bottom:15px}.rule{border:0;border-top:1px solid var(--line);margin:17px 0}
+.opportunity{display:grid;grid-template-columns:minmax(155px,1.1fr) minmax(150px,1fr) auto;align-items:center;gap:14px}.opportunity .row-main strong{font-size:16px}.opportunity .meta{font-size:12px;margin-top:4px}.subtle-label{font-size:11px;color:var(--muted);display:block}.opportunity .end{display:flex;align-items:center;gap:9px}.result-count{font-size:12px;color:var(--muted);margin-bottom:9px}
+details.sheet{overflow:hidden}details.sheet summary{list-style:none;padding:17px 19px;font-weight:650;cursor:pointer;display:flex;align-items:center;gap:12px}summary::-webkit-details-marker{display:none}details.sheet summary:after{content:"+";font-size:21px;font-weight:400;margin-inline-start:auto}details.sheet[open] summary:after{content:"−"}details.sheet[open] summary{border-bottom:1px solid var(--faint)}.sheet-body{padding:17px 20px}.sheet-body p,.prose p{margin:0 0 10px}.sheet-body p:last-child,.prose p:last-child{margin:0}.bullets{padding-inline-start:19px;margin:8px 0}.bullets li{margin:5px 0}.phase-num{font:italic 21px var(--serif);color:var(--clay)}.quote-box{white-space:pre-wrap;line-height:1.65;background:#f7f4e8;border-inline-start:3px solid #c5964e;border-radius:0 9px 9px 0;padding:19px 21px;margin:15px 0;color:#314638;font:19px/1.52 var(--serif)}
+dialog{border:1px solid var(--line);border-radius:15px;padding:0;background:var(--white);color:var(--ink);width:min(650px,calc(100vw - 24px));max-height:90dvh;box-shadow:0 24px 80px #102a2540}dialog::backdrop{background:#142c26a3}.modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:13px;padding:21px 23px 14px;border-bottom:1px solid var(--faint)}.modal-head h2{font-size:29px;margin-top:4px}.modal-content{padding:19px 23px 23px}.modal-content form{display:grid;gap:14px}.modal-content .actions{justify-content:flex-end}.form-error:not(:empty){padding:9px 12px;border:1px solid #d9b2a1;border-radius:7px;font-size:13px}.form-error:empty{display:none}#notice{position:fixed;z-index:9;bottom:16px;inset-inline-end:16px;max-width:min(420px,90vw);border-radius:9px;background:var(--forest);color:white;box-shadow:0 3px 16px #20332720;font-size:13px}#notice:not(:empty){padding:12px 17px}#notice.is-error{background:#7b3b2b}
+.gate{max-width:1140px;margin:auto;padding:20px clamp(17px,4vw,56px)}.gate .gate-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:25px}.gate .hero{margin:10px 0 20px}.gate .panel{max-width:100%}.code{font:600 19px/1.5 ui-monospace,Consolas,monospace;letter-spacing:.06em;display:block;background:#edf1e4;padding:9px 12px;border-radius:7px;user-select:all;overflow-wrap:anywhere}#print-area{display:none}[hidden]{display:none!important}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.linksafe{overflow-wrap:anywhere}
+@media(min-width:1650px){.hero-art{min-height:310px}}
+@media(max-width:1150px){:root{--rail:198px}.rail{padding-inline:10px}.hero-copy{padding:25px}.stats{gap:8px}.stat{padding:14px}.split{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:850px){.shell{display:block}.rail{position:static;height:auto;padding:11px 16px 0;overflow:visible;border-inline-end:0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto}.rail>.brand{margin:0}.rail .brand .mark{width:35px;height:35px}.rail .brand-title{font-size:22px}.rail .brand-small{font-size:8px}.nav{grid-column:1/-1;grid-row:2;display:flex;gap:3px;overflow-x:auto;margin:9px -5px 0;padding:0 5px 7px;scrollbar-width:thin}.nav a{min-height:36px;font-size:12px;gap:6px;padding:7px 10px}.nav a.active:after,.nav-label,.rail-note{display:none}.nav a .icon{width:16px;height:16px}.rail-foot{margin:0;padding:0;grid-column:2;grid-row:1}.profile{border:0;padding:0}.bar{min-height:46px}.page{padding-top:19px}.hero-art{min-height:220px}.grid-3{gap:9px}.hero h1{font-size:41px}}
+@media(max-width:620px){.page{padding-inline:14px}.bar{padding:7px 14px}.crumb .parent,.crumb .slash{display:none}.bar-actions{gap:5px}.hero{grid-template-columns:minmax(0,1fr);border-radius:14px}.hero-copy{padding:23px 21px}.hero h1{font-size:40px;max-width:17ch}.hero p{margin:10px 0 16px;font-size:14px}.hero-art{min-height:115px;background-position:50% 49%}.art-stamp{font-size:9px;bottom:9px}.stats{grid-template-columns:repeat(2,minmax(0,1fr));margin:12px 0 17px}.stat{padding:12px 13px}.stat-value{font-size:26px;margin:5px 0 2px}.split,.grid-2,.grid-3,.grid-4{grid-template-columns:minmax(0,1fr)}.section-line{margin-top:21px}.section-head,.card-head{gap:8px}.title-block{margin-bottom:17px}.title-block h1{font-size:39px}.opportunity{grid-template-columns:1fr auto;gap:7px 12px}.opportunity .op-next{grid-row:2;grid-column:1/-1}.opportunity .end{grid-row:1;grid-column:2;flex-direction:column;align-items:flex-end}.project-art{height:72px}.project-art .art-icon{height:49px}.form-grid{grid-template-columns:minmax(0,1fr)}.modal-content,.modal-head{padding-inline:16px}.toolbar .field{min-width:115px}.toolbar .field.search{flex-basis:100%}.profile .avatar{display:none}.topline .meta{font-size:10px}.rail{padding-inline:14px}.btn{padding-inline:12px}.tabs button{padding:8px 9px}}
+@media(prefers-reduced-motion:no-preference){.btn,.nav a{transition:background .15s,border-color .15s}.page{animation:appear .18s ease-out}@keyframes appear{from{opacity:.75;transform:translateY(2px)}to{opacity:1;transform:translateY(0)}}}
+@media print{@page{margin:16mm;size:auto}body{background:white;color:#162a22;font:11pt/1.4 Arial,sans-serif}body>*{display:none!important}#print-area{display:block!important}#print-area h1{font-size:29pt;margin:5mm 0 3mm}#print-area h2{font-size:17pt;margin:4mm 0 2mm}#print-area h3{font-size:12pt}#print-area p{margin:2mm 0}#print-area table{font-size:10pt}#print-area td,#print-area th{padding:2mm 1mm}#print-area .brief-page+.brief-page{break-before:page}#print-area .print-block,#print-area tr{break-inside:avoid}#print-area bdi{white-space:nowrap}.practice-print{border:1px solid #a87a31;padding:2mm;font-weight:bold}}
+
+</style>
+  <style>
+:root{--ink:#22243b;--muted:#585d75;--forest:#393378;--green:#50478f;--sage:#e6e2fc;--paper:#f6f7fb;--white:#fff;--line:#dbdce8;--faint:#e9eaf2;--honey:#d7f6a8;--violet:#574bb0;--midnight:#27224e;--lime:#d8f8a6;--lav:#eae5ff;--sans:"Segoe UI Variable","Segoe UI",Arial,sans-serif}
+body{background:radial-gradient(ellipse at 87% -12%,#eae6ff 0,transparent 42%),var(--paper)}
+.studio{min-height:100dvh}.studio-header{position:sticky;top:0;z-index:3;background:#fafaffef;backdrop-filter:blur(16px);border-bottom:1px solid #dcddeb}
+.header-inner{min-height:74px;padding:10px clamp(16px,4.5vw,68px);max-width:1512px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:15px}
+.brand{gap:9px}.brand .mark{width:39px;height:39px}.brand-title{font:740 23px/1 var(--sans);letter-spacing:-.055em}.brand-small{font:680 9px/1.6 var(--sans);letter-spacing:.11em;color:#626278}.header-tools{display:flex;align-items:center;gap:8px;min-width:0}
+.studio-nav{display:flex;gap:3px;padding:4px;background:#ededf6;border:1px solid #dfdfeb;border-radius:15px}.studio-nav a{min-height:38px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:8px 15px;border-radius:11px;color:#56576c;font-size:13px;font-weight:650;text-decoration:none}.studio-nav a[aria-current]{background:white;color:#352d79;box-shadow:0 2px 6px #28225518}.studio-nav a:hover{color:#352d79;background:#f8f8ff}.studio-nav .icon{width:17px;height:17px}
+.profile-chip{min-height:36px;border:1px solid #cdcbe3;border-radius:12px;padding:7px 10px;display:inline-flex;align-items:center;gap:6px;color:#524888;background:#f2effe;font-size:12px;font-weight:650;max-width:160px}.profile-chip span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.header-tools .btn,.header-tools .icon-btn{border-radius:11px;background:white}
+.studio-page{max-width:1420px;padding:22px clamp(16px,4.5vw,68px) 25px;margin:auto}.studio h1,.studio h2,dialog h2,.gate h1,.gate h2{font-family:var(--sans);font-weight:675;letter-spacing:-.055em;line-height:1.07}.studio h3{letter-spacing:-.025em}.studio h2{font-size:clamp(23px,2.4vw,36px)}[dir=rtl] .studio h1,[dir=rtl] .studio h2,[dir=rtl] .studio h3,[dir=rtl] dialog h2,[dir=rtl] .brand-title{letter-spacing:0}
+.btn,.icon-btn{border-radius:10px}.btn.primary{background:#51459d;border-color:#51459d}.btn.primary:hover:not(:disabled){background:#40347f}.btn:hover:not(:disabled),.icon-btn:hover{background:#f0eefb;border-color:#b7b2d8}.btn.bare{color:#504686}.btn:focus-visible,button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #8e73d8;outline-offset:3px}
+.btn.lime{background:var(--lime);color:#29361e;border-color:var(--lime);font-weight:720;box-shadow:0 4px 12px #19163024;padding:12px 18px}.btn.lime:hover:not(:disabled){background:#e4ffbd;border-color:#e4ffbd}.btn.on-dark{background:transparent;color:#f4f1ff;border-color:#b3aada88}.btn.on-dark:hover:not(:disabled){background:#ffffff18;border-color:#e5e0ff}.btn.switch-view{background:transparent;min-height:31px;font-size:12px;border:0;padding:4px 0;color:#504781}.btn.switch-view:hover{background:transparent;text-decoration:underline}
+.desk-ribbon{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:12px;min-height:30px}.space-label,.ribbon-end{display:inline-flex;align-items:center;gap:9px}.space-label{font-size:11px;font-weight:740;text-transform:uppercase;letter-spacing:.115em;color:#524a78}.space-label i,.hero-tag i{width:8px;height:8px;border-radius:50%;background:#806ec7;box-shadow:0 0 0 4px #806ec718}.ribbon-end,.demo-only{font-size:12px;color:var(--muted)}.demo-only{border-inline-end:1px solid #cfcddb;padding-inline-end:10px}.eyebrow{color:#62568a}
+.focus-hero,.board-hero{position:relative;isolation:isolate;overflow:hidden;border-radius:26px;color:white;background:radial-gradient(ellipse at 80% 6%,#7464b766,transparent 45%),linear-gradient(110deg,#262347,#3f3675 55%,#535092);box-shadow:0 12px 32px -17px #423b8150}
+.focus-hero{display:grid;grid-template-columns:1.03fr 1fr;align-items:center;min-height:320px}.focus-hero:before,.board-hero:before{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;background:repeating-linear-gradient(130deg,transparent 0 31px,#cbc3ff07 32px,transparent 33px);border:1px solid #e8e4ff24;border-radius:inherit}
+.focus-copy{padding:clamp(24px,3.8vw,57px);min-width:0}.hero-tag{display:inline-flex;gap:9px;align-items:center;font-size:11px;color:#d9f5b2;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.hero-tag i{background:#c9f49c;box-shadow:0 0 0 4px #c9f49c1a;width:6px;height:6px}
+.focus-copy h1,.board-hero h1{font-size:clamp(37px,4.8vw,72px);line-height:1.02;max-width:13ch;letter-spacing:-.064em;margin:12px 0 14px}.focus-copy p,.board-hero p{color:#e8e6f4;font-size:clamp(14px,1.22vw,18px);line-height:1.48;max-width:52ch;margin:9px 0 18px}.focus-person,.hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px}.focus-person{font-size:13px;font-weight:600;color:#f6f3ff}.focus-person bdi{max-width:100%;overflow-wrap:anywhere}.focus-person i{background:#a6a1cb;width:3px;height:3px;border-radius:50%}.tiny-face{width:24px;height:24px;display:inline-grid;place-items:center;border:1px solid #d6cdf89c;background:#c5b7f431;border-radius:50%;font-size:12px}.hero-actions{gap:15px}
+.focus-copy h1,.resource-tile h2{text-wrap:balance}.time-chip,.work-date{display:inline-flex;align-items:center;gap:5px;font-weight:600;font-size:12px;color:#555670}.time-chip.late,.work-date.late{color:#9e413c}.hero-actions .time-chip{color:#e3def7}.hero-actions .time-chip.late{color:#ffcebd}
+.atlas{position:relative;display:grid;place-items:center;align-content:center;min-width:0;padding:20px 16px 27px;background:radial-gradient(ellipse at 50% 52%,#b1a2ed29 0,transparent 65%)}.atlas-canvas{position:relative;aspect-ratio:520 / 270;width:100%;max-width:575px;direction:ltr}.orbit-art{display:block;width:100%;height:100%;overflow:visible}.star-node{position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);background:transparent;border:0;display:grid;place-items:center;padding:0;min-width:44px;min-height:44px;color:white}.star-node b{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(146deg,#eeeaff,#b5a4ec);border:2px solid #f0ebff;color:#373068;font-size:18px;box-shadow:0 3px 16px #211b4d43}.star-node.selected b{background:linear-gradient(135deg,#f3ffcd,#bde68d);border-color:#edffc4;color:#364926;box-shadow:0 0 0 5px #d5fca326,0 6px 16px #16103736}.star-node.vacant b{width:36px;height:36px;background:#50487ac7;border:1.5px dashed #cbc3eb;color:#f2edff}.star-node span{position:absolute;top:100%;max-width:103px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;border:1px solid #b6acd444;border-radius:12px;padding:2px 9px;color:#f2eeff;background:#34305ddf;font-size:11px;font-weight:650}.star-node:focus-visible{outline-color:var(--lime);border-radius:50%}.node-0{--x:74%;--y:20%}.node-1{--x:19%;--y:52%}.node-2{--x:69%;--y:78%}.atlas-caption{display:flex;align-items:center;justify-content:center;gap:7px;color:#e5dff9;font-size:11px;margin-top:3px}
+.resident-duo{display:grid;grid-template-columns:1.08fr 1fr;gap:18px;margin-top:20px}.studio-panel,.person-card,.resource-tile,.download-strip{background:#fff;border:1px solid var(--line);border-radius:21px;box-shadow:0 8px 22px -20px #39334f52}.studio-panel{padding:clamp(20px,2.25vw,32px);min-width:0}.studio-panel h2{font-size:clamp(25px,2.1vw,34px);margin:14px 0 7px}.studio-panel>p,.resource-tile p{color:var(--muted);max-width:62ch}.panel-top,.panel-end{display:flex;align-items:center;gap:10px}.panel-end{justify-content:space-between;border-top:1px solid var(--faint);padding-top:10px;flex-wrap:wrap}.shape-icon{flex:none;width:38px;height:38px;display:inline-grid;place-items:center;border-radius:12px}.mint{color:#396251;background:#def1e4}.lavender{color:#61519d;background:#ebe5fe}.studio-panel .mission{margin:19px 0}.ticks i{background:#e3e3ed}.ticks i.hit{background:#7266b5}.prompt-panel{background:radial-gradient(ellipse at 100% 0%,#ece7ff,transparent 67%),white}.script-preview{display:flex;align-items:baseline;gap:9px;border-inline-start:3px solid #a798d8;color:#403961;padding:8px 12px;margin:17px 0;font:italic 20px/1.4 Georgia,serif}.script-preview>.icon{flex:none}.progress-panel .eyebrow,.prompt-panel .eyebrow{font-size:10px}
+.people-list{display:grid;gap:12px}.person-card{padding:16px 20px;display:grid;grid-template-columns:auto minmax(0,1.1fr) minmax(0,1fr) auto;align-items:center;gap:16px}.person-body,.person-next{min-width:0}.person-body h3{font-size:19px}.person-meta{font-size:12px;color:var(--muted);margin:2px 0 5px}.person-face{width:43px;height:43px;border-radius:15px;display:grid;place-items:center;font-size:19px;font-weight:700}.tint-0{color:#51478b;background:#e8e1ff}.tint-1{color:#386257;background:#daede4}.tint-2{color:#84503e;background:#f8e3d8}.person-next strong,.linked-person strong,.download-strip small{display:block}.person-next strong{font-size:14px;font-weight:600;margin:2px 0}.circle-foot{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-top:15px;color:var(--muted);font-size:12px}.circle-foot .btn{margin-inline-start:auto}.circle-search{max-width:320px;margin-bottom:13px}.studio .title-block h1{font-size:clamp(34px,4vw,57px)}
+.resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.resource-tile{padding:18px;display:flex;flex-direction:column;text-decoration:none;color:var(--ink)}.resource-glyph{display:flex;align-items:center;justify-content:space-between;position:relative;min-height:108px;padding:18px;border-radius:13px;overflow:hidden;background:repeating-radial-gradient(ellipse at 110% 105%,transparent 0 12px,#ffffff70 13px,transparent 15px),var(--accent-bg);color:var(--accent-ink)}.resource-glyph .icon{width:36px;height:36px;stroke-width:1.3}.resource-glyph b{align-self:flex-start;font-size:12px}.theme-0{--accent-bg:#dbd3fa;--accent-ink:#574888}.theme-1{--accent-bg:#d1eadf;--accent-ink:#3a6351}.theme-2{--accent-bg:#f2dbcb;--accent-ink:#855139}.resource-tile h2{margin:18px 0 7px;font-size:25px}.resource-tile>span{display:flex;align-items:center;gap:7px;margin-top:auto;padding-top:17px;font-size:13px;font-weight:650;color:#514786}.download-strip{padding:15px 20px;display:flex;align-items:center;gap:12px;margin-top:17px}.download-strip>div{flex:1}.download-strip small{font-size:12px;color:var(--muted)}
+dialog{border-radius:21px;border-color:#d6d3e6;max-height:90dvh;box-shadow:0 35px 100px #1e18374d}dialog::backdrop{background:#1b193da8;backdrop-filter:blur(3px)}.modal-head{background:#f8f7fd}.modal-head h2{font-size:29px;overflow-wrap:anywhere}.modal-content form{gap:16px}.modal-content .field input,.modal-content .field select,.modal-content .field textarea,.board-tools input,.board-tools select{background:#fff;border-color:#cdd0df;border-radius:9px}.quick-extra{border-top:1px solid var(--line);padding-top:9px;margin-top:4px}.quick-extra summary{font-size:13px;font-weight:600;color:#5a507f;cursor:pointer;padding:7px 0}.quick-extra .form-grid,.quick-extra .actions{margin:6px 0}.quick-context,.linked-person{display:flex;align-items:center;gap:11px;background:#f5f4fb;padding:12px;border-radius:13px;margin-bottom:14px}.quick-context .tags{margin-top:4px}.linked-person{margin:0}.linked-person>div{min-width:0;flex:1}.update-choices{border:0;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.update-choices legend{font-weight:650;font-size:15px;margin-bottom:9px}.choice-tile{display:flex;min-width:0;position:relative}.choice-tile input{position:absolute;opacity:0;width:1px;height:1px}.choice-tile span{display:flex;align-items:center;gap:7px;padding:12px 10px;width:100%;min-height:44px;border:1px solid var(--line);border-radius:11px;background:white;cursor:pointer;font-size:13px;font-weight:640}.choice-tile input:checked+span{background:#eee9ff;color:#4a3a88;border-color:#8c79c7;box-shadow:inset 0 0 0 1px #8c79c7}.choice-tile input:focus-visible+span{outline:3px solid #9379d3;outline-offset:2px}#help-hint .field{margin-top:10px}.modal-content .quick-extra{margin-top:13px}
+.board-hero{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:27px clamp(22px,3.5vw,48px);background:radial-gradient(ellipse at 85% 140%,#7587a855,transparent 58%),linear-gradient(115deg,#28234b,#443b77 75%,#49477f)}.board-hero .eyebrow{color:#dacaef}.board-hero h1{font-size:clamp(36px,4.1vw,58px);margin:6px 0}.board-hero p{margin:6px 0 16px}.board-meter{display:flex;align-items:center;gap:12px;min-width:0}.board-meter svg{width:112px;height:112px;flex:none}.arc-todo{stroke:#d6c6ff}.arc-doing{stroke:#9edbda}.arc-done{stroke:#d6f5a1}.meter-legend{display:grid;gap:8px;min-width:117px}.meter-legend span{display:flex;align-items:center;gap:7px;font-size:12px;color:#f1eef8}.meter-legend b{margin-inline-start:auto}.swatch{flex:none;display:inline-block;width:9px;height:9px;border-radius:50%}.swatch.todo{background:#b49de8}.swatch.doing{background:#72b6ba}.swatch.done{background:#a4c577}
+.metric-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;margin:15px 0 24px}.metric-button{display:flex;align-items:center;gap:11px;padding:12px 15px;border:1px solid var(--line);border-radius:15px;background:#fff;text-align:start;min-width:0}.metric-button[aria-pressed=true]{border-color:#8c7ac6;background:#f5f1ff;box-shadow:inset 0 0 0 1px #8c7ac6}.metric-button b,.metric-button small{display:block}.metric-button b{font-size:23px;font-weight:700;line-height:1.12;letter-spacing:-.04em}.metric-button small{font-size:12px;color:#56566b;margin-top:3px}.metric-symbol{flex:none;display:grid;place-items:center;border-radius:11px;width:37px;height:37px;background:#eeeafa;color:#6858a3}.metric-unassigned .metric-symbol{background:#f6eacb;color:#846a2c}.metric-mine .metric-symbol{background:#e1edf0;color:#3c6b75}.metric-overdue .metric-symbol{background:#f6e5df;color:#945540}
+.board-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.board-heading h2{margin-top:3px}.layout-toggle,.mobile-lanes{display:flex;gap:3px;padding:3px;background:#eaeaf3;border:1px solid var(--line);border-radius:10px}.layout-toggle button,.mobile-lanes button{min-height:34px;display:flex;align-items:center;justify-content:center;gap:6px;border:0;white-space:nowrap;border-radius:7px;background:transparent;color:#53556a;font-size:12px;font-weight:650;padding:7px 11px}.layout-toggle button[aria-pressed=true],.mobile-lanes button[aria-pressed=true]{background:white;box-shadow:0 1px 5px #25203b22;color:#453a7a}.board-tools{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr) minmax(0,1fr);gap:10px;margin-top:14px}.board-tools .field{font-size:11px;gap:3px}.board-tools .field input,.board-tools .field select{min-height:35px;font-size:13px}.board-count{min-height:32px;display:flex;align-items:center;gap:10px;font-size:12px;color:var(--muted)}.board-count .btn{min-height:24px;padding:1px 5px}
+.work-board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;align-items:stretch}.work-lane{border:1px solid #dddeeb;background:#edeef5;border-radius:17px;padding:11px;min-height:180px;min-width:0}.work-lane>h3,.list-lane{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:2px 3px 11px;font-size:14px}.work-lane h3>span,.list-lane{display:flex;align-items:center;gap:8px}.work-lane h3>b,.list-lane b,.mobile-lanes b{font-size:11px;background:#ffffffcc;color:#545365;border-radius:8px;padding:1px 7px}.lane-cards{display:grid;align-content:start;gap:9px}.work-card{padding:13px;border:1px solid #d8d8e6;border-radius:13px;background:#fff;min-width:0;box-shadow:0 2px 4px #26213d09;cursor:grab}.work-card-top,.work-meta,.work-footer{display:flex;align-items:center;gap:7px}.work-card-top,.work-footer{justify-content:space-between;flex-wrap:wrap}.work-kind{display:inline-flex;align-items:center;gap:5px;color:#625b7c;font-size:11px;font-weight:600}.priority{font-size:10px;font-weight:700;padding:3px 8px;border-radius:12px}.pr-high{background:#fbe2d7;color:#87432c}.pr-normal{background:#eeebf7;color:#605480}.pr-low{background:#e3f0e9;color:#446851}.task-title{display:block;margin:10px 0 7px;width:100%;background:transparent;border:0;padding:0;font:680 16px/1.35 var(--sans);text-align:start;color:#2d2b45;overflow-wrap:anywhere}.task-title:hover{text-decoration:underline}.work-excerpt{font-size:12px;line-height:1.45;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.work-meta{margin-top:12px;flex-wrap:wrap;font-size:11px;color:#5a596d}.work-date{margin-inline-start:auto;font-size:11px}.owner-dot{width:23px;height:23px;flex:none;display:grid;place-items:center;border-radius:50%;background:#f0eff5;color:#77778a}.owner-dot.assigned{color:#59467a;background:#ede2f7;font-size:11px;font-weight:700}.owner-dot .icon{width:13px}.work-footer{border-top:1px solid var(--faint);padding-top:8px;margin-top:10px}.work-footer .icon-btn{width:31px;height:31px}.btn.task-step{padding:5px 8px;min-height:30px;background:#f5f3fc;border-color:#e2dfee;color:#514579;font-size:11px}.task-step .icon{width:13px;height:13px}.lane-empty{border:1px dashed #cacbdb;border-radius:10px;display:grid;justify-items:center;align-content:center;gap:6px;text-align:center;padding:22px 10px;color:#6b6b7e;font-size:12px}.work-lane.drop-ready{border-color:#7c68c0;background:#e5dff7;box-shadow:inset 0 0 0 2px #a18cdb}.work-card.dragging{opacity:.5}.mobile-lanes{display:none}.work-list{display:grid;gap:15px}.list-lane{justify-content:flex-start}.work-list .work-card{cursor:default;margin-bottom:6px;display:grid;grid-template-columns:minmax(100px,.7fr) minmax(150px,1.5fr) minmax(120px,1fr) auto;gap:8px 14px;align-items:center}.work-list .work-excerpt{display:none}.work-list .work-card-top{justify-content:flex-start}.work-list .work-meta,.work-list .task-title,.work-list .work-footer{margin:0}.work-list .work-footer{border:0;padding:0}
+.panel.sage{background:#edf1f8;border-color:#d8ddea}.panel.tinted{background:#f5f0e5}.tabs{background:#e9e8f4}.badge{background:#edeaf6;color:#564e70}.note{background:#eff1fb;border-color:#d9dced;color:#434964}.quote-box{background:#f4f1fb;border-inline-start-color:#a193c6;color:#403752}.empty{background:#faf9fd;border-color:#c9c5d8}.tile-icon{background:#e7e4f6}.studio .page-foot{margin-top:26px}.linked-person .icon-btn{flex:none}#notice{background:#38315e}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){.star-node b,.resource-tile,.work-card,.metric-button,.btn,.studio-nav a{transition:transform .16s ease,box-shadow .16s ease,background .16s ease}.star-node:hover b{transform:scale(1.11)}.resource-tile:hover,.metric-button:hover{transform:translateY(-2px);box-shadow:0 5px 16px #36304614}.work-card:hover{border-color:#aaa4c6}.btn.lime:hover{transform:translateY(-1px)}}
+@media(prefers-reduced-motion:no-preference){.float-sphere{transform-origin:260px 136px;animation:orbit-arrive .95s ease-out both}@keyframes orbit-arrive{from{transform:translateY(7px) scale(.93);opacity:.66}to{transform:none;opacity:1}}dialog[open]{animation:sheet-arrive .16s ease-out}@keyframes sheet-arrive{from{transform:translateY(7px);opacity:.84}to{transform:none;opacity:1}}}
+@media(max-width:980px){.header-inner,.studio-page{padding-inline:24px}.focus-copy{padding:27px}.focus-hero{min-height:275px}.work-list .work-card{grid-template-columns:1fr 1.5fr 1fr}.work-list .work-meta{grid-column:2}.work-list .work-footer{grid-column:3;grid-row:1/3}.studio-nav a{padding-inline:10px}.work-board{gap:8px}.work-lane{padding:8px}.work-card{padding:10px}.board-meter{gap:5px}.board-meter svg{width:90px;height:90px}}
+@media(max-width:720px){.studio-header{position:static}.header-inner{min-height:59px;padding:9px 16px}.brand .mark{width:33px;height:33px}.brand-title{font-size:20px}.brand-small{font-size:8px}.header-tools{gap:5px}.header-tools .btn{padding-inline:7px}.studio-nav{position:fixed;inset-inline:10px;bottom:max(9px,env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(3,minmax(0,1fr));z-index:5;gap:4px;padding:5px;border:1px solid #cfcde1;border-radius:19px;background:#f6f5fff2;backdrop-filter:blur(18px);box-shadow:0 5px 25px #29223e2a}.studio-header{backdrop-filter:none}.studio-nav a{flex-direction:column;gap:2px;border-radius:13px;min-height:45px;padding:5px 2px;font-size:11px}.studio-nav a[aria-current]{background:#e5dff7;box-shadow:none}.studio-nav a .icon{width:18px;height:18px}.studio-page{padding:12px 14px calc(81px + env(safe-area-inset-bottom))}.desk-ribbon{margin-bottom:8px}.space-label{font-size:10px}.ribbon-end{gap:6px}.demo-only{font-size:10px;padding-inline-end:6px}.focus-copy{padding:22px}.focus-copy h1{font-size:38px}.atlas{padding:14px 8px 16px}.resident-duo{gap:12px}.studio-panel{padding:17px}.panel-top{gap:8px}.panel-top .eyebrow{font-size:9px}.mission{gap:5px}.mission-item small{font-size:10px}.board-meter{display:block}.meter-legend{display:none}.board-hero{border-radius:20px;padding:21px}.board-hero h1{font-size:38px}.metric-strip{gap:6px;margin:10px 0 17px}.metric-button{padding:9px 8px;gap:7px;border-radius:11px}.metric-symbol{width:27px;height:27px;border-radius:8px}.metric-symbol .icon{width:15px;height:15px}.metric-button small{font-size:10px}.metric-button b{font-size:20px}.resource-grid{gap:10px}.resource-tile{padding:12px}.resource-tile h2{font-size:20px}.resource-glyph{min-height:73px}.work-board{grid-template-columns:1fr}.mobile-lanes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:9px}.mobile-lanes button{padding-inline:3px}.work-lane:not(.picked){display:none}.work-lane>h3{display:none}.work-lane{min-height:140px;padding:9px}.work-card{padding:12px 14px}.work-list .work-card{display:block}.work-list .task-title{margin:6px 0}.work-list .work-meta{margin:8px 0}.work-list .work-footer{border-top:1px solid var(--faint);padding-top:6px}#notice{bottom:82px}.circle-foot .btn{margin-inline-start:0}}
+@media(max-width:560px){.focus-hero{display:flex;flex-direction:column;align-items:stretch;min-height:0;border-radius:21px}.focus-copy{padding:21px 20px 5px}.focus-copy h1{max-width:17ch;margin:9px 0 10px;font-size:clamp(34px,8.7vw,45px)}.focus-copy p{margin:8px 0 13px;font-size:14px}.focus-person{font-size:12px}.hero-actions{gap:10px}.hero-actions .btn{min-height:41px;padding:10px 13px}.atlas{padding:0 8px 8px;grid-template-columns:minmax(0,1fr);justify-items:center}.atlas-canvas{max-width:295px}.atlas-caption{font-size:10px;margin-top:-3px}.star-node b{width:32px;height:32px;font-size:14px}.star-node.vacant b{width:27px;height:27px}.star-node span{top:calc(100% - 5px);font-size:9px;padding:1px 7px;max-width:80px}.resident-duo,.resource-grid{grid-template-columns:1fr}.resident-duo{margin-top:12px}.panel-top .eyebrow{font-size:10px}.studio-panel h2{margin-top:10px}.person-card{grid-template-columns:auto minmax(0,1fr) auto;gap:7px 11px;padding:14px;border-radius:16px}.person-face{width:35px;height:35px;border-radius:12px}.person-next{grid-row:2;grid-column:2/4}.person-card>.btn{grid-column:3;grid-row:1}.person-body h3{font-size:17px}.circle-foot{align-items:flex-start}.circle-foot>span{flex:1;min-width:75%}.resource-tile{display:grid;grid-template-columns:60px 1fr;gap:2px 12px;padding:15px}.resource-glyph{grid-row:1/4;min-height:70px;padding:10px;display:grid;place-items:center}.resource-glyph .icon{width:27px;height:27px}.resource-glyph b{font-size:9px}.resource-tile h2,.resource-tile p,.resource-tile>span{margin:0;padding:0}.resource-tile p{font-size:13px}.resource-tile>span{font-size:12px}.download-strip{padding:13px;gap:8px;flex-wrap:wrap}.download-strip .btn{margin-inline-start:auto}.board-hero{gap:4px;padding:18px 15px}.board-hero .eyebrow{font-size:9px}.board-hero h1{font-size:35px}.board-hero p{font-size:13px;margin-bottom:10px}.board-hero .actions{gap:5px}.board-hero .actions .btn{font-size:12px;min-height:35px;padding:7px 8px}.board-meter svg{width:70px;height:70px}.metric-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.metric-button{padding:9px 11px}.metric-button>span:nth-child(2){display:flex;gap:7px;align-items:baseline}.metric-button small{font-size:11px}.board-tools{grid-template-columns:1fr 1fr;gap:6px}.board-tools>.field:first-child{grid-column:1/-1}.board-heading h2{font-size:25px}.board-section .eyebrow{font-size:9px}.board-heading{gap:5px}.layout-toggle button{min-height:32px;padding:5px 8px}.field input,.field select,.field textarea{font-size:16px}.modal-content{padding:15px}.modal-head{padding:15px}.choice-tile span{padding:11px 8px;font-size:12px}dialog{border-radius:18px;max-height:89dvh}.studio .page-foot{font-size:10px}}
+@media(max-width:370px){.header-inner{padding-inline:10px;gap:5px}.profile-chip{padding-inline:6px;max-width:98px}.studio-page{padding-inline:10px}.desk-ribbon{gap:5px}.demo-only{font-size:9px}.board-meter svg{width:54px;height:54px}.work-kind{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.studio *,.studio *:before,.studio *:after,dialog,.star-node b{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+@media print{body{background:white}.studio-header,.studio-nav,#notice{display:none!important}}
+
+</style>
+</head>
+<body>
+  <a id="skip" class="skip" href="#main">Skip to content</a>
+  <div id="shell"><main class="boot"><h1>Adorim · אדורים</h1><p>Opening the community fund… / טוענים את מרכז הגיוס…</p></main></div>
+  <dialog id="dialog" aria-labelledby="modal-title"><div id="modal-body"></div></dialog>
+  <div id="notice" role="status" aria-live="polite"></div>
+  <div id="print-area"></div>
+  <noscript><p>This workspace needs JavaScript. Enable it and reopen the page. / יש להפעיל JavaScript כדי להשתמש במרכז הגיוס.</p></noscript>
+  <script>
+const PLAN = {"projects": [{"id": "youth", "goal": 300000}, {"id": "business", "goal": 200000}, {"id": "safety", "goal": 325000}, {"id": "delivery", "goal": 75000}], "markets": ["il", "us", "ca", "uk", "other"], "stages": ["identified", "contacted", "meeting", "asked", "pledged", "received", "referred", "declined"], "projectChecks": ["scope", "quotes", "permission", "owner", "timing", "fallback"], "controls": ["sponsor", "account", "oversight", "restricted", "receipts", "changes", "privacy", "reporting"]};
+</script>
+  <script>
+"use strict";
+let lang = "en";
+const t = (en, he) => lang === "he" ? he : en;
+const l = pair => t(...pair);
+const NAV = {
+  desk:["Today","היום"], outreach:["My circle","המעגל שלי"], projects:["Project library","ספריית המיזמים"],
+  playbook:["Campaign playbook","תוכנית הגיוס"], toolkit:["Conversation kit","ערכת שיחה"], team:["Campaign controls","ניהול הגיוס"], resources:["Resources","כלים"]
+};
+const STAGE = {
+  identified:["Identified","אותרה הזדמנות"], contacted:["Contact made","נוצר קשר"], meeting:["Meeting","פגישה"],
+  asked:["Ask made","הוגשה בקשה"], pledged:["Pledged","התקבלה התחייבות"], received:["Received in full","התקבל במלואו"],
+  referred:["Introduction made","בוצע חיבור"], declined:["Declined","לא מעוניינים"]
+};
+const MARKET = {il:["Israel","ישראל"],us:["United States","ארצות הברית"],ca:["Canada","קנדה"],uk:["United Kingdom","בריטניה"],other:["Other · confirm jurisdiction","אחר · לבדיקה פרטנית"]};
+const CIRCLE = {first:["First circle","מעגל ראשון"],second:["Second circle","מעגל שני"]};
+const PRACTICE_COPY={
+  "sample-a":["Arrange a short call","לקבוע שיחה קצרה"],"sample-b":["Request a warm introduction","לבקש חיבור אישי"],
+  "sample-docs":["Review the project budget","בדיקת תקציב המיזם"],"sample-brief":["Prepare the donor brief","הכנת תקציר לתורם"]
+};
+function displayEntry(id,value){const pair=PRACTICE_COPY[id];return practice&&pair&&value===pair.join(" / ")?l(pair):value}
+const CONTRIBUTION={"":["Not chosen yet","טרם נבחר"],connector:["Connector · make introductions","חיבורים · להפגיש בין אנשים"],advocate:["Advocate · join conversations","הסברה · להצטרף לשיחות"],ask:["Ask partner · make a major ask","בקשות · להציג בקשה משמעותית"],ambassador:["Ambassador · invite smaller gifts","שגרירות · לפנות לתרומות קטנות"]};
+const PROJECT = {
+  youth:{name:["Playground & youth park","גן משחקים ופארק לנוער"],short:["Youth park","פארק הנוער"],icon:"sun",
+    intro:["A welcoming place for young people to play and families to spend time together.","מקום מזמין למשחק, למפגש של בני נוער ולבילוי משפחתי."],
+    outcome:["Design an accessible play space and a maintenance plan. Report approved milestones and the spaces brought into use.","לתכנן מרחב משחק נגיש ותוכנית תחזוקה. לדווח על אבני דרך שאושרו ועל מרחבים שנפתחו לשימוש."],
+    proof:["Confirm site permission, accessibility, installation, inspection and who will maintain the space before promising a build.","לפני הבטחת הקמה יש לברר הרשאה לשימוש באתר, נגישות, התקנה, בדיקה ואחריות לתחזוקה."]},
+  business:{name:["Local livelihoods","עסקים ופרנסה מקומית"],short:["Small businesses","עסקים קטנים"],icon:"shop",
+    intro:["Help local entrepreneurs access equipment, mentoring and fairly awarded small grants.","סיוע ליזמים מקומיים בציוד, בליווי מקצועי ובמענקים קטנים בחלוקה הוגנת."],
+    outcome:["Publish selection criteria; report the number of businesses supported and what the support enabled, with their consent.","לפרסם תנאי זכאות ולדווח כמה עסקים קיבלו סיוע ומה התאפשר בזכותו, בהסכמתם."],
+    proof:["Confirm the sponsor may fund the program. Document eligibility, conflicts of interest, grant decisions and follow-up.","יש לוודא שהגוף המקבל רשאי לתמוך בתוכנית ולתעד זכאות, ניגודי עניינים, החלטות ומעקב."]},
+  safety:{name:["Community safety","בטיחות קהילתית"],short:["Community safety","בטיחות קהילתית"],icon:"shield",
+    intro:["Support professionally reviewed improvements to everyday safety for residents and visitors.","שיפור הבטיחות היומיומית של תושבים ומבקרים בליווי גורמי מקצוע."],
+    outcome:["Report professionally reviewed scope, approval and completion in general terms, without operational details.","לדווח באופן כללי על היקף המיזם שנבדק מקצועית, על אישורו ועל השלמתו, ללא פרטים מבצעיים."],
+    proof:["Use public-safe outcomes only. Do not enter maps, locations of equipment, vulnerabilities or operational plans here.","יש להזין רק תוצאות המתאימות לפרסום. אין להזין מפות, מיקומי ציוד, נקודות תורפה או תוכניות מבצעיות."]},
+  delivery:{name:["Permits, reserve & reporting","היתרים, עתודה ודיווח"],short:["Delivery reserve","עתודה לביצוע"],icon:"file",
+    intro:["A separate allowance for approvals, contingencies and accountable delivery. Not a fourth community project.","תקציב נפרד לאישורים, לבלתי צפוי ולדיווח אחראי. אין מדובר במיזם קהילתי רביעי."],
+    outcome:["Track actual delivery costs and unused reserves separately. Follow donor restrictions before reallocating anything.","לעקוב בנפרד אחר הוצאות בפועל ויתרות. יש לכבד ייעוד תרומות לפני כל שינוי הקצאה."],
+    proof:["Only charge a restricted gift for overhead when its written terms permit it.","מותר לזקוף הוצאות ניהול לתרומה ייעודית רק אם תנאיה הכתובים מאפשרים זאת."]}
+};
+const PCHECK = {scope:["Itemized budget and measurable outcome","תקציב מפורט ותוצאה מדידה"],quotes:["At least two supplier quotations","לפחות שתי הצעות מחיר"],
+  permission:["Required permissions documented","האישורים הנדרשים תועדו"],owner:["Named delivery and maintenance owner","נקבעה אחריות לביצוע ולתחזוקה"],
+  timing:["Milestones and completion estimate","אבני דרך ואומדן מועד סיום"],fallback:["Delay and restricted-gift plan","תוכנית לעיכובים ולתרומות ייעודיות"]};
+const CONTROL = {sponsor:["Receiving organization and authority confirmed","אומתו הגוף המקבל וסמכותו"],account:["Dedicated account or project ledger","חשבון ייעודי או כרטסת מיזם"],
+  oversight:["Two-person financial authorization","אישור כספי בידי שני אנשים"],restricted:["Restricted gifts tracked separately","מעקב נפרד אחר תרומות ייעודיות"],
+  receipts:["Receipt eligibility checked per jurisdiction","נבדקה זכאות לקבלה בכל מדינה"],changes:["Refund, scope-change and in-kind rules","כללים להחזרים, לשינוי ייעוד ולתרומה בעין"],
+  privacy:["Consent, privacy and duplicate-contact process","נוהל הסכמה, פרטיות ומניעת כפל פניות"],reporting:["Reporting owner and quarterly dates","אחריות לדיווח ותאריכים רבעוניים"]};
+const STATUS_NOTE = ["Adorim’s projects are currently privately funded. Official building and project permissions must not be assumed. No construction, opening date or tax benefit is promised.",
+  "המיזמים באדורים ממומנים כיום באופן פרטי. אין להניח שקיים אישור בנייה או אישור למיזם מסוים. אין הבטחה לבנייה, למועד פתיחה או להטבת מס."];
+const ERR = {
+  taskDate:["Give this task a due date.","יש לקבוע תאריך יעד למשימה."],taskOwner:["Choose an active team manager. A task in progress needs an owner.","יש לבחור מנהל/ת פעיל/ה. משימה בטיפול חייבת אחראי/ת."],taskBusy:["Another task update is saving. Please try again in a moment.","עדכון משימה נשמר כעת. נסו שוב בעוד רגע."],
+  invalid:["Check the fields and try again.","בדקו את השדות ונסו שוב."],date:["Enter a valid calendar date.","יש להזין תאריך תקין."],
+  conflict:["Someone updated this record. Close this form, refresh the workspace and reopen it before editing.","הרשומה עודכנה. יש לסגור את הטופס, לרענן את סביבת העבודה ולפתוח אותה מחדש."],
+  expired:["Your session ended. Sign in again; unsaved edits were not sent.","תוקף החיבור פג. יש להיכנס שוב. שינויים שלא נשמרו לא נשלחו."],
+  origin:["This address does not match the configured workspace. Open its exact configured address.","כתובת זו אינה תואמת לכתובת שהוגדרה. יש לפתוח את הכתובת המדויקת של המרכז."],
+  auth:["The sign-in details did not match an active account.","פרטי הכניסה אינם תואמים לחשבון פעיל."],
+  invite:["This invitation is invalid, expired or already used.","ההזמנה אינה תקפה, פג תוקפה או שכבר נוצלה."],
+  handle:["Use 3–40 lowercase Latin letters, numbers, dots, underscores or hyphens; start with a letter or number.","שם משתמש: 3–40 אותיות לטיניות קטנות, ספרות, נקודות, קווים תחתיים או מקפים; התחלה באות או בספרה."],
+  password:["Use a passphrase of 12–256 characters.","יש לבחור סיסמה באורך 12–256 תווים."],taken:["That username is already in use.","שם המשתמש כבר בשימוש."],
+  rate:["Too many attempts. Try again in 15 minutes.","ניסיונות רבים מדי. נסו שוב בעוד 15 דקות."],
+  unavailable:["The workspace could not be reached. Nothing was confirmed; refresh before retrying.","לא ניתן להגיע למרכז. הפעולה לא אושרה; יש לרענן לפני ניסיון נוסף."],
+  missing:["This record is no longer available to you.","הרשומה אינה זמינה עוד."],forbidden:["This action requires different access.","אין לחשבון זה הרשאה לבצע פעולה זו."],
+  finance:["Only the managing team can reconcile cash or amend financial fields after a written pledge.","רק הצוות המנהל יכול לאשר תקבולים או לעדכן שדות כספיים לאחר התחייבות בכתב."],
+  restricted:["A received gift cannot be moved to another project or giving route here. Reconcile restrictions with finance first.","לא ניתן להעביר כאן תרומה שהתקבלה למיזם או למסלול אחר. תחילה יש לברר את תנאי הייעוד עם הגזברות."],
+  next:["Give this conversation a next action and a due date.","יש לקבוע לשיחה פעולה הבאה ותאריך יעד."],
+  notReady:["Introductions are welcome. Before a formal ask or gift, the team must clear this project and verify a giving route for this market.","אפשר להתחיל בהיכרות. לפני בקשה רשמית או תרומה נדרש אישור הצוות למיזם ולמסלול התרומה במדינה זו."],
+  askAmount:["Enter a positive, specific ask amount in whole shekels.","יש להזין סכום בקשה חיובי בשקלים שלמים."],
+  pledge:["A pledge needs a positive amount, a written commitment and a payment date.","להתחייבות נדרשים סכום חיובי, תיעוד בכתב ותאריך לתשלום."],
+  amounts:["Cash cannot exceed the pledge. Use “Pledged” for a partial payment and “Received in full” only when fully paid. Other stages cannot hold gift amounts.","תקבול לא יכול לחרוג מההתחייבות. לתשלום חלקי בחרו בהתחייבות; רק לתשלום מלא בחרו בהתקבל במלואו. בשלבים אחרים לא ניתן לרשום סכומי תרומה."],
+  route:["Specify the receiving entity, HTTPS link, receipt terms and eligible projects. For Other, also enter the exact country code.","יש לציין גוף מקבל, קישור מאובטח, תנאי קבלה ומיזמים לפי זכאות. למדינה אחרת יש להזין גם קוד מדינה מדויק."],
+  country:["Enter a two-letter country code, for example FR.","יש להזין קוד מדינה בן שתי אותיות לטיניות, למשל FR."],
+  budgetLines:["Use up to 16 lines: positive whole-shekel amount | description. To clear a project, the lines must add up to its stated budget.","הזינו עד 16 שורות: סכום חיובי בשקלים שלמים | תיאור. לאישור המיזם, סכומן חייב להתאים לתקציב."],
+  url:["Enter an HTTPS address without sign-in details.","יש להזין כתובת HTTPS ללא פרטי כניסה."],
+  controls:["Complete the first five finance controls before marking a giving route verified.","לפני אימות מסלול תרומה יש להשלים את חמש הבקרות הכספיות הראשונות."],
+  projectReady:["To clear a project, fill in the owner, timing, scope and delay plan and confirm all six readiness checks.","לאישור מיזם יש למלא אחראי, לוח זמנים, היקף ותוכנית לעיכובים ולאשר את כל שש הבדיקות."],
+  keepGift:["Records with pledges or receipts are retained; they cannot be removed.","רשומות עם התחייבות או תקבול נשמרות ואינן ניתנות למחיקה."],
+  owner:["Choose an active relationship owner.","יש לבחור אחראי קשר פעיל."],
+  storage:["Practice storage is unavailable or unreadable. Allow browser storage or reset only the practice data.","אחסון ההדגמה אינו זמין או שאינו קריא. יש לאפשר אחסון בדפדפן או לאפס את נתוני ההדגמה בלבד."],
+  practiceOnly:["Invitations and accounts are only available in a hosted shared workspace.","הזמנות וחשבונות זמינים רק בסביבת עבודה משותפת ומאוחסנת."]};
+const PATHS = {
+  board:"<rect x='3' y='4' width='18' height='16' rx='3'/><path d='M9 5v14m6-14v14M5 8h2m4 0h2m4 0h2m-14 3h2'/>",
+  resources:"<path d='M3 8l9-5 9 5-9 5zM3 12l9 5 9-5M3 16l9 5 9-5'/>", spark:"<path d='m12 2 2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z'/>",
+  person:"<circle cx='12' cy='8' r='4'/><path d='M4 21q0-7 8-7t8 7'/>",list:"<path d='M9 6h12M9 12h12M9 18h12M3 6h1m-1 6h1m-1 6h1'/>",
+  target:"<circle cx='12' cy='12' r='9'/><circle cx='12' cy='12' r='5'/><circle cx='12' cy='12' r='1'/>",
+  filter:"<path d='M3 6h7m4 0h7M3 12h11m4 0h3M3 18h3m4 0h11'/><circle cx='12' cy='6' r='2'/><circle cx='16' cy='12' r='2'/><circle cx='8' cy='18' r='2'/>",
+  chevron:"<path d='m6 9 6 6 6-6'/>",grip:"<path d='M9 6h.01M15 6h.01M9 12h.01M15 12h.01M9 18h.01M15 18h.01' stroke-width='3.3'/>",
+  desk:"<rect x='3' y='3' width='8' height='8' rx='2'/><rect x='14' y='3' width='7' height='5' rx='1.5'/><rect x='3' y='14' width='8' height='7' rx='2'/><rect x='14' y='11' width='7' height='10' rx='2'/>",
+  outreach:"<circle cx='6' cy='12' r='3'/><circle cx='18' cy='5' r='3'/><circle cx='18' cy='19' r='3'/><path d='m9 10.5 6-4m-6 7 6 4'/>",
+  projects:"<path d='M3 8h7l2-3h8v14H3z'/><path d='M3 9V6h6'/>",playbook:"<path d='M3 5q6-2 9 2 4-4 9-2v14q-5-2-9 2-4-4-9-2zM12 7v14'/>",
+  toolkit:"<rect x='3' y='5' width='18' height='13' rx='3'/><path d='m8 18-3 3v-4m3-7h8m-8 4h5'/>",
+  team:"<circle cx='9' cy='8' r='3'/><path d='M3 20v-2q0-5 6-5t6 5v2m1-15q5 0 4 4t-4 3m2 2q4 1 4 5'/>",
+  arrow:"<path d='M4 12h15m-6-6 6 6-6 6'/>",plus:"<path d='M12 5v14M5 12h14'/>",close:"<path d='m6 6 12 12M18 6 6 18'/>",
+  flag:"<path d='M5 21V4m1 1q4-3 8 0t6 0v9q-3 2-7-1t-7 0'/>",wallet:"<path d='M4 7V5l13-2v4m-13 0h16v13H4z'/><path d='M20 11h-6v5h6'/>",
+  hand:"<path d='M2 14h4l3-3h5q3 0 2 3H9m-3 3 6 3 9-6q1-3-2-2l-4 2'/><path d='m13 7-3-3q-1-3 2-3l1 1 1-1q3 0 2 3z'/>",
+  clock:"<circle cx='12' cy='12' r='9'/><path d='M12 6v6l4 2'/>",globe:"<circle cx='12' cy='12' r='9'/><ellipse cx='12' cy='12' rx='4' ry='9'/><path d='M3 12h18'/>",
+  sun:"<circle cx='12' cy='12' r='4'/><path d='M12 2v3m0 14v3M2 12h3m14 0h3M5 5l2 2m10 10 2 2M5 19l2-2M17 7l2-2'/>",
+  shop:"<path d='m3 10 2-6h14l2 6q-2 4-5 0-2 4-5 0-2 4-5 0l-3 1zm2 3v7h14v-7m-12 7v-5h4v5'/>",
+  shield:"<path d='m12 2 8 4v6q0 6-8 10-8-4-8-10V6z'/><path d='m8 12 3 3 5-6'/>",
+  file:"<path d='M5 3h10l4 4v14H5zM14 3v5h5M8 12h8m-8 4h6'/>",check:"<path d='m4 12 5 5L20 6'/>",circle:"<circle cx='12' cy='12' r='8'/>",
+  info:"<circle cx='12' cy='12' r='9'/><path d='M12 11v6m0-10v1'/>",copy:"<rect x='8' y='8' width='12' height='13' rx='2'/><path d='M16 8V3H3v13h5'/>",
+  print:"<path d='M7 8V3h10v5M6 17H3V9h18v8h-3M7 14h10v7H7z'/>",lock:"<rect x='4' y='10' width='16' height='11' rx='2'/><path d='M8 10V7a4 4 0 0 1 8 0v3'/>",
+  refresh:"<path d='M4 9a8 8 0 0 1 14-4l2 3m0-5v5h-5M20 15a8 8 0 0 1-14 4l-2-3m0 5v-5h5'/>",
+  exit:"<path d='M10 3H4v18h6m-2-9h13m-5-5 5 5-5 5'/>",pen:"<path d='m4 16 11-11 4 4L8 20l-5 1zM14 6l4 4'/>",
+  leaf:"<path d='M3 20C3 9 8 3 21 3q0 15-13 15m-5 3L15 9'/>",calendar:"<rect x='3' y='5' width='18' height='16' rx='2'/><path d='M7 2v6m10-6v6M3 10h18'/>",
+  download:"<path d='M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5'/>",link:"<path d='m9 15 6-6m-5-2 3-3q4-4 7 0t-1 7l-2 2m-3 4-3 3q-4 4-7 0t1-7l2-2'/>"
+};
+function icon(name, cls=""){return `<svg class="icon ${cls}${name==="arrow"?" directional":""}" viewBox="0 0 24 24" aria-hidden="true">${PATHS[name]||""}</svg>`}
+function mark(){return `<svg class="mark" viewBox="0 0 52 52" aria-hidden="true"><rect width="52" height="52" rx="16" fill="#302b6f"/><path d="M11 34c4-5 8-17 14-17 7 0 10 13 16 17M13 38c6-7 9-12 13-12s8 6 13 9" fill="none" stroke="#d3f790" stroke-width="3.1" stroke-linecap="round"/><circle cx="36" cy="15" r="4.3" fill="#bcb0ff"/></svg>`}
+const ART = {
+  youth:"<circle cx='58' cy='12' r='7'/><path d='M5 57h67M9 55 25 12l18 43M25 12h29l16 43M33 16v22m14-22v22M31 38h18q-5 7-18 2z'/>",
+  business:"<path d='M6 55h63M13 54V28m49 25V28M9 24l6-14h44l7 14M9 24q3 10 11 1 5 9 11 0 5 9 12 0 5 9 11 0 6 9 12 0M20 25l4-15m7 15 2-15m10 15-1-15m12 15-3-15M21 54V37h14v17m7-16h13v9H42z'/>",
+  safety:"<path d='m36 6 22 9v14q0 15-22 26-21-10-21-26V15Z'/><path d='m25 31 8 8 16-18M4 55h12m40 0h13'/>",
+  delivery:"<path d='M15 7h30l12 12v36H15zM44 7v13h13M23 30h25m-25 8h20m-20 8h15'/>"
+};
+function projectArt(id,index){return `<div class="project-art tone-${id}" aria-hidden="true"><span class="folio">0${index+1}</span><svg class="art-icon" viewBox="0 0 76 63" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">${ART[id]}</svg></div>`}
+
+</script>
+  <script>
+"use strict";
+const STANDALONE = document.documentElement.dataset.mode === "standalone";
+const PORTABLE = STANDALONE || document.documentElement.dataset.mode === "practice";
+const PRACTICE_KEY = STANDALONE ? "adorim.resident.v1" : "adorim.practice.v1";
+let practice = PORTABLE, demoRole = "resident", S = null, loadProblem = "";
+let stateEpoch=0,writing=false;
+const fail = code => {const e=new Error(code);e.code=code;throw e;};
+const must = (value,code="invalid") => {if(!value)fail(code)};
+const clone = obj => JSON.parse(JSON.stringify(obj));
+function localDay(offset=0){const d=new Date();d.setDate(d.getDate()+offset);return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`}
+function emptyRoute(){return {entity:"",url:"",terms:"",country:"",projects:[],verified:false}}
+function blankLead(owner){return {id:"",rev:0,owner,alias:"",project:"youth",circle:"first",market:"il",country:"",stage:"identified",ask:0,pledged:0,received:0,payDate:"",next:"",due:localDay(3),help:false,written:false,contactedOnce:false,askedOnce:false,giftOnce:false,paidOnce:false}}
+const workId=()=>"w-"+crypto.getRandomValues(new Uint32Array(2)).join("-");
+function blankTask(){return {id:"",rev:0,leadId:"",title:"",notes:"",status:"todo",assignee:0,due:localDay(3),priority:"normal",completed:""}}
+function syncPracticeHandoff(db,p){
+  let w=db.tasks.find(x=>x.leadId===p.id);
+  if(!!(w&&w.status!=="done")===p.help)return;
+  const now=new Date().toISOString();
+  if(!w){w={...blankTask(),id:workId(),leadId:p.id,created:now};db.tasks.push(w)}
+  Object.assign(w,p.help?{status:"todo",assignee:0,due:p.due||localDay(),completed:""}:{status:"done",completed:now},{updated:now,rev:w.rev+1});
+}
+function seedDemo(){
+  if(STANDALONE){
+    return {version:1,projects:PLAN.projects.map(p=>({...p,rev:0,owner:"",schedule:"",scope:"",fallback:"",lines:[],checks:[],approved:false})),
+      campaign:{rev:0,start:"",checks:[],routes:Object.fromEntries(PLAN.markets.map(m=>[m,emptyRoute()]))},
+      members:[{id:1,handle:"manager",name:"Team · צוות",role:"manager",active:1},{id:2,handle:"resident",name:"Resident · תושב/ת",role:"resident",active:1},{id:3,handle:"finance",name:"Finance · כספים",role:"manager",active:1}],
+      leads:[],activity:[],tasks:[]};
+  }
+  const a={...blankLead(2),id:"sample-a",rev:1,alias:"A · א",stage:"contacted",next:PRACTICE_COPY["sample-a"].join(" / "),due:localDay(1),contactedOnce:true};
+  const b={...blankLead(1),id:"sample-b",rev:1,alias:"B · ב",project:"business",circle:"second",market:"us",next:PRACTICE_COPY["sample-b"].join(" / "),help:true};
+  const now=new Date().toISOString(),db={version:1,projects:PLAN.projects.map(p=>({...p,rev:0,owner:"",schedule:"",scope:"",fallback:"",lines:[],checks:[],approved:false})),
+    campaign:{rev:0,start:"",checks:[],routes:Object.fromEntries(PLAN.markets.map(m=>[m,emptyRoute()]))},
+    members:[{id:1,handle:"manager",name:"Team · צוות",role:"manager",active:1},{id:2,handle:"resident",name:"Resident · תושב/ת",role:"resident",active:1},{id:3,handle:"finance",name:"Finance · כספים",role:"manager",active:1}],
+    leads:[a,b],activity:[],tasks:[
+      {...blankTask(),id:"sample-docs",rev:1,title:PRACTICE_COPY["sample-docs"].join(" / "),priority:"high",due:localDay(-1),created:now,updated:now},
+      {...blankTask(),id:"sample-brief",rev:1,title:PRACTICE_COPY["sample-brief"].join(" / "),status:"doing",assignee:1,created:now,updated:now}
+    ]};
+  db.leads.forEach(p=>syncPracticeHandoff(db,p));return db;
+}
+function readPractice(){
+  let raw;
+  try{raw=localStorage.getItem(PRACTICE_KEY)}catch{fail("storage")}
+  if(raw===null){const fresh=seedDemo();writePractice(fresh);return fresh}
+  let db;try{db=JSON.parse(raw)}catch{fail("storage")}
+  must(db?.version===1&&Array.isArray(db.projects)&&Array.isArray(db.leads)&&Array.isArray(db.members)&&db.campaign?.routes&&Array.isArray(db.activity),"storage");
+  let migrated=false;
+  if(!Object.hasOwn(db,"tasks")){db.tasks=[];db.leads.forEach(p=>syncPracticeHandoff(db,p));migrated=true}
+  must(Array.isArray(db.tasks),"storage");
+  if(db.members.length===2&&!db.members.some(m=>m.handle==="finance")&&db.members.every(m=>m.id===1||m.id===2)){
+    db.members.push({id:3,handle:"finance",name:"Finance · כספים",role:"manager",active:1});migrated=true
+  }
+  if(migrated)writePractice(db);
+  return db;
+}
+function writePractice(db){try{localStorage.setItem(PRACTICE_KEY,JSON.stringify(db))}catch{fail("storage")}}
+function demoState(db){
+  const user=db.members.find(m=>m.role===demoRole),manager=user.role==="manager";
+  const stats=Object.fromEntries(PLAN.projects.map(p=>[p.id,{pledged:0,received:0}]));
+  for(const a of db.leads){stats[a.project].pledged+=a.pledged;stats[a.project].received+=a.received}
+  const leads=db.leads.filter(a=>manager||a.owner===user.id),ids=new Set(leads.map(a=>a.id));
+  return {user,csrf:"",projects:db.projects,campaign:db.campaign,stats,leads,tasks:manager?db.tasks:[],
+    handoffs:Object.fromEntries(db.tasks.filter(w=>ids.has(w.leadId)).map(w=>[w.leadId,w.status])),
+    members:manager?db.members:[],activity:manager?db.activity:[]};
+}
+function safeURL(s){try{const u=new URL(s);return u.protocol==="https:"&&u.hostname&&!u.username&&!u.password&&!/[\s\\\x00-\x1f]/.test(s)}catch{return false}}
+function validateProject(p){
+  must(Number.isSafeInteger(p.goal)&&p.goal>0&&p.goal<=999999999);
+  must(Array.isArray(p.lines)&&p.lines.length<=16&&p.lines.every(r=>r.label.trim()&&r.label.length<=100&&Number.isSafeInteger(r.amount)&&r.amount>0&&r.amount<=999999999),"budgetLines");
+  must(!p.approved||p.lines.reduce((a,r)=>a+r.amount,0)===p.goal,"budgetLines");
+  must(!p.approved||([p.owner,p.schedule,p.scope,p.fallback].every(s=>s.trim())&&PLAN.projectChecks.every(k=>p.checks.includes(k))),"projectReady");
+}
+function validateCampaign(c){
+  for(const [m,r] of Object.entries(c.routes)){
+    must(!r.url||safeURL(r.url),"url");must(!r.country||/^[A-Z]{2}$/.test(r.country),"country");
+    must(!r.verified||(r.url&&r.entity.trim()&&r.terms.trim()&&r.projects?.length&&(m!=="other"||r.country)),"route");
+    must(!r.verified||PLAN.controls.slice(0,5).every(k=>c.checks.includes(k)),"controls");
+  }
+}
+function clearFor(ws,id,market,country=""){const r=ws.campaign.routes[market];return ws.projects.find(p=>p.id===id).approved&&r.verified&&r.projects?.includes(id)&&(market!=="other"||(country&&country===r.country))}
+function validateLead(p,old,workspace){
+  const manager=workspace.user.role==="manager";
+  must(p.alias.trim()&&p.alias.trim().length<=60&&PROJECT[p.project]&&PLAN.stages.includes(p.stage)&&PLAN.markets.includes(p.market));
+  must([p.ask,p.pledged,p.received].every(v=>Number.isSafeInteger(v)&&v>=0&&v<=999999999));
+  must(manager||p.owner===workspace.user.id,"forbidden");
+  must(!p.country||/^[A-Z]{2}$/.test(p.country),"country");
+  const money=["stage","project","market","country","ask","pledged","received","payDate","written"];
+  must(manager||(p.received===(old?.received||0)&&(!old?.pledged||money.every(k=>p[k]===(old[k]??"")))),"finance");
+  must(!old?.paidOnce||(p.project===old.project&&p.market===old.market&&p.country===(old.country||"")),"restricted");
+  must((p.next.trim()&&p.due)||(["declined","referred","received"].includes(p.stage)&&!p.next.trim()&&!p.due),"next");
+  if(["asked","pledged","received"].includes(p.stage)&&money.some(k=>p[k]!==old?.[k])){
+    must(clearFor(workspace,p.project,p.market,p.country),"notReady");
+  }
+  must(p.stage!=="asked"||p.ask>0,"askAmount");
+  if(["pledged","received"].includes(p.stage)){
+    must(p.pledged>0&&p.written&&p.payDate,"pledge");
+    must(p.received<=p.pledged&&((p.received===p.pledged)===(p.stage==="received")),"amounts");
+  }else must(p.pledged===0&&p.received===0,"amounts");
+}
+function demoChange(action,obj){
+  const db=readPractice(),ws=demoState(db),uid=ws.user.id,manager=ws.user.role==="manager";
+  let item=obj.id||"",delta=0,kind=action;
+  if(action==="lead"||action==="remove"){
+    const old=db.leads.find(p=>p.id===obj.id);
+    must(!obj.id||(old&&(manager||old.owner===uid)),"missing");
+    must(obj.rev===(old?.rev||0),"conflict");
+    if(action==="remove"){
+      must(old&&!old.pledged&&!old.received&&!old.giftOnce,"keepGift");db.leads=db.leads.filter(x=>x.id!==obj.id);kind="removed";
+      db.tasks=db.tasks.filter(w=>w.leadId!==obj.id);
+    }else{
+      validateLead(obj,old,ws);const p=clone(obj);p.id=p.id||("p-"+crypto.getRandomValues(new Uint32Array(2)).join("-"));
+      p.rev++;p.updated=new Date().toISOString();p.created=old?.created||p.updated;p.firstPledgeAt=old?.firstPledgeAt||(p.pledged?p.updated:"");p.contactedOnce=!!old?.contactedOnce||p.stage!=="identified";
+      p.askedOnce=!!old?.askedOnce||["asked","pledged","received"].includes(p.stage);p.giftOnce=!!(old?.giftOnce||p.pledged);p.paidOnce=!!(old?.paidOnce||p.received);item=p.id;delta=p.received-(old?.received||0);
+      db.leads=[p,...db.leads.filter(x=>x.id!==p.id)];
+      syncPracticeHandoff(db,p);
+    }
+  }else if(action==="preference"){
+    must(Object.hasOwn(CONTRIBUTION,obj.contribution));db.members.find(m=>m.id===uid).contribution=obj.contribution;
+    writePractice(db);S=demoState(db);return;
+  }else{
+    must(manager,"forbidden");
+    if(action==="task"){
+      const old=db.tasks.find(w=>w.id===obj.id),now=new Date().toISOString();
+      must(!obj.id||old,"missing");must(obj.rev===(old?.rev||0),"conflict");
+      must(obj.leadId===(old?.leadId||"")&&(obj.leadId||obj.title.trim())&&obj.title.length<=100&&obj.notes.length<=500);
+      must(["todo","doing","done"].includes(obj.status)&&["high","normal","low"].includes(obj.priority));
+      must(/^\d{4}-\d{2}-\d{2}$/.test(obj.due)&&!isNaN(Date.parse(obj.due))&&new Date(obj.due).toISOString().slice(0,10)===obj.due,"taskDate");
+      must(obj.assignee===0||db.members.some(m=>m.id===obj.assignee&&m.active&&m.role==="manager"),"taskOwner");
+      must(obj.status!=="doing"||obj.assignee,"taskOwner");
+      const w={...obj,id:obj.id||workId(),rev:obj.rev+1,created:old?.created||now,updated:now,completed:obj.status==="done"?old?.completed||now:""};
+      db.tasks=[w,...db.tasks.filter(x=>x.id!==w.id)];item=w.id;kind=w.status==="done"&&old?.status!=="done"?"taskDone":"task";
+      if(w.leadId){const a=db.leads.find(p=>p.id===w.leadId);must(a,"missing");if(a.help!==(w.status!=="done"))Object.assign(a,{help:w.status!=="done",updated:now,rev:a.rev+1})}
+    }else if(action==="project"){const old=db.projects.find(p=>p.id===obj.id);must(old&&old.rev===obj.rev,"conflict");validateProject(obj);Object.assign(old,obj,{rev:obj.rev+1})}
+    else if(action==="campaign"){must(db.campaign.rev===obj.rev,"conflict");validateCampaign(obj);db.campaign={...obj,rev:obj.rev+1}}
+    else fail("practiceOnly");
+  }
+  db.activity.unshift({stamp:new Date().toISOString(),actor:ws.user.name,kind,item,delta});db.activity=db.activity.slice(0,20);
+  writePractice(db);S=demoState(db);
+}
+async function api(action,obj){
+  let res;
+  try{res=await fetch("/api/"+action,{method:obj===undefined?"GET":"POST",credentials:"same-origin",cache:"no-store",
+    headers:obj===undefined?{}:{"Content-Type":"application/json","X-CSRF-Token":S?.csrf||""},body:obj===undefined?undefined:JSON.stringify(obj)})}catch{fail("unavailable")}
+  let data;try{data=await res.json()}catch{fail("unavailable")}
+  if(!res.ok){
+    if(data.error==="expired"){S=null;loadProblem="expired";clearPrivateView();render()}
+    fail(data.error||"unavailable");
+  }
+  return data;
+}
+async function refreshState(){const epoch=++stateEpoch,prior=S;const data=practice?demoState(readPractice()):await api("state");
+  if(epoch!==stateEpoch)return;if(prior?.user&&data.user?.id!==prior.user.id)clearPrivateView();S=data;loadProblem=""}
+async function change(action,obj){
+  if(practice){demoChange(action,obj);return}
+  must(!writing,"taskBusy");writing=true;stateEpoch++;const prior=S;
+  try{const result=await api(action,obj);
+    if(action==="invite")return result;
+    if(!practice&&S?.user?.id===prior?.user?.id)S=result;
+  }finally{writing=false;stateEpoch++}
+}
+const isManager=()=>S?.user?.role==="manager";
+const mine=()=>S.leads.filter(p=>p.owner===S.user.id);
+const total=key=>Object.values(S.stats).reduce((sum,s)=>sum+s[key],0);
+const goal=()=>S.projects.reduce((sum,p)=>sum+p.goal,0);
+
+</script>
+  <script>
+"use strict";
+const $ = (s,root=document)=>root.querySelector(s);
+const esc = s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const locale=()=>t("en-IL","he-IL");
+const ils=n=>new Intl.NumberFormat(locale(),{style:"currency",currency:"ILS",maximumFractionDigits:0}).format(n);
+const money=n=>`<bdi>${esc(ils(n))}</bdi>`;
+const fmtDay=s=>s?new Intl.DateTimeFormat(locale(),{day:"numeric",month:"short",year:"numeric"}).format(new Date(s.slice(0,10)+"T12:00:00")):"—";
+const actions=Object.create(null),views=Object.create(null);
+const act=(key,label,opt={})=>`<button type="button" class="btn ${opt.cls||""}" data-act="${key}"${opt.id!==undefined?` data-id="${esc(opt.id)}"`:""}>${opt.icon?icon(opt.icon):""}${esc(label)}${opt.arrow?icon("arrow","sm"):""}</button>`;
+const jump=(key,label,cls="",arrow=false)=>`<a class="btn ${cls}" href="#${key}">${esc(label)}${arrow?icon("arrow","sm"):""}</a>`;
+const mini=(key,label,symbol,id="")=>`<button type="button" class="icon-btn" data-act="${key}" data-id="${esc(id)}" aria-label="${esc(label)}" title="${esc(label)}">${icon(symbol,"sm")}</button>`;
+const note=(body,tone="",symbol="info")=>`<div class="note ${tone}">${icon(symbol)}<span>${body}</span></div>`;
+const badge=(label,cls="")=>`<span class="badge ${cls}">${esc(label)}</span>`;
+const eyebrow=s=>`<div class="eyebrow">${esc(s)}</div>`;
+const opts=(values,labels,current)=>values.map(k=>`<option value="${esc(k)}"${k===current?" selected":""}>${esc(labels(k))}</option>`).join("");
+const field=(label,control,help="",full=false)=>`<label class="field${full?" full":""}"><span>${esc(label)}</span>${control}${help?`<small>${esc(help)}</small>`:""}</label>`;
+const input=(name,value="",attrs="")=>`<input name="${name}" value="${esc(value)}" ${attrs}>`;
+const select=(name,body,attrs="")=>`<select name="${name}" ${attrs}>${body}</select>`;
+const area=(name,value,limit)=>`<textarea name="${name}" maxlength="${limit}">${esc(value)}</textarea>`;
+const check=(name,label,checked=false)=>`<label class="checkbox"><input type="checkbox" name="${esc(name)}"${checked?" checked":""}><span>${esc(label)}</span></label>`;
+const empty=(title,text,button="")=>`<div class="empty">${icon("leaf")}<h3>${esc(title)}</h3><p>${esc(text)}</p>${button}</div>`;
+const titleBlock=(k,title,sub,button="")=>`<div class="title-block"><div class="title-row"><div>${eyebrow(k)}<h1>${esc(title)}</h1></div>${button}</div><p>${esc(sub)}</p></div>`;
+const section=(k,title,extra="")=>`<div class="section-line"><div>${eyebrow(k)}<h2>${esc(title)}</h2></div>${extra}</div>`;
+const brand=()=>`<a href="#desk" class="brand" aria-label="${t("Adorim home","דף הבית של אדורים")}">${mark()}<div><div class="brand-title">${t("Adorim","אדורים")}</div><div class="brand-small">${t("Community fund","הקרן הקהילתית")}</div></div></a>`;
+const modeLabel=()=>STANDALONE?t("Private on this device","פרטי במכשיר זה"):practice?t("Practice workspace","סביבת תרגול"):t("Private workspace","מרכז פרטי");
+const errors=e=>l(ERR[e.code]||ERR.invalid);
+const roleName=r=>r==="manager"?t("Managing team","צוות מנהל"):t("Resident volunteer","מתנדב/ת מהקהילה");
+const projectName=id=>l(PROJECT[id].short);
+const projectReady=p=>p.approved?t("Team-cleared scope","היקף אושר בידי הצוות"):t("Planning estimate","אומדן לתכנון");
+const foot=()=>`<footer class="page-foot"><span>${t("Adorim Community Fund · אדורים","מרכז הגיוס של אדורים · Adorim")}</span><span>${t("Relationships first. Accountability always.","קודם כול קשר אישי. תמיד באחריות.")}</span></footer>`;
+let noticeTimer,activeRoute="desk";
+function notify(message,isError=false){const n=$("#notice");clearTimeout(noticeTimer);n.textContent=message;n.className=isError?"is-error":"";noticeTimer=setTimeout(()=>{n.textContent=""},6500)}
+function closeModal(){const d=$("#dialog");if(d.open)d.close();$("#modal-body").replaceChildren()}
+function modal(title,body,k=t("Field desk","שולחן העבודה")){
+  const d=$("#dialog");$("#modal-body").innerHTML=`<div class="modal-head"><div>${eyebrow(k)}<h2 id="modal-title">${esc(title)}</h2></div>${mini("close",t("Close","סגירה"),"close")}</div><div class="modal-content">${body}</div>`;
+  if(!d.open)d.showModal();d.scrollTop=0;
+}
+function formHandler(form,fn){
+  form.addEventListener("submit",async e=>{
+    e.preventDefault();if(form.dataset.busy)return;form.dataset.busy="1";
+    const submit=form.querySelector('[type="submit"]'),box=form.querySelector(".form-error");
+    if(submit)submit.disabled=true;if(box)box.textContent="";
+    try{await fn(new FormData(form),form)}catch(err){const message=errors(err);if(box&&form.isConnected){box.textContent=message;box.scrollIntoView({block:"nearest"})}else notify(message,true)}
+    finally{delete form.dataset.busy;if(submit)submit.disabled=false}
+  });
+}
+const savebar=(label=t("Save changes","שמירת שינויים"))=>`<div role="alert" class="form-error"></div><div class="actions">${act("close",t("Cancel","ביטול"))}<button class="btn primary" type="submit">${icon("check","sm")}${esc(label)}</button></div>`;
+function saved(){closeModal();render();notify(t("Saved to this workspace.","נשמר בסביבת עבודה זו."))}
+async function copyText(value){
+  if(navigator.clipboard?.writeText){try{await navigator.clipboard.writeText(value);notify(t("Copied to clipboard.","הועתק ללוח."));return}catch(e){if(!["NotAllowedError","SecurityError"].includes(e.name))throw e}}
+  modal(t("Copy this text","העתקת הטקסט"),field(t("Select and copy manually","יש לסמן ולהעתיק ידנית"),`<textarea id="manual-copy" readonly rows="8">${esc(value)}</textarea>`));
+  $("#manual-copy").select();
+}
+function hero(gate=false){
+  return `<section class="hero"><div class="hero-copy"><div class="eyebrow">${icon("leaf","sm")}${t("The Adorim campaign","מסע הגיוס של אדורים")}</div><h1>${t("A community built by neighbors.","קהילה בונים יחד.")}</h1><p>${t("Start with someone you know. One personal introduction can help create a place to play, a local livelihood or a safer community.","מתחילים במי שמכירים. חיבור אישי אחד יכול לקדם מקום למשחק, פרנסה מקומית או קהילה בטוחה יותר.")}</p>${gate?act("auth",t("Enter the workspace","כניסה למרכז"),{cls:"gold",arrow:true}):jump("outreach",t("Open my outreach","לפתיחת הפניות שלי"),"gold",true)}</div><div class="hero-art" role="img" aria-label="${t("Original illustration of terraced hills in warm evening light","איור מקורי של גבעות מדורגות באור ערב")}"><span class="art-stamp">${t("FIELD SKETCH  /  01","רישום נוף  /  01")} &nbsp;·&nbsp; אדורים</span></div></section>`;
+}
+function stats(){
+  const paid=total("received"),pledged=total("pledged");
+  return `<div class="stats">${[
+    ["flag",t("Campaign goal","יעד הגיוס"),money(goal()),S.projects.every(p=>p.approved)?t("Team-cleared budgets","תקציבים שאושרו בידי הצוות"):t("Illustrative until approved","אומדן עד לאישור")],
+    ["wallet",t("Money received","כסף שהתקבל"),money(paid),t("Confirmed by the finance team","אושר בידי הצוות הכספי")],
+    ["hand",t("Pledged, not paid","התחייבויות שטרם שולמו"),money(pledged-paid),t("Excludes money received","ללא כספים שכבר התקבלו")],
+    ["outreach",t("Still to secure","נותר לגייס"),money(Math.max(0,goal()-pledged)),t("Goal less all commitments","היעד פחות כלל ההתחייבויות")]
+  ].map(([ic,label,v,sub])=>`<article class="stat"><div class="stat-top">${icon(ic)}${esc(label)}</div><strong class="stat-value">${v}</strong><small>${esc(sub)}</small></article>`).join("")}</div>`;
+}
+function mission(){
+  const list=mine();const stages=[
+    [3,list.length,t("People added","אנשים במעגל")],
+    [2,list.filter(a=>a.contactedOnce).length,t("Contacted","נוצר קשר")],
+    [1,list.filter(a=>a.askedOnce).length,t("Specific ask","בקשה ממוקדת")]
+  ];
+  return `<div class="mission">${stages.map(([max,n,label])=>`<div class="mission-item"><div class="ticks" aria-hidden="true">${Array.from({length:max},(_,i)=>`<i class="${i<n?"hit":""}"></i>`).join("")}</div><b>${esc(label)}</b><small>${Math.min(max,n)} ${t("of","מתוך")} ${max}</small></div>`).join("")}</div>`;
+}
+function upcoming(list){return list.filter(a=>a.next&&a.due&&a.stage!=="declined").sort((a,b)=>a.due.localeCompare(b.due))}
+function dueLabel(a){return a.due<localDay()?t("Overdue","באיחור"):a.due===localDay()?t("Today","היום"):fmtDay(a.due)}
+function actionRows(list,limit=4){
+  return list.slice(0,limit).map(a=>`<div class="list-row"><span class="tile-icon">${icon(a.help?"team":"calendar")}</span><div class="row-main"><strong>${esc(a.next||l(STAGE[a.stage]))}</strong><small><bdi>${esc(a.alias)}</bdi> · ${esc(projectName(a.project))} · ${esc(dueLabel(a))}</small></div>${mini("lead-edit",t("Open opportunity","פתיחת ההזדמנות")+" "+a.alias,"arrow",a.id)}</div>`).join("");
+}
+function projectCard(p,i){
+  return `<article class="card project-card">${projectArt(p.id,i)}<div class="inside">${eyebrow(p.id==="delivery"?t("Delivery allowance","עתודה לביצוע"):t("Community project","מיזם קהילתי"))}<h3>${esc(l(PROJECT[p.id].name))}</h3><p>${esc(l(PROJECT[p.id].intro))}</p><strong>${money(p.goal)}</strong><small class="help">${esc(projectReady(p))}</small><div class="actions">${act("project-view",t("Project brief","כרטיס מיזם"),{id:p.id,cls:"small",arrow:true})}</div></div></article>`;
+}
+views.desk=()=>isManager()?boardView():residentHome();
+function languageBtn(){return `<button type="button" class="btn small" data-act="language" lang="${t("he","en")}" aria-label="${t("החלפה לעברית","Switch to English")}">${icon("globe","sm")}${t("עברית","English")}</button>`}
+function gateScreen(){
+  if(practice&&!S?.user)return `<main class="gate" id="main" tabindex="-1"><div class="gate-head">${brand()}${languageBtn()}</div><div class="panel">${eyebrow(modeLabel())}<h1>${t("Practice could not open.","לא ניתן לפתוח את התרגול.")}</h1><p class="spaced">${esc(l(ERR[loadProblem]||ERR.storage))}</p><div class="actions">${act("reload",t("Try again","ניסיון נוסף"),{cls:"primary"})}${act("reset-practice",t("Reset fictional data","איפוס נתוני הדגמה"))}${!PORTABLE?act("return-live",t("Return to sign-in","חזרה לכניסה")):""}</div></div></main>`;
+  return `<main class="gate" id="main" tabindex="-1"><div class="gate-head">${brand()}${languageBtn()}</div>${loadProblem?`<div class="bottom-gap">${note(esc(l(ERR[loadProblem]||ERR.unavailable)),"warm")}</div>`:""}
+    ${hero(true)}<div class="split equal"><article class="panel">${eyebrow(t("Private campaign workspace","סביבת גיוס פרטית"))}<h2>${t("Welcome back.","טוב שחזרתם.")}</h2><p class="bottom-gap">${t("Residents keep a short personal list. The managing team coordinates approvals, introductions and receipts.","התושבים מנהלים רשימה אישית קצרה. הצוות מרכז אישורים, חיבורים וקבלות.")}</p><div class="actions">${act("auth",t("Sign in","כניסה"),{cls:"primary",icon:"lock"})}${act("join",t("Use an invitation","מימוש הזמנה"))}${act("reload",t("Retry connection","ניסיון חיבור חוזר"),{cls:"bare small"})}</div></article>
+    <article class="panel tinted">${eyebrow(t("No account needed","ללא צורך בחשבון"))}<h2>${t("Take a practice run.","אפשר קודם לתרגל.")}</h2><p class="bottom-gap">${t("Explore both roles with fictional opportunities on this browser only. Never use real contact details in practice.","אפשר להתנסות בשני התפקידים עם הזדמנויות פיקטיביות בדפדפן זה בלבד. אין להזין פרטים אמיתיים בתרגול.")}</p>${act(practice?"reset-practice":"practice",practice?t("Reset practice data","איפוס נתוני תרגול"):t("Explore practice hub","כניסה למרכז התרגול"),{arrow:true})}</article></div>${foot()}</main>`;
+}
+function render(){
+  document.documentElement.lang=lang;document.documentElement.dir=t("ltr","rtl");$("#skip").textContent=t("Skip to content","דילוג לתוכן");
+  activeRoute=location.hash.slice(1);if(!Object.hasOwn(NAV,activeRoute))activeRoute="desk";
+  const navLabel=k=>k==="desk"&&isManager()?t("Task board","לוח משימות"):l(NAV[k]);
+  document.title=(S?.user?navLabel(activeRoute):t("Community fund","מרכז הגיוס"))+" · Adorim | אדורים";
+  if(!S?.user){$("#shell").innerHTML=gateScreen();return}
+  const group=["projects","toolkit","playbook"].includes(activeRoute)?"resources":activeRoute;
+  const navLink=k=>`<a href="#${k}"${k===group?' aria-current="page"':""}>${icon(k==="desk"?(isManager()?"board":"sun"):k)}<span>${esc(navLabel(k))}</span></a>`;
+  $("#shell").innerHTML=`<div class="studio"><header class="studio-header"><div class="header-inner">${brand()}
+    <nav class="studio-nav" aria-label="${t("Main navigation","ניווט ראשי")}">${["desk",isManager()?"team":"outreach","resources"].map(navLink).join("")}</nav>
+    <div class="header-tools">${languageBtn()}${!practice?mini("reload",t("Refresh shared data","רענון נתונים משותפים"),"refresh"):""}<button type="button" class="profile-chip" data-act="mode" aria-label="${esc(modeLabel())}">${icon(STANDALONE?"lock":practice?"leaf":"person","sm")}<span>${STANDALONE?(isManager()?t("Team","צוות"):t("My phone","המכשיר שלי")):practice?t("Practice","תרגול"):esc(S.user.name)}</span>${icon("chevron","sm")}</button></div></div></header>
+    <main class="studio-page page" id="main" tabindex="-1">${["projects","playbook","toolkit"].includes(activeRoute)?jump("resources",t("Back to resources","חזרה לכלים"),"bare small bottom-gap"):""}${views[activeRoute]()}${foot()}</main></div>`;
+}
+actions.close=closeModal;
+actions.language=()=>{lang=t("he","en");try{localStorage.setItem("adorim.language",lang)}catch{notify(t("Language changed for this visit only.","השפה שונתה לביקור זה בלבד."))}closeModal();render()};
+actions.reload=async()=>{await refreshState();closeModal();render();notify(t("Workspace refreshed.","המרכז רוענן."))};
+async function switchWorkspace(toPractice){practice=toPractice;demoRole="resident";S=null;closeModal();try{await refreshState()}catch(err){loadProblem=err.code||"unavailable"}render()}
+actions.practice=()=>switchWorkspace(true);
+actions["return-live"]=()=>switchWorkspace(false);
+actions["switch-role"]=async()=>{must(practice,"forbidden");demoRole=demoRole==="manager"?"resident":"manager";await refreshState();closeModal();if(location.hash!=="#desk")location.hash="desk";render();notify(roleName(S.user.role))};
+actions["reset-practice"]=()=>modal(STANDALONE?t("Clear saved data on this device?","למחוק את הנתונים השמורים במכשיר זה?"):t("Reset the practice workspace?","לאפס את סביבת התרגול?"),`<p class="bottom-gap">${STANDALONE?t("This clears your personal list and local tasks from this browser only.","פעולה זו תמחק את הרשימה האישית והמשימות המקומיות מדפדפן זה בלבד."):t("This removes fictional contacts and practice edits from this browser only. Shared campaign data is never affected.","פעולה זו תמחק רק את אנשי הקשר הפיקטיביים ושינויי התרגול שבדפדפן זה. נתוני המרכז המשותף לא יושפעו.")}</p><div class="actions">${act("close",STANDALONE?t("Keep my data","שמירת הנתונים"):t("Keep my practice data","שמירת נתוני התרגול"))}${act("confirm-reset",STANDALONE?t("Clear this device","מחיקה מהמכשיר"):t("Reset practice","איפוס התרגול"),{cls:"danger"})}</div>`);
+actions["confirm-reset"]=async()=>{must(practice,"forbidden");writePractice(seedDemo());demoRole="resident";await refreshState();saved()};
+actions.mode=()=>modal(modeLabel(),STANDALONE?`${note(t("Your personal circle stays private on this device — staff cannot see your personal list or stages. When a contact is ready for the campaign team, pass it to them directly via WhatsApp or copy the handoff note.","המעגל האישי שלך נשמר בפרטיות במכשיר זה בלבד — הצוות לא רואה את הרשימה או השלבים שלך. כשקשר מוכן לטיפול הצוות, מעבירים אותו ישירות בוואטסאפ או בהעתקת הודעה."),"","lock")}<div class="actions top-gap">${act("switch-role",isManager()?t("Switch to resident view","מעבר לתצוגת תושב/ת"):t("Open team task board","פתיחת לוח המשימות לצוות"),{cls:"primary",icon:"team"})}${act("reset-practice",t("Clear this device","איפוס נתונים במכשיר"),{cls:"small"})}</div>`:practice?`${note(t("This is a rehearsal, not a shared donor database. Use fictional aliases only. Gifts here are not real donations.","זוהי חזרה, לא מאגר תורמים משותף. השתמשו בכינויים פיקטיביים בלבד. סכומים בתרגול אינם תרומות אמיתיות."),"warm")}<div class="actions top-gap">${act("switch-role",isManager()?t("Try resident view","התנסות כתושב/ת"):t("Try managing team view","התנסות כחבר/ת צוות"),{cls:"primary",icon:"team"})}${act("reset-practice",t("Reset practice","איפוס התרגול"),{cls:"small"})}${!PORTABLE?act("return-live",t("Return to sign-in","חזרה לכניסה")):""}</div>`:
+    `${note(t("Your account is private. Residents see their own opportunities and project-level totals. Only the managing team can reconcile money received. Use Refresh to load colleagues’ changes.","החשבון פרטי. תושבים רואים את ההזדמנויות שלהם וסכומים מצטברים לכל מיזם. רק הצוות מאשר תקבולים. לחצו על רענון כדי לטעון עדכונים של עמיתים."))}<div class="actions top-gap">${act("reload",t("Refresh workspace","רענון המרכז"),{icon:"refresh"})}${act("logout",t("Sign out","יציאה"))}</div>`);
+function authDialog(join){
+  if(PORTABLE){actions["reset-practice"]();return}
+  const hd=join?t("Join by invitation","הצטרפות בהזמנה"):t("Sign in","כניסה");
+  modal(hd,`<form id="auth-form">${join?field(t("One-time invitation code","קוד הזמנה חד־פעמי"),input("code","","required maxlength='80' dir='ltr' autocomplete='off'"))+field(t("Your display name","שם לתצוגה"),input("name","","required maxlength='60' autocomplete='name'")):""}
+    ${field(t("Username","שם משתמש"),input("handle","","required maxlength='40' dir='ltr' autocomplete='username'"))}${field(t("Passphrase","סיסמה"),input("password","",`type="password" required maxlength="256" ${join?'minlength="12" autocomplete="new-password"':'autocomplete="current-password"'}`),join?t("At least 12 characters. It is not emailed or shared.","לפחות 12 תווים. הסיסמה אינה נשלחת בדוא״ל או משותפת."):"")}
+    ${savebar(hd)}</form>`,t("Private access","גישה פרטית"));
+  formHandler($("#auth-form"),async data=>{await api(join?"join":"login",Object.fromEntries(data));practice=false;await refreshState();closeModal();render()});
+}
+actions.auth=()=>authDialog(false);actions.join=()=>authDialog(true);
+function clearPrivateView(){
+  circleFocus="";circleQuery="";resetBoardFilters();boardUI.lane="todo";teamFilter={owner:"",stage:"",q:"",attention:""};teamTab="pipeline";
+  closeModal();$("#print-area").replaceChildren();
+}
+actions.logout=async()=>{await api("logout",{});S=null;clearPrivateView();render();notify(t("Signed out.","יצאת מהמרכז."))};
+document.addEventListener("click",async e=>{
+  if(e.target.closest("#skip")){e.preventDefault();$("#main")?.focus();return}
+  const el=e.target.closest("[data-act]");if(!el)return;
+  const fn=actions[el.dataset.act];if(!fn)return;el.disabled=true;
+  try{await fn(el.dataset.id,el)}catch(err){notify(errors(err),true)}finally{el.disabled=false}
+});
+window.addEventListener("hashchange",()=>{closeModal();render();$("#main")?.focus({preventScroll:true});window.scrollTo(0,0)});
+window.addEventListener("storage",async e=>{if(practice&&e.key===PRACTICE_KEY&&!$("#dialog").open){try{await refreshState();render()}catch(err){notify(errors(err),true)}}});
+document.addEventListener("DOMContentLoaded",async()=>{
+  try{const pref=localStorage.getItem("adorim.language");lang=["en","he"].includes(pref)?pref:navigator.language.startsWith("he")?"he":"en"}catch{lang=navigator.language.startsWith("he")?"he":"en"}
+  try{await refreshState()}catch(err){loadProblem=err.code||"unavailable";S=null}
+  render();
+});
+
+</script>
+  <script>
+"use strict";
+views.outreach=()=>circleView();
+actions["my-contribution"]=()=>{
+  modal(t("How I can help","איך אוכל לעזור"),`<form id="contribution-form"><p>${t("Choose a contribution that fits your time and comfort. Your coordinator can see this preference. It does not change your account permissions.","בחרו דרך שמתאימה לזמן ולנוחות שלכם. הרכז יראה את ההעדפה. אין לכך השפעה על הרשאות החשבון.")}</p>${field(t("My volunteer contribution","התפקיד ההתנדבותי שלי"),select("contribution",opts(Object.keys(CONTRIBUTION),k=>l(CONTRIBUTION[k]),S.user.contribution||"")))}${savebar()}</form>`);
+  formHandler($("#contribution-form"),async d=>{await change("preference",{contribution:d.get("contribution")});saved()});
+};
+function editLead(id=""){
+  const old=id?S.leads.find(p=>p.id===id):null;must(!id||old,"missing");
+  const a=old?clone(old):blankLead(S.user.id);if(!old)a.next=t("Invite them to a short conversation","להזמין לשיחה אישית קצרה");
+  const disabledPaid=(!isManager()&&a.pledged>0)?"disabled":"";
+  const gateNote=`<div id="ask-gate" class="full"></div>`;
+  const endActions=a.id&&!a.pledged&&!a.received&&!a.giftOnce?act("lead-remove",t("Remove opportunity","מחיקת הזדמנות"),{id:a.id,cls:"bare small danger"}):"";
+  modal(id?t("Edit opportunity","עריכת הזדמנות"):t("Open one door","פותחים דלת אחת"),`<form id="lead-form">
+    ${note(t("Use an alias you can recognize. Do not enter phone numbers, emails, bank details or sensitive information. Check discreetly with your captain before a duplicate approach.","בחרו כינוי שתזהו. אין להזין טלפונים, דוא״ל, פרטי בנק או מידע רגיש. לפני פנייה חופפת בדקו בדיסקרטיות עם הרכז."),"","lock")}
+    <div class="form-grid">${field(t("Relationship alias","כינוי לקשר"),input("alias",a.alias,'required maxlength="60" autocomplete="off"'),t("For example: Circle A","לדוגמה: מעגל א׳"))}
+    ${field(t("Relationship circle","מעגל קשר"),select("circle",opts(["first","second"],k=>l(CIRCLE[k]),a.circle)))}
+    ${field(t("Project of interest","מיזם רלוונטי"),select("project",opts(S.projects.map(p=>p.id),projectName,a.project),a.paidOnce?"disabled":disabledPaid))}
+    ${field(t("Donor market","מדינת התרומה"),select("market",opts(PLAN.markets,k=>l(MARKET[k]),a.market),a.paidOnce?"disabled":disabledPaid))}
+    <div id="other-country">${field(t("Country code for this donor","קוד המדינה של התורם"),input("country",a.country||"",`maxlength="2" dir="ltr" placeholder="FR" ${a.paidOnce?"disabled":disabledPaid}`))}</div>
+    ${isManager()?field(t("Relationship owner","אחראי/ת הקשר"),select("owner",opts(S.members.filter(m=>m.active||m.id===a.owner).map(m=>m.id),k=>S.members.find(m=>m.id===k).name,a.owner))):""}
+    ${field(t("Current stage","שלב נוכחי"),select("stage",opts(PLAN.stages.filter(s=>s!=="received"||isManager()||a.stage==="received"),k=>l(STAGE[k]),a.stage),disabledPaid))}
+    ${field(t("Planned ask · ₪","סכום הבקשה המתוכנן · ₪"),input("ask",a.ask||"",`type="number" min="0" max="999999999" step="1" ${disabledPaid}`),t("A tailored ask, not a gift received.","בקשה מותאמת אישית, לא תקבול."))}
+    ${gateNote}</div>
+    <div id="gift-fields" class="panel"><h3>${t("Written commitment","התחייבות בכתב")}</h3><div class="form-grid">${field(t("Total committed · ₪","סך ההתחייבות · ₪"),input("pledged",a.pledged||"",`type="number" min="0" max="999999999" step="1" ${disabledPaid}`))}
+    ${field(t("Agreed payment date","תאריך תשלום מוסכם"),input("payDate",a.payDate,`type="date" ${disabledPaid}`))}
+    ${field(t("Cumulative cash received · ₪","סך התקבולים במצטבר · ₪"),input("received",a.received||"",`type="number" min="0" max="999999999" step="1" ${isManager()?"":"disabled"}`),t("Finance only. Enter the cumulative amount, not the latest installment.","לגזברות בלבד. מזינים סכום מצטבר, לא את התשלום האחרון."),true)}
+    <div class="full">${check("written",t("A written commitment is on file with the receiving organization.","התחייבות בכתב שמורה אצל הגוף המקבל."),a.written)}</div></div></div>
+    <div class="form-grid">${field(t("One next action","פעולה אחת להמשך"),input("next",a.next,'maxlength="160"'))}${field(t("Next action due","תאריך יעד לפעולה"),input("due",a.due,'type="date"'))}</div>
+    <div class="actions">${act("suggest-next",t("Suggest a next step","הצעה לפעולה הבאה"),{cls:"small",icon:"calendar"})}${act("quarterly-next",t("Plan a 90-day update","תכנון עדכון בעוד 90 יום"),{cls:"small"})}</div>
+    ${check("meetingHeld",t("We have held a donor meeting on this opportunity.","התקיימה פגישת תורם במסגרת הזדמנות זו."),a.meetingHeld)}
+    ${check("help",t("Request team help with this conversation","בקשת עזרה מהצוות בשיחה זו"),a.help)}
+    ${endActions}${savebar(id?t("Save opportunity","שמירת ההזדמנות"):t("Add opportunity","הוספת הזדמנות"))}</form>`,t("Private outreach","פנייה אישית"));
+  const f=$("#lead-form"),v=name=>f.elements.namedItem(name).value;
+  f.elements.written.disabled=!!disabledPaid;
+  const update=()=>{
+    const stage=v("stage"),gift=["pledged","received"].includes(stage),ready=clearFor(S,v("project"),v("market"),v("country").trim().toUpperCase());
+    $("#other-country").hidden=v("market")!=="other";
+    $("#gift-fields").hidden=!gift;
+    $("#ask-gate").innerHTML=["asked","pledged","received"].includes(stage)&&!ready?note(esc(l(ERR.notReady)),"warm"):"";
+    f.elements.next.required=!["declined","referred","received"].includes(stage);f.elements.due.required=f.elements.next.required;
+  };
+  f.addEventListener("change",e=>{if(e.target.name==="stage"&&v("stage")==="declined"){f.elements.next.value="";f.elements.due.value="";f.elements.help.checked=false}update()});update();
+  formHandler(f,async()=>{
+    const p={...a,alias:v("alias").trim(),circle:v("circle"),project:v("project"),market:v("market"),country:v("market")==="other"?v("country").trim().toUpperCase():"",owner:isManager()?Number(v("owner")):S.user.id,
+      stage:v("stage"),ask:Number(v("ask")),pledged:Number(v("pledged")),received:Number(v("received")),payDate:v("payDate"),
+      next:v("next").trim(),due:v("due"),help:f.elements.help.checked,written:f.elements.written.checked,meetingHeld:f.elements.meetingHeld.checked};
+    if(!["pledged","received"].includes(p.stage)){
+      must(!a.pledged&&!a.received||isManager(),"finance");
+      if(a.pledged||a.received){must(window.confirm(t("Reverse the recorded commitment and cash balance? Confirm only after finance reconciliation.","לאפס את ההתחייבות והתקבול הרשומים? יש לאשר רק לאחר התאמה כספית.")),"amounts")}
+      Object.assign(p,{pledged:0,received:0,payDate:"",written:false});
+    }
+    validateLead(p,old,S);await change("lead",p);saved();
+  });
+}
+const NEXT_STEP={
+  identified:[3,"Request a warm introduction","לבקש חיבור אישי"],contacted:[3,"Agree a time for a 20-minute conversation","לתאם שיחה בת 20 דקות"],
+  meeting:[1,"Prepare one project and a tailored ask with the coordinator","להכין מיזם אחד ובקשה מותאמת עם הרכז"],asked:[1,"Send the written meeting summary","לשלוח סיכום פגישה בכתב"],
+  pledged:[1,"Confirm written terms and payment arrangements","לאשר תנאים בכתב וסידורי תשלום"],received:[2,"Send a personal thank-you and confirm the receipt","לשלוח תודה אישית ולוודא הנפקת קבלה"],
+  referred:[2,"Thank the connector and confirm permission to meet","להודות על החיבור ולבדוק הסכמה לפגישה"],declined:[0,"",""]
+};
+actions["suggest-next"]=()=>{const f=$("#lead-form"),[days,en,he]=NEXT_STEP[f.elements.stage.value];f.elements.next.value=t(en,he);f.elements.due.value=en?localDay(days):"";f.elements.next.focus()};
+actions["quarterly-next"]=()=>{const f=$("#lead-form");f.elements.next.value=t("Send the agreed milestone and spending update","לשלוח עדכון מוסכם על אבני דרך והוצאות");f.elements.due.value=localDay(90);f.elements.next.focus()};
+actions["lead-new"]=()=>editLead();actions["lead-edit"]=id=>editLead(id);
+actions["lead-remove"]=id=>{
+  const a=S.leads.find(v=>v.id===id);must(a,"missing");
+  modal(t("Remove this opportunity?","למחוק את ההזדמנות?"),`<p class="bottom-gap">${esc(a.alias)} · ${t("This removes the alias, reminder and any linked team task. Gift records cannot be deleted.","הכינוי, התזכורת ומשימת הצוות המקושרת יימחקו. לא ניתן למחוק רשומות של תרומות.")}</p><form id="remove-form">${savebar(t("Confirm removal","אישור מחיקה"))}</form>`);
+  formHandler($("#remove-form"),async()=>{await change("remove",{id:a.id,rev:a.rev});saved()});
+};
+
+</script>
+  <script>
+"use strict";
+const listHTML=items=>`<ul class="bullets">${items.map(s=>`<li>${esc(s)}</li>`).join("")}</ul>`;
+const sheet=(heading,body,num="",open=false)=>`<details class="sheet"${open?" open":""}><summary>${num?`<span class="phase-num">${esc(num)}</span>`:""}<span>${esc(heading)}</span></summary><div class="sheet-body">${body}</div></details>`;
+const checkSummary=(keys,labels,checked)=>`<div class="checklist compact">${keys.map(k=>`<div class="checkline ${checked.includes(k)?"done":""}">${icon(checked.includes(k)?"check":"circle")}<span>${esc(l(labels[k]))} <span class="sr-only">${checked.includes(k)?t("confirmed","אושר"):t("not confirmed","טרם אושר")}</span></span></div>`).join("")}</div>`;
+views.projects=()=>`${titleBlock(t("Funding portfolio  /  02","תיק המיזמים  /  02"),l(NAV.projects),t("Three community projects and one delivery allowance. Open a brief to see what the gift would support and what still needs approval.","שלושה מיזמים קהילתיים ועתודה אחת לביצוע. בכרטיס המיזם אפשר לראות מה התרומה נועדה לקדם ומה עדיין טעון אישור."),act("brief",t("Print bilingual brief","הדפסת תקציר דו־לשוני"),{icon:"print"}))}
+  ${note(esc(l(STATUS_NOTE)),"warm")}<div class="grid-2 top-gap">${S.projects.map(projectCard).join("")}</div>
+  ${section(t("Financial transparency","שקיפות כספית"),t("Allocation & progress","הקצאה והתקדמות"))}<div class="panel">${fundTable()}</div>`;
+function fundTable(){
+  return `<div class="table-wrap"><table><thead><tr>${[t("Allocation","הקצאה"),t("Budget","תקציב"),t("Unpaid pledges","התחייבויות פתוחות"),t("Cash received","כסף שהתקבל")].map(x=>`<th scope="col">${esc(x)}</th>`).join("")}</tr></thead><tbody>${S.projects.map(p=>`<tr><th scope="row">${esc(projectName(p.id))}</th><td>${money(p.goal)}</td><td>${money(S.stats[p.id].pledged-S.stats[p.id].received)}</td><td>${money(S.stats[p.id].received)}</td></tr>`).join("")}</tbody><tfoot><tr><th scope="row">${t("Total","סה״כ")}</th><td>${money(goal())}</td><td>${money(total("pledged")-total("received"))}</td><td>${money(total("received"))}</td></tr></tfoot></table></div>`;
+}
+function budgetTable(p){
+  return p.lines?.length?`<div class="table-wrap"><table><thead><tr><th>${t("Budget item","סעיף תקציבי")}</th><th>${t("Amount","סכום")}</th></tr></thead><tbody>${p.lines.map(r=>`<tr><td>${esc(r.label)}</td><td>${money(r.amount)}</td></tr>`).join("")}</tbody></table></div>`:`<p class="muted">${t("An itemized budget has not been entered yet.","טרם הוזן תקציב מפורט.")}</p>`;
+}
+actions["project-view"]=id=>{
+  const p=S.projects.find(x=>x.id===id);must(p,"missing");const d=PROJECT[id],st=S.stats[id];
+  modal(l(d.name),`<div class="stack"><div class="between"><strong class="display">${money(p.goal)}</strong>${badge(projectReady(p),p.approved?"green":"amber")}</div><p>${esc(p.scope||l(d.outcome))}</p>
+    ${note(esc(l(d.proof)),"warm")}<div class="grid-2"><div><span class="subtle-label">${t("Delivery owner","אחריות לביצוע")}</span><strong>${esc(p.owner||t("Not assigned","טרם נקבעה"))}</strong></div><div><span class="subtle-label">${t("Timing","לוח זמנים")}</span><strong>${esc(p.schedule||t("Not confirmed","טרם אושר"))}</strong></div></div>
+    <div><h3>${t("If approvals are delayed","אם האישורים מתעכבים")}</h3><p>${esc(p.fallback||t("Do not start unapproved work or redirect a restricted gift. Confirm revised terms with the receiving organization and donor.","לא מתחילים עבודה שלא אושרה ולא משנים ייעוד תרומה. מבררים תנאים מעודכנים עם הגוף המקבל ועם התורם."))}</p></div>
+    <div><div class="between"><strong>${t("Cash progress","התקדמות בתקבולים")}</strong><span>${money(st.received)} / ${money(p.goal)}</span></div><progress class="spaced" value="${Math.min(st.received,p.goal)}" max="${p.goal}" aria-label="${t("Cash progress","התקדמות בתקבולים")}"></progress></div>
+    <div><h3>${t("Itemized budget","תקציב מפורט")}</h3>${budgetTable(p)}</div><div><h3>${t("Readiness record","בדיקות מוכנות")}</h3>${checkSummary(PLAN.projectChecks,PCHECK,p.checks)}</div>
+    <div class="actions">${isManager()?act("project-edit",t("Edit budget & readiness","עריכת תקציב ומוכנות"),{id,cls:"primary",icon:"pen"}):""}${act("giving-info",t("View giving routes","הצגת מסלולי תרומה"),{id,icon:"globe"})}${act("project-print",t("Print project sheet","הדפסת דף מיזם"),{id,icon:"print"})}</div></div>`,t("Project brief","כרטיס מיזם"));
+};
+actions["project-edit"]=id=>{
+  must(isManager(),"forbidden");const p=clone(S.projects.find(x=>x.id===id));
+  modal(l(PROJECT[id].name),`<form id="project-form">${note(t("Use public-safe summaries in either language; your wording appears as entered. Store permits, quotations and sensitive documents with the responsible organization, not in this hub.","יש להשתמש בסיכומים המתאימים לפרסום. הטקסט יוצג בשפה שבה נכתב. היתרים, הצעות מחיר ומסמכים רגישים שומרים אצל הגוף האחראי ולא במרכז זה."))}
+    <div class="form-grid">${field(t("Project budget · ₪","תקציב המיזם · ₪"),input("goal",p.goal,'type="number" step="1" min="1" max="999999999" required'))}${field(t("Project lead","אחראי/ת המיזם"),input("owner",p.owner,'maxlength="100"'))}
+    ${field(t("Milestones and timing","אבני דרך ולוח זמנים"),input("schedule",p.schedule,'maxlength="160"'),"",true)}${field(t("Public scope and measurable outcome","היקף לפרסום ותוצאה מדידה"),area("scope",p.scope,600),"",true)}
+    ${field(t("Delay and contingency plan","תוכנית לעיכובים ולבלתי צפוי"),area("fallback",p.fallback,400),"",true)}
+    ${field(t("Budget lines · amount | description","סעיפי תקציב · סכום | תיאור"),area("lines",(p.lines||[]).map(r=>`${r.amount} | ${r.label}`).join("\n"),2000),t("One item per line. Example format: 5000 | Design review. Use actual estimates; the total must match your budget before clearance.","סעיף אחד בכל שורה. לדוגמה: 5000 | בדיקת תכנון. השתמשו באומדנים בפועל. הסכום הכולל חייב להתאים לתקציב לפני אישור המיזם."),true)}</div>
+    <div class="checklist">${PLAN.projectChecks.map(k=>check("check-"+k,l(PCHECK[k]),p.checks.includes(k))).join("")}</div>
+    <div class="note">${check("approved",t("The team has reviewed the evidence and cleared this scope for fundraising. This is not a legal permit.","הצוות בדק את התיעוד ואישר גיוס למטרה זו. אין מדובר בהיתר חוקי."),p.approved)}</div>${savebar()}</form>`,t("Manager · project readiness","ניהול · מוכנות מיזם"));
+  formHandler($("#project-form"),async data=>{const out={...p,goal:Number(data.get("goal")),checks:PLAN.projectChecks.filter(k=>data.has("check-"+k)),approved:data.has("approved")};for(const k of ["owner","schedule","scope","fallback"])out[k]=data.get(k).trim();
+    out.lines=data.get("lines").split(/\r?\n/).filter(s=>s.trim()).map(s=>{const match=s.match(/^\s*(\d+)\s*\|\s*(.+?)\s*$/);must(match,"budgetLines");return {amount:Number(match[1]),label:match[2]}});
+    validateProject(out);await change("project",out);saved()});
+};
+actions["project-print"]=id=>{
+  const p=S.projects.find(x=>x.id===id);must(p,"missing");
+  printContent(`<article class="brief-page" dir="${t("ltr","rtl")}">${practice&&!STANDALONE?`<p class="practice-print">${t("PRACTICE COPY · illustrative only","עותק תרגול · להמחשה בלבד")}</p>`:""}${eyebrow(t("Adorim · project sheet","אדורים · דף מיזם"))}<h1>${esc(l(PROJECT[id].name))}</h1><p>${esc(projectReady(p))} · ${money(p.goal)} · ${esc(fmtDay(localDay()))}</p><p>${esc(p.scope||l(PROJECT[id].outcome))}</p><h2>${t("Itemized budget","תקציב מפורט")}</h2>${budgetTable(p)}<p>${t("Owner and timing:","אחריות ולוח זמנים:")} ${esc(p.owner||"—")} · ${esc(p.schedule||"—")}</p><h2>${t("Permissions & contingency","אישורים ועתודה")}</h2><p>${esc(l(STATUS_NOTE))}</p><p>${esc(p.fallback||t("A delay plan has not yet been confirmed.","תוכנית לעיכובים טרם אושרה."))}</p><p>${t("Please ask the resident who shared this sheet for the verified receiving channel. Never transfer funds to a personal account.","לבירור הגוף המקבל והמסלול המאומת פנו לתושב ששיתף דף זה. אין להעביר כסף לחשבון פרטי.")}</p></article>`);
+};
+function briefPage(code){
+  const original=lang;lang=code;
+  try{return `<article class="brief-page" lang="${code}" dir="${t("ltr","rtl")}">${practice&&!STANDALONE?`<p class="practice-print">${t("PRACTICE COPY · illustrative only · not a solicitation","עותק תרגול · להמחשה בלבד · אינו בקשת תרומה")}</p>`:""}
+    ${eyebrow(t("Adorim Community Fund  /  Donor brief","הקרן הקהילתית של אדורים  /  תקציר לתורם"))}<h1>${t("Adorim: a place to grow","אדורים: מקום לצמוח בו")}</h1>
+    <p>${t("Residents are volunteering their time to develop spaces for young people, support local livelihoods and improve everyday safety. We invite a conversation about one project you care about.","תושבים מקדישים מזמנם בהתנדבות לפיתוח מרחבים לצעירים, לחיזוק הפרנסה המקומית ולשיפור הבטיחות היומיומית. נשמח לשוחח על מיזם אחד שקרוב לליבכם.")}</p>
+    <p><strong>${t("Current status","המצב כיום")}:</strong> ${esc(l(STATUS_NOTE))}</p><h2>${t("What a gift could support","מה תרומה יכולה לקדם")}</h2>
+    ${S.projects.map(p=>`<div class="print-block"><h3>${esc(l(PROJECT[p.id].name))} · ${money(p.goal)}</h3><p>${esc(l(PROJECT[p.id].intro))} <em>${esc(projectReady(p))}.</em></p></div>`).join("")}
+    <p><strong>${t("Combined planning total","סך התקציב המתוכנן")}: ${money(goal())}</strong></p><h2>${t("A responsible next step","הצעד הבא, באחריות")}</h2>
+    <p>${t("Ask the resident who shared this brief for a 20-minute introduction to the campaign lead. Before any gift, request the approved scope, itemized budget, receiving entity, written terms and the receipt rules for your country.","אפשר לבקש מהתושב ששיתף את התקציר לתאם היכרות בת 20 דקות עם מוביל הגיוס. לפני תרומה בקשו את היקף המיזם שאושר, פירוט התקציב, שם הגוף המקבל, תנאים בכתב וכללי קבלות למדינתכם.")}</p>
+    <p>${t("Never transfer funds to a resident. The team will confirm the next reporting date. Naming recognition and public use of names or photos require agreement.","אין להעביר כסף לחשבון תושב. הצוות יתאם מועד לדיווח הבא. הנצחה ופרסום שמות או תמונות מחייבים הסכמה.")}</p><p>${esc(fmtDay(localDay()))} · Adorim / אדורים</p></article>`}
+  finally{lang=original}
+}
+const printBrief=()=>briefPage("en")+briefPage("he");
+function printContent(html){closeModal();$("#print-area").innerHTML=html;window.print()}
+actions.brief=()=>printContent(printBrief());
+window.addEventListener("beforeprint",()=>{const p=$("#print-area");if(!p.childElementCount&&S?.user)p.innerHTML=printBrief()});
+window.addEventListener("afterprint",()=>$("#print-area").replaceChildren());
+
+const PHASES=[
+  [["Weeks 1–2 · Make it possible","שבועות 1–2 · מכינים תשתית"],[
+    ["Hold a 90-minute workshop with 8–12 volunteers. Choose a lead, coordinator, finance contact and project owners; invite captains to support groups of 5–8 households.","קיימו סדנה בת 90 דקות ל־8–12 מתנדבים. בחרו מוביל, רכז, אחראי כספים ואחראי מיזמים. רצוי שכל ראש קבוצה ילווה 5–8 משקי בית."],
+    ["Review budgets and two quotes per project. Confirm planning status, approvals, restrictions and the fallback if a project is delayed.","בדקו תקציבים ושתי הצעות מחיר לכל מיזם. בררו מצב תכנוני, אישורים, מגבלות ומה עושים במקרה של עיכוב."],
+    ["Verify a receiving route, create the bilingual case and identify 30 possible relationships privately. Do not collect money into personal accounts.","אמתו מסלול לקבלת תרומות, הכינו תקציר דו־לשוני ומפו באופן פרטי 30 קשרים אפשריים. אין לגבות כספים לחשבונות פרטיים."]]],
+  [["Week 3 · Train & target","שבוע 3 · מכשירים וממקדים"],[
+    ["In one 45-minute session, practice an opening, an ask and a respectful no. Each household privately considers five people, then selects the best three.","במפגש אחד בן 45 דקות תרגלו פתיחה, בקשה וקבלת סירוב בכבוד. כל משק בית יחשוב בפרטיות על חמישה אנשים ויבחר שלושה מתאימים."],
+    ["Score relationship strength, interest, likely fit and the best introducer. One resident owns each relationship; privately coordinate overlaps with the captain.","שקלו את חוזק הקשר, תחומי העניין, מידת ההתאמה ומי יכול לחבר. לכל קשר אחראי אחד; תיאום חפיפות נעשה בפרטיות מול הרכז."],
+    ["Aim to book ten meetings in three weeks. An introduction is a useful outcome, not a promise of a gift.","שאפו לקבוע עשר פגישות בשלושה שבועות. חיבור אישי הוא תוצאה מועילה, לא הבטחה לתרומה."]]],
+  [["Weeks 4–5 · Open conversations","שבועות 4–5 · פותחים שיחות"],[
+    ["Start with the strongest 15 relationships. Ask for 20 minutes, not money in a mass WhatsApp. For a second-circle lead, ask permission for a forwardable introduction.","התחילו ב־15 הקשרים החזקים. בקשו 20 דקות לשיחה ולא כסף בהודעת תפוצה. במעגל שני בקשו רשות להעביר הודעת היכרות."],
+    ["Before each meeting agree on one project, an exact ask, who tells the personal story, who answers budget questions and the next step.","לפני כל פגישה בחרו מיזם, סכום מדויק, מי יספר את הסיפור האישי, מי ישיב על שאלות התקציב ומה הצעד הבא."]]],
+  [["Weeks 6–7 · Ask & close","שבועות 6–7 · מבקשים וסוגרים"],[
+    ["Only make a formal ask once the project and giving route are cleared. Ask for a specific sum, then listen. Offer a smaller gift, a future conversation or an introduction without pressure.","בקשה רשמית מגישים רק לאחר אישור המיזם ומסלול התרומה. מבקשים סכום מוגדר ומקשיבים. אפשר להציע סכום קטן יותר, שיחה עתידית או חיבור, ללא לחץ."],
+    ["The team sends a written summary within 24 hours: use of funds, terms, payment date, verified giving channel, receipt position and next update. Keep pledges separate from cash.","הצוות שולח סיכום בכתב בתוך 24 שעות: ייעוד, תנאים, תאריך תשלום, מסלול מאומת, תנאי קבלה ועדכון הבא. מפרידים בין התחייבות לכסף שהתקבל."],
+    ["Seek a matching pledge if helpful. Confirm its cap, dates and conditions in writing; never count a match twice.","אפשר לבקש התחייבות להכפלת תרומות. מתעדים תקרה, מועדים ותנאים ולא סופרים תרומה כפולה."]]],
+  [["Week 8 · Thank, report & decide","שבוע 8 · מודים, מדווחים ומחליטים"],[
+    ["The resident thanks the donor personally within 48 hours; finance arranges the proper receipt. Revisit undecided prospects once at an agreed time.","התושב מודה אישית בתוך 48 שעות והגזברות מטפלת בקבלה המתאימה. חוזרים למתלבטים פעם אחת במועד שהוסכם."],
+    ["Review meeting, ask, pledge, receipt and referral counts. Choose whether to extend, resize the first phase or pause. Never rank households publicly.","בדקו פגישות, בקשות, התחייבויות, תקבולים וחיבורים. החליטו אם להאריך, לשנות את היקף השלב הראשון או לעצור. אין לדרג משפחות בפומבי."],
+    ["Send quarterly spending and milestone updates, and a completion report. Get written consent before changing a restricted use, publishing names or using photos.","שולחים עדכון רבעוני על הוצאות ואבני דרך ודוח סיום. שינוי ייעוד או פרסום שמות ותמונות מחייבים הסכמה בכתב."]]]
+];
+let bookTab="sprint";
+const bookTabs={sprint:["Eight-week sprint","מהלך לשמונה שבועות"],roles:["People & meetings","אנשים ופגישות"],strategy:["Funding strategy","אסטרטגיית הגיוס"]};
+function tabset(options,chosen,action){return `<div class="tabs">${Object.keys(options).map(k=>`<button type="button" data-act="${action}" data-id="${k}" aria-pressed="${chosen===k}">${esc(l(options[k]))}</button>`).join("")}</div>`}
+function bookContent(){
+  if(bookTab==="sprint")return `<div class="stack">${PHASES.map(([head,items],i)=>sheet(l(head),listHTML(items.map(l)),"0"+(i+1),i===0)).join("")}</div>`;
+  if(bookTab==="roles")return `<div class="grid-2"><div class="panel sage"><h2>${t("What only a resident can do","מה שרק התושב יכול לעשות")}</h2>${listHTML([
+    t("Connector: make three permission-based introductions.","מחבר/ת: שלושה חיבורים בהסכמה."),t("Advocate: tell your personal story in two meetings.","שגריר/ה: לספר את הסיפור האישי בשתי פגישות."),
+    t("Ask partner: make one well-prepared major-gift request.","שותף/ה לבקשה: בקשת תרומה משמעותית אחת לאחר הכנה."),t("Ambassador: invite five smaller community gifts.","נציג/ת קהילה: לפנות לחמש תרומות קהילתיות קטנות יותר."),
+    t("Send a personal thank-you. Count introductions as useful work, not only money.","שלחו תודה אישית. חיבורים נחשבים לתרומה למאמץ, גם כשלא התקבל כסף.")])}</div>
+    <div class="panel"><h2>${t("What stays central","מה נשאר באחריות הצוות")}</h2>${listHTML([t("Campaign lead: choose priorities, join major meetings, decide and support volunteers.","מוביל הגיוס: סדרי עדיפויות, פגישות גדולות, החלטות וסיוע למתנדבים."),
+    t("Coordinator and captains: schedule meetings, discreetly prevent duplicate approaches and clear overdue actions.","הרכז וראשי הקבוצות: תיאום פגישות, מניעת כפילות בדיסקרטיות וטיפול במשימות באיחור."),
+    t("Finance and project owners: budgets, agreements, suppliers, receipt questions and donor reporting.","הגזברות ואחראי המיזמים: תקציבים, הסכמים, ספקים, קבלות ודיווח לתורמים."),
+    t("Local and overseas co-chairs open doors. Professional advisers check planning, legal, tax and safety issues.","יושבי ראש מקומיים ובחו״ל פותחים דלתות. אנשי מקצוע בודקים תכנון, משפט, מס ובטיחות.")])}</div></div>
+    <div class="stack top-gap">${sheet(t("A 20-minute donor conversation","שיחת תורם ב־20 דקות"),listHTML([t("3 min · Personal connection. Why this matters to your family.","3 דקות · קשר אישי. מדוע העניין חשוב למשפחה שלכם."),t("4 min · Listen and connect the need to their interests.","4 דקות · הקשבה וחיבור הצורך לתחומי העניין שלהם."),t("5 min · One project, its budget, permissions and outcome.","5 דקות · מיזם אחד, תקציב, אישורים ותוצאה."),t("5 min · Questions. Say “I’ll check” when you do not know.","5 דקות · שאלות. כשלא יודעים אומרים ״אבדוק״."),t("1 min · A specific, appropriate ask. Then listen.","דקה · בקשה מתאימה ומוגדרת. ואז מקשיבים."),t("2 min · Agree a next step, an owner and a date.","2 דקות · קובעים צעד, אחראי ותאריך.")]),"",true)}
+    ${sheet(t("A volunteer-friendly weekly check-in","בדיקה שבועית שמתאימה למתנדבים"),`<p>${t("Keep it to 20–30 minutes. Review aggregate counts, help requests, obstacles and the next three decisions. No roll call of donors, no household league table. Let residents submit updates asynchronously.","הגבילו ל־20–30 דקות. עברו על מספרים מצטברים, בקשות עזרה, חסמים ושלוש החלטות קרובות. אין מקריאים שמות תורמים ואין טבלת דירוג למשפחות. אפשר לעדכן גם בלי להשתתף בישיבה.")}</p>`)}</div>`;
+  return `<div class="split equal"><article class="panel"><h2>${t("Israel: trust first","ישראל: מתחילים באמון")}</h2><p>${t("Start with relatives, former residents, local businesses, suppliers, entrepreneurs and family foundations. Ask a mutual contact for a meeting. Value in-kind offers separately and accept them only against approved needs.","התחילו בקרובים, תושבים לשעבר, עסקים, ספקים, יזמים וקרנות משפחתיות. בקשו פגישה באמצעות מכר משותף. מעריכים תרומה בעין בנפרד ומקבלים אותה רק לצורך שאושר.")}</p></article>
+    <article class="panel sage"><h2>${t("Overseas: go narrow","חו״ל: מתחילים ממוקד")}</h2><p>${t("Choose one or two regions with real relationships. Approach families, synagogues, congregations, donor-advised fund holders and family foundations through personal introductions. Prepare an English brief and confirm the exact receiving and receipt route for that jurisdiction.","בחרו אזור אחד או שניים עם קשרים אמיתיים. פנו דרך היכרות למשפחות, בתי כנסת, קהילות, בעלי קרנות מונחות־תורם וקרנות משפחתיות. הכינו תקציר באנגלית ובדקו מי מקבל את הכסף ומהם תנאי הקבלה במדינה.")}</p></article></div>
+    ${section(t("Feasibility test · illustrative, not commitments","בדיקת היתכנות · להמחשה בלבד"),t("One way to reach ₪900,000","דרך אפשרית לגייס ₪900,000"))}
+    <div class="panel"><div class="table-wrap"><table><thead><tr>${[t("Level","דרגה"),t("Gifts","מספר תרומות"),t("Ask","סכום לפנייה"),t("Subtotal","סך ביניים")].map(x=>`<th>${esc(x)}</th>`).join("")}</tr></thead><tbody>${[[t("Founding","מייסדים"),4,75000],[t("Lead","מובילים"),10,30000],[t("Major","משמעותיים"),20,10000],[t("Community","קהילה"),50,2000]].map(([n,k,v])=>`<tr><td>${esc(n)}</td><td>${k}</td><td>${money(v)}</td><td>${money(v*k)}</td></tr>`).join("")}</tbody></table></div>
+    <p class="muted top-gap">${t("An alternative: 25 × ₪20,000, 10 × ₪30,000 and 50 × ₪2,000. These are models, not forecasts. An opportunity is not a secured gift: map more prospects than gifts needed and resize the plan based on actual responses.","חלופה: 25 תרומות של ₪20,000, עשר של ₪30,000 וחמישים של ₪2,000. אלה מודלים ולא תחזיות. הזדמנות אינה תרומה מובטחת: מפים יותר קשרים ממספר התרומות הדרוש ומתאימים את התוכנית לתגובות בפועל.")}</p></div>
+    <div class="panel top-gap"><h2>${t("After the resident pilot","אחרי המהלך הקהילתי")}</h2><p>${t("The larger planning horizon is 6–9 months. Use a quiet phase to test up to 75 warm prospects; consider a public launch only after 50–60% is credibly committed. Then consider a local gathering, two overseas briefings and a final 30-day challenge. Publish monthly progress and steward donors quarterly.","אופק התכנון הכולל הוא 6–9 חודשים. בשלב שקט בוחנים עד 75 קשרים חמים; שוקלים השקה פומבית רק לאחר התחייבויות מבוססות ל־50%–60% מהיעד. בהמשך אפשר לקיים מפגש מקומי, שני תדרוכים בחו״ל ומאמץ סיום בן 30 יום. מפרסמים התקדמות חודשית ומעדכנים תורמים מדי רבעון.")}</p></div>`;
+}
+views.playbook=()=>`${titleBlock(t("Field guide  /  03","מדריך למגייסים  /  03"),l(NAV.playbook),t("A small mission for each household, with the difficult administrative work carried by the team.","משימה קטנה לכל משפחה, כשהעבודה המנהלית המורכבת נשארת בידי הצוות."))}${tabset(bookTabs,bookTab,"book-tab")}${bookContent()}`;
+actions["book-tab"]=id=>{bookTab=id;render()};
+
+const scripts={open:["First-circle opening","פתיחה למעגל ראשון"],intro:["Second-circle introduction","חיבור למעגל שני"],ask:["Specific gift request","בקשה לסכום מוגדר"],close:["24-hour summary","סיכום בתוך 24 שעות"],thanks:["Personal thank-you","תודה אישית"],no:["After a decline","לאחר סירוב"],update:["Quarterly update","עדכון רבעוני"]};
+let kit={type:"open",project:"youth",ask:25000};
+function scriptText(config=kit){
+  const p=projectName(config.project),sum=ils(config.ask||0);
+  return ({
+    open:t(`Hi [name], I’m volunteering with neighbors in Adorim on a project close to my heart: ${p}. I thought of you because [personal reason]. Would you have 20 minutes this week to hear what we’re planning?`,
+      `שלום [שם], אני מתנדב/ת עם שכנים מאדורים למען מיזם שקרוב לליבי: ${p}. חשבתי דווקא עליך כי [סיבה אישית]. נוכל לדבר השבוע במשך 20 דקות על מה שאנחנו מתכננים?`),
+    intro:t(`Would you feel comfortable forwarding this note to one person who cares about ${p}? Please check with them before sharing any contact details.\n\n“Someone I know in Adorim is volunteering on ${p}. Would you like a short introduction? No pressure at all.”`,
+      `יהיה לך נוח להעביר הודעה לאדם אחד שחשוב לו הנושא של ${p}? חשוב לקבל רשות לפני שמשתפים פרטי קשר.\n\n״מישהו שאני מכיר/ה מאדורים מתנדב בנושא ${p}. יתאים לך שאחבר ביניכם לשיחה קצרה? בלי שום התחייבות.״`),
+    ask:t(`You mentioned that [their priority] matters to you. Would you consider a gift of ${sum} toward ${p}, specifically for [approved milestone]? We can share the written budget and verified giving route. What would you like to understand before deciding?`,
+      `אמרת ש[נושא שחשוב לתורם] קרוב לליבך. האם תשקול/י תרומה של ${sum} עבור ${p}, לטובת [אבן דרך שאושרה]? נוכל להעביר תקציב כתוב ומסלול תרומה מאומת. מה חשוב לך לברר לפני החלטה?`),
+    close:t(`Thank you for discussing ${p}. My understanding is [agreed amount and restricted use]. The receiving organization is [verified entity]. The agreed payment date is [date]. Attached are its giving instructions and receipt terms for your jurisdiction. [Owner] will update you on [date]. Please confirm or correct this summary.`,
+      `תודה על השיחה על ${p}. להבנתי סוכם על [סכום וייעוד מוסכמים]. הגוף המקבל הוא [גוף מאומת]. מועד התשלום המוסכם הוא [תאריך]. מצורפים פרטי המסלול המאומת ותנאי הקבלה למדינתך. [אחראי/ת] יעדכן ב[מועד]. נשמח לאישור או לתיקון הסיכום.`),
+    thanks:t(`Thank you for your support for ${p}. It means a great deal to me that you took the time to listen and help. The team will follow up about the receipt and update you by [agreed date]. May we stay in touch in the way you prefer?`,
+      `תודה על התמיכה ב${p}. משמעותי עבורי שפינית זמן להקשיב ולעזור. הצוות יטפל בנושא הקבלה ויעדכן עד [מועד מוסכם]. נשמח לשמור על קשר בדרך שנוחה לך.`),
+    no:t("Thank you for hearing me out. I respect your decision and won’t follow up on this request. If you ever want an update, you’re welcome to reach out.","תודה על ההקשבה. אני מכבד/ת את ההחלטה ולא אחזור אליך בעניין הבקשה הזאת. אם תרצה/י עדכון בעתיד, אשמח לשמוע."),
+    update:t(`Here is your update on ${p}: [milestone actually achieved], [cash received and spent], and [remaining work or delay]. The next update is due [date]. If the scope needs to change, we will discuss the written terms with you before reallocating restricted funds.`,
+      `הנה עדכון על ${p}: [אבן דרך שהושלמה בפועל], [כסף שהתקבל והוצא] ו[עבודה שנותרה או עיכוב]. העדכון הבא יישלח עד [תאריך]. אם נדרש שינוי בהיקף, נברר איתך את התנאים בכתב לפני שינוי ייעוד של תרומה.`)
+  })[config.type];
+}
+function faq(){return `<div class="stack">${[
+  [t("Can we promise a build date or naming rights?","אפשר להבטיח מועד בנייה או הנצחה?"),l(STATUS_NOTE)+" "+t("Naming needs confirmed ownership, permissions and a recognition policy.","הנצחה מחייבת בעלות מוסדרת, הרשאות ומדיניות הוקרה.")],
+  [t("How do overseas receipts work?","איך פועלות קבלות בחו״ל?"),t("Only the authorized receiving entity can confirm eligibility. Check the donor’s jurisdiction and gift type, including donor-advised funds. Never promise deductibility, use an informal pass-through or treat a pledge as a receipt.","רק הגוף המקבל המורשה יכול לאשר זכאות. בדקו מדינה וסוג תרומה, כולל קרנות מונחות־תורם. אין להבטיח זיכוי מס, להשתמש במתווך לא מוסדר או להציג התחייבות כקבלה.")],
+  [t("What can we share?","מה אפשר לשתף?"),t("Share the bilingual donor brief. Do not share the team pipeline, private contact lists or sensitive safety information. Use stories, photos and public donor names only with permission.","שתפו את התקציר הדו־לשוני. אין לשתף רשימות פניות, פרטי קשר או מידע בטיחותי רגיש. סיפורים, תמונות ושמות תורמים מפרסמים רק בהסכמה.")],
+  [t("What if they prefer to help in another way?","מה אם מעדיפים לעזור בדרך אחרת?"),t("Thank them. If invited, discuss a different amount, future gift, introduction, approved in-kind support or a documented match. Do not push for a referral after a clear no.","מודים להם. אם מתאים להם, אפשר לדבר על סכום אחר, תרומה עתידית, חיבור, תרומה בעין שאושרה או הכפלה מתועדת. אחרי סירוב ברור לא לוחצים לקבל הפניה.")]
+].map(([q,a])=>sheet(q,`<p>${esc(a)}</p>`)).join("")}</div>`}
+views.toolkit=()=>`${titleBlock(t("Field guide  /  04","מדריך למגייסים  /  04"),l(NAV.toolkit),t("Words you can make your own. Choose a situation, personalize the brackets and reach out privately. Nothing is sent by this site.","נוסחים שאפשר להפוך לאישיים. בחרו מצב, התאימו את הטקסט בסוגריים ופנו באופן פרטי. האתר אינו שולח הודעות."),act("brief",t("Bilingual donor brief","תקציר דו־לשוני לתורם"),{icon:"print"}))}
+  <div class="panel"><div class="toolbar" id="kit-controls">${field(t("Conversation","סוג שיחה"),select("type",opts(Object.keys(scripts),k=>l(scripts[k]),kit.type)))}${field(t("Project","מיזם"),select("project",opts(S.projects.map(p=>p.id),projectName,kit.project)))}${field(t("Ask amount · ₪","סכום לבקשה · ₪"),input("ask",kit.ask,'type="number" min="1" max="999999999" step="1"'))}</div>
+  ${note(t("Use the ask and payment summary only after clearance. Replace every bracket with confirmed information. No tax promises or personal transfers.","בקשה וסיכום לתשלום מתאימים רק לאחר אישור. יש להחליף את כל הסוגריים במידע בדוק. ללא הבטחת זיכוי מס או העברה לחשבון פרטי."),"warm")}
+  <blockquote class="quote-box" id="script-result">${esc(scriptText())}</blockquote><div class="actions">${act("copy-script",t("Copy this script","העתקת הנוסח"),{cls:"primary",icon:"copy"})}</div></div>
+  ${section(t("Before promising anything","לפני שמבטיחים דבר"),t("Donor questions","שאלות של תורמים"))}${faq()}`;
+document.addEventListener("input",e=>{if(e.target.closest("#kit-controls")){const k=e.target.name;kit[k]=k==="ask"?Number(e.target.value):e.target.value;$("#script-result").textContent=scriptText()}});
+actions["copy-script"]=()=>{if(kit.type==="ask")must(Number.isSafeInteger(kit.ask)&&kit.ask>0&&kit.ask<=999999999,"askAmount");return copyText(scriptText())};
+
+</script>
+  <script>
+"use strict";
+let teamTab="pipeline",teamFilter={owner:"",stage:"",q:"",attention:""};
+const teamTabs={pipeline:["Pipeline & handoffs","פניות והעברות לטיפול"],ready:["Readiness & giving","מוכנות ומסלולי תרומה"],people:["People & access","אנשים והרשאות"],report:["Reports","דוחות"]};
+const ownerName=id=>S.members.find(m=>m.id===id)?.name||"—";
+const activityName={lead:["Opportunity updated","הזדמנות עודכנה"],removed:["Opportunity removed","הזדמנות נמחקה"],project:["Project reviewed","מיזם עודכן"],campaign:["Campaign settings updated","הגדרות הגיוס עודכנו"],invited:["Invitation issued","הונפקה הזמנה"],joined:["Resident joined","הצטרף תושב"],access:["Access changed","הרשאה שונתה"],task:["Team task updated","משימת צוות עודכנה"],taskDone:["Team task completed","משימת צוות הושלמה"]};
+function sprintTiming(){
+  const start=S.campaign.start;if(!start)return t("No start date set","לא נקבע תאריך התחלה");
+  const days=(Date.parse(localDay()+"T12:00:00Z")-Date.parse(start+"T12:00:00Z"))/86400000;
+  return days<0?t("Starts ","מתחיל ב־")+fmtDay(start):days>=56?t("Eight-week review due","הגיע הזמן לסיכום שמונת השבועות"):t("Sprint week ","שבוע במהלך: ")+(1+Math.floor(days/7))+" / 8";
+}
+function pipelineTable(){
+  const list=S.leads.filter(a=>(!teamFilter.owner||a.owner===Number(teamFilter.owner))&&(!teamFilter.stage||a.stage===teamFilter.stage)&&a.alias.toLowerCase().includes(teamFilter.q.trim().toLowerCase())&&
+    (!teamFilter.attention||(teamFilter.attention==="help"?a.help:!!(a.next&&a.due&&a.due<=localDay(7)&&a.stage!=="declined"))));
+  return list.length?`<div class="result-count">${t("Records in view","רשומות בתצוגה")}: ${list.length}</div><div class="table-wrap"><table><thead><tr>${[t("Alias / owner","כינוי / אחראי"),t("Project / stage","מיזם / שלב"),t("Planned ask","בקשה מתוכננת"),t("Next step","צעד הבא"),t("Actions","פעולות")].map(v=>`<th scope="col">${esc(v)}</th>`).join("")}</tr></thead><tbody>${list.map(a=>`<tr><td><strong><bdi>${esc(a.alias)}</bdi></strong><br>${esc(ownerName(a.owner))}</td><td>${esc(projectName(a.project))}<br>${badge(l(STAGE[a.stage]))}</td><td>${money(a.ask)}</td><td>${esc(a.next||"—")}<br><small>${esc(a.due?dueLabel(a):"—")}</small></td><td><div class="actions">${mini("lead-edit",t("Open opportunity","פתיחת הזדמנות")+" "+a.alias,"arrow",a.id)}${a.stage!=="declined"?act("track-followup",a.help?t("View task","הצגת המשימה"):t("Send to board","העברה ללוח"),{id:a.id,cls:"small",icon:"board"}):""}</div></td></tr>`).join("")}</tbody></table></div>`:empty(t("No matching opportunities","אין הזדמנויות מתאימות"),t("Adjust the filters or add the first opportunity with its relationship owner.","שנו מסננים או הוסיפו הזדמנות ראשונה בצירוף אחראי הקשר."));
+}
+function pipelinePanel(){
+  const help=S.leads.filter(a=>a.help),soon=upcoming(S.leads).filter(a=>a.due<=localDay(7));
+  return `<div class="split equal"><article class="panel tinted">${eyebrow(t("Coordinator queue","תור הרכז"))}<h2>${t("Team help requested","ממתינים לסיוע הצוות")} · ${help.length}</h2>${help.length?actionRows(help,5):`<p>${t("No open handoffs. Residents can ask for help on any opportunity.","אין בקשות פתוחות. תושבים יכולים לבקש עזרה בכל הזדמנות.")}</p>`}</article>
+  <article class="panel"><div class="section-head"><div>${eyebrow(t("This week","השבוע"))}<h2>${t("Due or overdue","קרוב או באיחור")} · ${soon.length}</h2></div>${icon("clock")}</div>${soon.length?actionRows(soon,5):`<p>${t("Nothing due in the next seven days.","אין פעולות הממתינות בשבעת הימים הקרובים.")}</p>`}</article></div>
+  ${section(t("Private team view","תצוגה פרטית לצוות"),t("Relationship pipeline","מעקב אחר קשרים"),act("lead-new",t("Add opportunity","הוספת הזדמנות"),{cls:"primary small",icon:"plus"}))}
+  <div class="panel">${note(t("Use aliases to coordinate privately. Check possible overlaps with captains before anyone approaches the same donor; matching aliases alone cannot identify duplicates.","השתמשו בכינויים לתיאום פרטי. בררו חפיפות עם ראשי הקבוצות לפני פנייה לאותו תורם; כינויים לבדם אינם מספיקים לזיהוי כפילויות."))}
+  <div id="team-filters" class="toolbar top-gap">${field(t("Find alias","חיפוש כינוי"),input("q",teamFilter.q,'type="search"'))}${field(t("Relationship owner","אחראי/ת קשר"),select("owner",`<option value="">${t("All owners","כל האחראים")}</option>`+opts(S.members.map(m=>String(m.id)),k=>ownerName(Number(k)),teamFilter.owner)))}${field(t("Stage","שלב"),select("stage",`<option value="">${t("All stages","כל השלבים")}</option>`+opts(PLAN.stages,k=>l(STAGE[k]),teamFilter.stage)))}${field(t("Attention","לטיפול"),select("attention",opts(["","help","due"],k=>k==="help"?t("Team help requested","התבקש סיוע"):k==="due"?t("Due within 7 days","יעד עד שבוע"):t("All records","כל הרשומות"),teamFilter.attention)))}</div>
+  <div id="team-results">${pipelineTable()}</div></div>`;
+}
+function readinessPanel(){
+  const c=S.campaign;
+  return `<div class="split equal"><article class="panel"><div class="section-head"><div>${eyebrow(t("01  /  Governance","01  /  ניהול תקין"))}<h2>${t("Campaign controls","בקרות הגיוס")}</h2></div>${badge(c.checks.length+" / "+PLAN.controls.length)}</div>${checkSummary(PLAN.controls,CONTROL,c.checks)}<hr class="rule"><p class="meta">${icon("calendar","sm")}${esc(sprintTiming())}</p><div class="actions top-gap">${act("controls-edit",t("Edit controls & start date","עריכת בקרות ותאריך התחלה"),{cls:"primary small",icon:"pen"})}</div></article>
+  <article class="panel sage">${eyebrow(t("02  /  Project clearance","02  /  אישור מיזמים"))}<h2>${t("Ready to ask?","מוכנים לבקש?")}</h2><p class="muted">${t("A formal ask needs both a cleared scope and a verified route for the donor’s market. Introductions can begin earlier.","בקשה רשמית מחייבת אישור להיקף המיזם ולמסלול במדינת התורם. היכרויות אפשר להתחיל קודם.")}</p><div class="rows top-gap">${S.projects.map(p=>`<div class="list-row"><div class="row-main"><strong>${esc(projectName(p.id))}</strong><small>${esc(projectReady(p))} · ${p.checks.length} / 6</small></div>${mini("project-edit",t("Review","בדיקה")+" "+projectName(p.id),"pen",p.id)}</div>`).join("")}</div></article></div>
+  ${section(t("03  /  Receiving partners","03  /  גופים מקבלים"),t("Giving routes by market","מסלולי תרומה לפי מדינה"))}<div class="panel"><p class="bottom-gap">${t("Confirm the entity can accept funds for this specific activity and jurisdiction. Do not enter bank details. For “Other,” identify the exact country in the terms and check each donor individually.","ודאו שהגוף רשאי לקבל כספים לפעילות ולמדינה המסוימות. אין להזין פרטי בנק. ב״אחר״ ציינו את המדינה המדויקת בתנאים ובדקו כל תורם בנפרד.")}</p>
+  ${PLAN.markets.map(m=>`<div class="list-row"><span class="tile-icon">${icon("globe")}</span><div class="row-main"><strong>${esc(l(MARKET[m]))}</strong><small>${esc(c.routes[m].entity||t("No receiving entity confirmed","לא אושר גוף מקבל"))}</small></div>${badge(c.routes[m].verified?t("Verified by team","אומת בידי הצוות"):t("Not verified","טרם אומת"),c.routes[m].verified?"green":"amber")}${mini("route-edit",t("Edit route","עריכת מסלול")+" "+l(MARKET[m]),"pen",m)}</div>`).join("")}</div>`;
+}
+function peoplePanel(){
+  return `<div class="panel"><div class="section-head"><div>${eyebrow(t("Private membership","חברות פרטית"))}<h2>${t("Campaign team & residents","צוות הגיוס והתושבים")}</h2></div>${!practice?act("invite",t("Create resident invite","יצירת הזמנה לתושב"),{cls:"primary",icon:"plus"}):""}</div>
+    ${note(practice?t("These two fictional profiles let you rehearse the handoff. Real accounts and one-time invitations are available only in the shared installation.","שני הפרופילים הפיקטיביים נועדו לתרגול העברת טיפול. חשבונות אמיתיים והזמנות חד־פעמיות זמינים רק בהתקנה משותפת."):t("Send each invitation privately. It can be used once, expires after 72 hours and grants resident access only. Additional managers are created by the server operator.","שלחו כל הזמנה באופן פרטי. ניתן לממש אותה פעם אחת בתוך 72 שעות והיא מעניקה הרשאת תושב בלבד. מנהלים נוספים ייווצרו בידי מפעיל השרת."))}
+    <div class="rows top-gap">${S.members.map(m=>`<div class="list-row"><span class="avatar" aria-hidden="true">${esc(m.name.charAt(0))}</span><div class="row-main"><strong>${esc(m.name)}</strong><small><bdi>${esc(m.handle)}</bdi> · ${esc(roleName(m.role))}${m.contribution?" · "+esc(l(CONTRIBUTION[m.contribution])):""}</small></div>${badge(m.active?t("Active","פעיל"):t("Paused","מושהה"),m.active?"green":"clay")}${!practice&&m.role==="resident"?act("access",m.active?t("Pause","השהיה"):t("Restore","חידוש"),{id:m.id,cls:"small"}):""}</div>`).join("")}</div></div>`;
+}
+function signals(){
+  const a=S.leads,gifts=a.filter(x=>x.pledged>0),timed=a.filter(x=>x.firstPledgeAt&&x.created);
+  return [[t("Opportunities","הזדמנויות"),a.length],[t("Contacted at least once","נוצר קשר לפחות פעם"),a.filter(x=>x.contactedOnce).length],
+    [t("Opportunities with a meeting held","הזדמנויות שבהן התקיימה פגישה"),a.filter(x=>x.meetingHeld).length],[t("Specific asks to date","בקשות מוגדרות עד כה"),a.filter(x=>x.askedOnce).length],
+    [t("Written commitments","התחייבויות בכתב"),a.filter(x=>x.pledged>0).length],[t("Introductions recorded","חיבורים שנרשמו"),a.filter(x=>x.stage==="referred").length],
+    [t("Requests for team help","בקשות עזרה מהצוות"),a.filter(x=>x.help).length],
+    [t("Average written commitment","סכום התחייבות ממוצע"),gifts.length?ils(total("pledged")/gifts.length):"—"],
+    [t("Average days from entry to first pledge","ימים בממוצע מהזנה להתחייבות ראשונה"),timed.length?Math.round(timed.reduce((v,x)=>v+(Date.parse(x.firstPledgeAt)-Date.parse(x.created))/86400000,0)/timed.length):"—"]];
+}
+function reportPanel(){
+  const commitments=total("pledged"),percent=Math.round(commitments/goal()*100),quiet=total("received");
+  return `${stats()}<div class="panel"><div class="section-head"><div>${eyebrow(t("Finance  /  Whole shekels","כספים  /  שקלים שלמים"))}<h2>${t("Funding by purpose","גיוס לפי ייעוד")}</h2></div>${icon("wallet")}</div>${fundTable()}<hr class="rule"><div class="between"><strong>${t("Quiet-phase progress","התקדמות בשלב השקט")}</strong>${badge(percent+"%")}</div>
+    <progress class="spaced" value="${Math.min(commitments,goal())}" max="${goal()}" aria-label="${t("Committed share of goal","שיעור ההתחייבויות מהיעד")}"></progress><p class="muted">${t("Public-launch checkpoint: 50–60% committed, not just requested. Confirm receipt before publishing cash totals.","נקודת בדיקה לפני השקה פומבית: התחייבויות ל־50%–60%, לא רק בקשות. יש לאמת תקבולים לפני פרסום סכומים.")} ${t("Confirmed cash:","תקבול מאומת:")} ${money(quiet)}.</p>
+    <div class="actions top-gap">${act("report-print",t("Print aggregate report","הדפסת דוח מצטבר"),{cls:"primary",icon:"print"})}${act("report-csv",t("Export finance CSV","ייצוא דוח כספי CSV"),{icon:"download"})}</div></div>
+    <div class="split equal top-gap"><div class="panel"><h2>${t("Weekly signals","מדדים שבועיים")}</h2>${signals().map(([n,v])=>`<div class="list-row"><span class="row-main">${esc(n)}</span><strong>${v}</strong></div>`).join("")}</div>
+    <div class="panel"><h2>${t("Recent changes","שינויים אחרונים")}</h2><p class="subtle-label">${t("Latest 20 changes. Cash figures below are changes, not balances.","20 השינויים האחרונים. הסכומים כאן הם שינויים בתקבול, לא יתרות.")}</p>${S.activity.length?S.activity.map(a=>`<div class="list-row"><div class="row-main"><strong>${esc(l(activityName[a.kind]))}</strong><small>${esc(a.actor)} · ${esc(fmtDay(a.stamp))}${a.kind==="lead"||a.kind==="removed"?` · <bdi>${esc(S.leads.find(v=>v.id===a.item)?.alias||a.item.slice(-6))}</bdi>`:""}</small></div>${a.delta?money(a.delta):""}</div>`).join(""):`<p class="muted top-gap">${t("No changes recorded yet.","עדיין לא נרשמו שינויים.")}</p>`}</div></div>`;
+}
+views.team=()=>{
+  if(!isManager())return `${titleBlock(t("Managing team  /  05","הצוות המנהל  /  05"),l(NAV.team),t("The team coordinates the work that residents should not have to carry alone.","הצוות מרכז את העבודה שתושבים לא צריכים לשאת לבדם."))}<div class="panel sage"><h2>${practice?t("Try the other side of a handoff.","נסו את הצד השני של העברת הטיפול."):t("Manager access required","נדרשת הרשאת מנהל")}</h2><p class="bottom-gap">${practice?t("Switch to the fictional manager to see requests for help, approve a project, verify a giving route and review the campaign totals. This never changes real account permissions.","עברו לדמות המנהל כדי לראות בקשות עזרה, לאשר מיזם, לאמת מסלול תרומה ולבחון את הסכומים. פעולה זו לעולם אינה משנה הרשאות אמיתיות."):t("Your opportunities are available under My outreach.","ההזדמנויות שלכם נמצאות תחת הפניות שלי.")}</p>${practice?act("switch-role",t("Enter manager practice","כניסה לתרגול ניהולי"),{cls:"primary",icon:"team"}):jump("outreach",l(NAV.outreach),"primary")}</div>`;
+  return `${titleBlock(t("Managing team  /  05","הצוות המנהל  /  05"),l(NAV.team),t("Work the handoffs, clear the blockers and keep every shekel attributable to its purpose.","טפלו בבקשות הסיוע, הסירו חסמים ושמרו על ייעודו של כל שקל."),badge(sprintTiming()))}${tabset(teamTabs,teamTab,"team-tab")}${({pipeline:pipelinePanel,ready:readinessPanel,people:peoplePanel,report:reportPanel})[teamTab]()}`;
+};
+actions["team-tab"]=id=>{teamTab=id;render()};
+document.addEventListener("input",e=>{if(e.target.closest("#team-filters")){teamFilter[e.target.name]=e.target.value;$("#team-results").innerHTML=pipelineTable()}});
+actions["controls-edit"]=()=>{
+  must(isManager(),"forbidden");const c=clone(S.campaign);
+  modal(t("Controls & sprint date","בקרות ותאריך התחלה"),`<form id="controls-form">${field(t("First day of week one","היום הראשון של השבוע הראשון"),input("start",c.start,'type="date"'))}${note(t("The first five checks are required for a verified giving route. Mark evidence you have actually reviewed, not work you intend to do.","חמש הבדיקות הראשונות נדרשות לאימות מסלול. יש לסמן תיעוד שבדקתם בפועל, לא עבודה עתידית."),"warm")}<div class="checklist">${PLAN.controls.map(k=>check(k,l(CONTROL[k]),c.checks.includes(k))).join("")}</div>${savebar()}</form>`);
+  formHandler($("#controls-form"),async d=>{c.start=d.get("start");c.checks=PLAN.controls.filter(k=>d.has(k));validateCampaign(c);await change("campaign",c);saved()});
+};
+actions["route-edit"]=m=>{
+  must(isManager()&&PLAN.markets.includes(m),"forbidden");const c=clone(S.campaign),r=c.routes[m];
+  modal(l(MARKET[m]),`<form id="route-form">${note(t("Confirm eligibility with the receiving organization. A checkbox records the team’s review; it does not confer legal or tax status.","יש לבדוק זכאות מול הגוף המקבל. סימון הבדיקה מתעד את עבודת הצוות ואינו מקנה מעמד משפטי או מעמד מס."),"warm")}
+    ${field(t("Receiving organization","הגוף המקבל"),input("entity",r.entity,'maxlength="120"'))}${field(t("Verified HTTPS giving page","דף תרומה מאומת ב־HTTPS"),input("url",r.url,'type="url" maxlength="500" dir="ltr" placeholder="https://…"'))}
+    ${field(t("Receipt terms, country and restrictions","תנאי קבלה, מדינה ומגבלות"),area("terms",r.terms,450))}
+    ${m==="other"?field(t("Exact two-letter country code","קוד מדינה מדויק בן שתי אותיות"),input("country",r.country||"",'maxlength="2" dir="ltr" placeholder="FR"')):""}
+    <div><h3>${t("Projects this recipient can accept","מיזמים שהגוף רשאי לקבל עבורם תרומות")}</h3><div class="checklist top-gap">${S.projects.map(p=>check("p-"+p.id,projectName(p.id),r.projects?.includes(p.id))).join("")}</div></div>
+    ${check("verified",t("I verified this organization and its terms for this project activity and market.","בדקתי את הארגון ואת תנאיו לפעילות ולמדינה זו."),r.verified)}${savebar()}</form>`,t("Giving route","מסלול תרומה"));
+  formHandler($("#route-form"),async d=>{c.routes[m]={entity:d.get("entity").trim(),url:d.get("url").trim(),terms:d.get("terms").trim(),country:(d.get("country")||"").trim().toUpperCase(),projects:S.projects.map(p=>p.id).filter(k=>d.has("p-"+k)),verified:d.has("verified")};validateCampaign(c);await change("campaign",c);saved()});
+};
+actions["giving-info"]=id=>{
+  const p=S.projects.find(x=>x.id===id);must(p,"missing");
+  const eligible=PLAN.markets.filter(m=>clearFor(S,id,m,S.campaign.routes[m].country));
+  modal(t("Giving routes","מסלולי תרומה"),`<div class="stack">${note(t("Never use a personal account. Check the donor’s location and confirm that the receiving entity accepts this exact restricted use. This hub never takes payment or issues a tax receipt.","אין להשתמש בחשבון פרטי. בודקים את מדינת התורם ואת הסכמת הגוף המקבל לייעוד המדויק. המרכז אינו סולק תשלומים ואינו מנפיק קבלות מס."),"warm")}
+  ${eligible.length?eligible.map(m=>{const r=S.campaign.routes[m];return `<div class="card">${eyebrow(l(MARKET[m])+(r.country?" · "+r.country:""))}<h3>${esc(r.entity)}</h3><p>${esc(r.terms)}</p>${practice?badge(t("Practice only · no payment link","תרגול בלבד · ללא קישור לתשלום"),"amber"):`<a class="btn small primary" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${icon("link","sm")}${t("Open organization’s giving page","פתיחת דף התרומה של הגוף המקבל")}</a>`}</div>`}).join(""):
+    empty(t("No giving route available for this project yet.","עדיין אין מסלול תרומה זמין למיזם הזה."),t("You can request a conversation. Do not request or transfer funds until the team has cleared both the project and the appropriate giving route.","אפשר לבקש שיחת היכרות. אין לבקש או להעביר כסף עד שהצוות יאשר גם את המיזם וגם את מסלול התרומה המתאים."))}</div>`,projectName(id));
+};
+actions.invite=async()=>{must(isManager()&&!practice,"practiceOnly");const i=await change("invite",{});modal(t("Resident invitation","הזמנה לתושב/ת"),`<p>${t("Privately share the workspace address and this code. The recipient chooses “Use an invitation” and sets their own passphrase.","שתפו בפרטיות את כתובת המרכז וקוד זה. מקבל ההזמנה בוחר ״מימוש הזמנה״ וקובע סיסמה משלו.")}</p><code class="code spaced" dir="ltr" id="invite-value">${esc(i.code)}</code><p class="muted">${t("Expires:","בתוקף עד:")} ${esc(new Date(i.expires*1000).toLocaleString(locale()))}</p><div class="actions top-gap">${act("invite-copy",t("Copy invitation","העתקת הזמנה"),{cls:"primary",icon:"copy"})}</div>`)};
+actions["invite-copy"]=()=>copyText(`${location.origin}\n${$("#invite-value").textContent}`);
+actions.access=id=>{
+  must(isManager()&&!practice,"forbidden");const m=S.members.find(x=>x.id===Number(id));must(m?.role==="resident","missing");
+  modal(m.active?t("Pause resident access?","להשהות גישה לתושב?"):t("Restore resident access?","לחדש גישה לתושב?"),`<form id="access-form"><p><strong>${esc(m.name)}</strong> · ${t("Existing records stay with the team. Pausing an account immediately revokes its sessions.","הרשומות הקיימות נשמרות אצל הצוות. השהיית חשבון מבטלת מיד את ההתחברויות שלו.")}</p>${savebar(t("Confirm change","אישור השינוי"))}</form>`);
+  formHandler($("#access-form"),async()=>{await change("member",{id:m.id,active:!m.active});saved()});
+};
+actions["report-print"]=()=>{
+  must(isManager(),"forbidden");
+  printContent(`<article class="brief-page" dir="${t("ltr","rtl")}">${practice&&!STANDALONE?`<p class="practice-print">${t("PRACTICE DATA · not actual campaign results","נתוני תרגול · לא תוצאות הגיוס בפועל")}</p>`:""}${eyebrow(t("Adorim community fund","הקרן הקהילתית של אדורים"))}<h1>${t("Campaign progress","התקדמות הגיוס")}</h1><p>${esc(fmtDay(localDay()))} · ${esc(sprintTiming())}</p><p>${t("Budgets are estimates unless cleared. Cash is not added to unpaid balances twice.","התקציבים הם אומדנים עד לאישור. התקבולים אינם נספרים שוב כחלק מההתחייבויות הפתוחות.")}</p>${fundTable()}<h2>${t("Outreach signals","מדדי פנייה")}</h2>${signals().map(([n,v])=>`<p>${esc(n)}: ${v}</p>`).join("")}<h2>${t("Next review","בדיקה הבאה")}</h2><p>${t("At the next weekly check-in review overdue actions, handoffs and commitments awaiting payment. Share donor-level details only with authorized people.","בבדיקה השבועית הבאה עברו על פעולות באיחור, בקשות סיוע והתחייבויות הממתינות לתשלום. פרטי תורמים משתפים רק עם גורמים מורשים.")}</p></article>`);
+};
+actions["report-csv"]=()=>{
+  must(isManager(),"forbidden");const name=practice?"PRACTICE":"SHARED";
+  const rows=[["workspace","as_of","allocation","status","budget_ils","total_committed_ils","unpaid_ils","received_ils"],...S.projects.map(p=>[name,localDay(),p.id,p.approved?"team-cleared":"estimate",p.goal,S.stats[p.id].pledged,S.stats[p.id].pledged-S.stats[p.id].received,S.stats[p.id].received])];
+  const url=URL.createObjectURL(new Blob(["\ufeff"+rows.map(r=>r.join(",")).join("\r\n")+"\r\n"],{type:"text/csv;charset=utf-8"}));
+  const a=document.createElement("a");a.href=url;a.download=`adorim-${name.toLowerCase()}-${localDay()}.csv`;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);
+};
+
+</script>
+  <script>
+"use strict";
+let circleFocus="",circleQuery="";
+const boardLabel=()=>t("Task board","לוח משימות");
+const taskState={todo:["To do","לביצוע"],doing:["In progress","בטיפול"],done:["Done","הושלם"]};
+const taskPriority={high:["High","גבוהה"],normal:["Normal","רגילה"],low:["Low","נמוכה"]};
+const initials=name=>Array.from((name||"").trim()).slice(0,1).join("").toUpperCase()||"·";
+const peopleLabel=()=>t("My circle","המעגל שלי");
+const addLabel=()=>t("Add a person","הוספת אדם");
+function shortDate(day){
+  if(!day)return "—";
+  if(day===localDay())return t("Today","היום");
+  if(day===localDay(1))return t("Tomorrow","מחר");
+  return new Intl.DateTimeFormat(locale(),{day:"numeric",month:"short"}).format(new Date(day+"T12:00:00"));
+}
+function dueChip(a){return a.due?`<span class="time-chip ${a.due<localDay()?"late":""}">${icon("calendar","sm")}${esc((a.due<localDay()?t("Overdue · ","באיחור · "):"")+shortDate(a.due))}</span>`:""}
+function handoffLabel(a){
+  const s=S.handoffs[a.id];
+  if(s==="doing")return t("Team working on it","בטיפול הצוות");
+  if(s==="todo"||a.help)return t("Sent to team","הועבר לצוות");
+  if(s==="done")return t("Handoff closed","בקשת העזרה נסגרה");
+  return "";
+}
+function deskRibbon(manager=false){
+  const role=manager?t("Team workspace","מרחב הצוות"):t("Resident workspace","מרחב התושבים");
+  const end=STANDALONE?(manager?act("switch-role",t("Resident view","תצוגת תושב"),{cls:"switch-view",arrow:true}):`<span>${esc(fmtDay(localDay()))}</span>`):practice?`<span class="demo-only">${t("Fictional data","נתוני תרגול")}</span>`+act("switch-role",manager?t("Resident view","תצוגת תושב"):t("Team view","תצוגת צוות"),{cls:"switch-view",arrow:true}):`<span>${esc(fmtDay(localDay()))}</span>`;
+  return `<div class="desk-ribbon"><span class="space-label"><i></i>${esc(role)}</span><div class="ribbon-end">${end}</div></div>`;
+}
+function circleCandidates(){
+  const people=mine().filter(a=>a.stage!=="declined"&&(a.due||a.help));
+  return people.sort((a,b)=>Number(a.help)-Number(b.help)||(a.due||"9999").localeCompare(b.due||"9999")||a.alias.localeCompare(b.alias));
+}
+function atlasArt(slots,selected){
+  const node=(p,i)=>`<button class="star-node node-${i} ${p?"occupied":"vacant"} ${p?.id===selected?.id&&p?"selected":""}" type="button" data-act="${p?"focus-person":"person-new"}"${p?` data-id="${esc(p.id)}" aria-pressed="${p.id===selected?.id}"`:""} aria-label="${esc(p?t("Focus on ","התמקדות ב־")+p.alias:addLabel())}"><b aria-hidden="true">${p?esc(initials(p.alias)):icon("plus","sm")}</b>${p?`<span><bdi>${esc(p.alias)}</bdi></span>`:""}</button>`;
+  return `<div class="atlas"><div class="atlas-canvas"><svg viewBox="0 0 520 270" class="orbit-art" aria-hidden="true">
+    <defs><radialGradient id="orb" cx="30%" cy="20%" r="85%"><stop stop-color="#f8ffe5"/><stop offset=".23" stop-color="#c5edcd"/><stop offset=".48" stop-color="#9ca4ec"/><stop offset=".73" stop-color="#8980da"/><stop offset="1" stop-color="#3c3a86"/></radialGradient>
+    <linearGradient id="ribbon" x1="0" x2="1" y1="0.8" y2="0.1"><stop stop-color="#a7e4c4"/><stop offset=".43" stop-color="#a3a2eb"/><stop offset=".72" stop-color="#e7d8ff"/><stop offset="1" stop-color="#8e87d5"/></linearGradient>
+    <pattern id="atlas-grid" width="21" height="21" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#c6c2ff" opacity=".34"/></pattern>
+    <clipPath id="sphere-clip"><circle cx="260" cy="136" r="51"/></clipPath></defs>
+    <rect width="520" height="270" fill="url(#atlas-grid)"/><g transform="rotate(-16 260 136)" fill="none" stroke="#cbc6fc"><ellipse cx="260" cy="136" rx="205" ry="81" opacity=".32"/><ellipse cx="260" cy="136" rx="162" ry="65" opacity=".65" stroke-dasharray="2 7"/><ellipse cx="260" cy="136" rx="116" ry="47" opacity=".38"/></g>
+    <g class="float-sphere"><ellipse cx="260" cy="186" rx="43" ry="5" fill="#211e57" opacity=".43"/><circle cx="260" cy="136" r="51" fill="url(#orb)"/>
+    <g clip-path="url(#sphere-clip)" stroke="#f4f1ff" stroke-width="1" fill="none" opacity=".44"><path d="M197 157q28-55 59-46t64-33m-125 91q33-58 66-48t65-36m-125 96q36-55 68-48t67-38m-124 94q34-50 67-47t65-36m-125 92q35-50 71-45t57-37"/></g>
+    <ellipse cx="260" cy="136" rx="78" ry="16" transform="rotate(-24 260 136)" fill="none" stroke="url(#ribbon)" stroke-width="5" stroke-dasharray="206 150" stroke-dashoffset="6"/></g>
+    <g fill="#e1ffc1"><circle cx="73" cy="169" r="3"/><circle cx="414" cy="59" r="2"/><circle cx="330" cy="172" r="2"/><path d="m356 45 2-6 2 6 6 2-6 2-2 6-2-6-6-2Z"/></g><g stroke="#d7ccff" opacity=".62"><path d="M59 66h9m-4.5-4.5v9M428 184h9m-4.5-4.5v9"/></g></svg>
+    ${[0,1,2].map(i=>node(slots[i],i)).join("")}</div><span class="atlas-caption">${icon("outreach","sm")}${t("Your circle · tap a point","המעגל שלך · בחרו נקודה")}</span></div>`;
+}
+function quickScript(a){
+  const type=a?.stage==="declined"?"no":a?.stage==="received"?"thanks":a?.circle==="second"?"intro":"open";
+  return scriptText({type,project:a?.project||"youth",ask:0});
+}
+function residentHome(){
+  const candidates=circleCandidates(),a=candidates.find(p=>p.id===circleFocus)||candidates[0],slots=candidates.slice(0,3);
+  if(a&&!slots.some(p=>p.id===a.id))slots[2]=a;
+  const title=!a?(mine().length?t("You're all caught up.","אין פעולה שממתינה לך."):t("Start with one person.","מתחילים באדם אחד.")):
+    a.help?t("Your team has this.","הצוות מטפל בזה."):a.stage==="identified"?t("Open a conversation.","פותחים שיחה."):t("Time to follow up.","עוד צעד בשיחה.");
+  const body=a?(a.help?handoffLabel(a):displayEntry(a.id,a.next)):t("Choose someone you know. A nickname is enough to get started.","חשבו על מישהו שאתם מכירים. כינוי מספיק כדי להתחיל.");
+  return `${deskRibbon()}<section class="focus-hero"><div class="focus-copy"><div class="hero-tag"><i></i>${t("Your next move","הצעד הבא שלך")}</div>
+    <h1>${esc(title)}</h1>${a?`<div class="focus-person"><span class="tiny-face">${esc(initials(a.alias))}</span><bdi>${esc(a.alias)}</bdi><i></i><span>${esc(projectName(a.project))}</span></div>`:""}
+    <p>${esc(body)}</p><div class="hero-actions">${act(a?"person-update":"person-new",a?(a.help?t("View update","הצגת עדכון"):t("Log an update","עדכון קצר")):addLabel(),{cls:"lime",id:a?.id,arrow:true})}${a&&!a.help?dueChip(a):""}</div></div>${atlasArt(slots,a)}</section>
+    <div class="resident-duo"><section class="studio-panel progress-panel"><div class="panel-top"><span class="shape-icon mint">${icon("outreach")}</span>${eyebrow(t("Your contribution","החלק שלך"))}</div><h2>${t("A circle of three","מעגל של שלושה")}</h2>
+    <p>${t("Think of three people. Start two conversations. Make one specific ask, with the team’s help.","חושבים על שלושה אנשים, פותחים שתי שיחות ומגישים בקשה אחת בעזרת הצוות.")}</p>${mission()}<div class="panel-end">${jump("outreach",peopleLabel(),"bare small",true)}${act("person-new",addLabel(),{cls:"small",icon:"plus"})}</div></section>
+    <section class="studio-panel prompt-panel"><div class="panel-top"><span class="shape-icon lavender">${icon("toolkit")}</span>${eyebrow(t("Conversation starter","פתיח לשיחה"))}</div><h2>${t("Find your words","איך מתחילים?")}</h2><p class="sample-line">${a?.help?t("The team has your request. You can still prepare a personal note.","הבקשה התקבלה בצוות. בינתיים אפשר להכין כמה מילים אישיות."):t("A short opening you can adapt before you call or write.","נוסח קצר שאפשר להתאים לפני שיחה או הודעה.")}</p>
+    <div class="script-preview">${icon("toolkit","sm")}<span>${a?.circle==="second"?t("“Would you feel comfortable introducing me…?”","״יהיה לך נוח להכיר לי מישהו…?״"):t("“I thought of you because…”","״חשבתי דווקא עליך כי…״")}</span></div>
+    ${act("person-script",t("Open a starter","פתיחת נוסח"),{id:a?.id,cls:"bare small",arrow:true})}</section></div>`;
+}
+function personChips(a){
+  const h=handoffLabel(a);
+  return `${badge(l(STAGE[a.stage]))}${h?badge(h,a.help?"amber":"green"):""}`;
+}
+function residentRows(){
+  const all=mine(),q=circleQuery.trim().toLocaleLowerCase(),list=all.filter(a=>(a.alias+" "+projectName(a.project)).toLocaleLowerCase().includes(q));
+  return list.length?`<div class="people-list">${list.map((a,i)=>`<article class="person-card"><span class="person-face tint-${i%3}">${esc(initials(a.alias))}</span><div class="person-body"><h3><bdi>${esc(a.alias)}</bdi></h3><div class="person-meta">${esc(projectName(a.project))} · ${esc(l(CIRCLE[a.circle]))}</div><div class="tags">${personChips(a)}</div></div><div class="person-next">${a.next?`<span class="subtle-label">${t("Next step","הצעד הבא")}</span><strong>${esc(a.next)}</strong>`:""}${a.stage!=="declined"?dueChip(a):""}</div>${act("person-update",t("Update","עדכון"),{id:a.id,cls:"small",arrow:true})}</article>`).join("")}</div>`:
+    empty(q?t("No matching people.","לא נמצאו התאמות."):t("One person is enough to start.","מספיק אדם אחד כדי להתחיל."),q?t("Try another nickname or project.","נסו כינוי או מיזם אחר."):t("Use a nickname, not contact details.","השתמשו בכינוי ולא בפרטי קשר."),q?act("clear-circle",t("Clear search","ניקוי חיפוש")):act("person-new",addLabel(),{cls:"primary",icon:"plus"}));
+}
+function circleView(){
+  return `${deskRibbon()}${titleBlock(STANDALONE?t("Saved privately on your phone","נשמר בפרטיות במכשיר שלך"):t("Private to you and the coordinating team","לעיניך ולעיני הצוות המתאם"),peopleLabel(),t("Pick a person to log a conversation or pass a warm lead to the team.","בחרו אדם כדי לעדכן על שיחה או להעביר פנייה לטיפול הצוות."),act("person-new",addLabel(),{cls:"primary",icon:"plus"}))}
+    ${mine().length>4||circleQuery?`<div class="circle-search">${field(t("Find a person","חיפוש במעגל"),input("circleQuery",circleQuery,'type="search" id="circle-search"'))}</div>`:""}<div id="out-results">${residentRows()}</div>
+    <div class="circle-foot">${icon("lock","sm")}<span>${t("Keep names and phone numbers with you. Coordinate possible overlaps privately.","שמות ומספרי טלפון נשארים אצלכם. בודקים חפיפות בפרטיות.")}</span>${act("my-contribution",S.user.contribution?l(CONTRIBUTION[S.user.contribution]):t("My volunteer role","התפקיד שלי"),{cls:"bare small"})}</div>`;
+}
+function handoffSummary(a,requestText=""){
+  const noteLine=requestText||a.next||t("Ready for team coordination","מוכן לתיאום והמשך טיפול של הצוות");
+  return t(
+    `Adorim Fundraising — Lead passed to the team\nNickname: ${a.alias}\nProject: ${projectName(a.project)}\nRelationship: ${l(CIRCLE[a.circle])}\nHow the team can help: ${noteLine}\n(Contact details will be shared privately directly with the coordinator.)`,
+    `גיוס אדורים — העברת פנייה לטיפול הצוות\nכינוי: ${a.alias}\nמיזם: ${projectName(a.project)}\nמעגל קשר: ${l(CIRCLE[a.circle])}\nאיך הצוות יכול לעזור: ${noteLine}\n(פרטי הקשר יועברו ישירות ובפרטיות לרכז.)`
+  );
+}
+function openHandoffShare(a,requestText=""){
+  const msg=handoffSummary(a,requestText);
+  const wa="https://api.whatsapp.com/send?text="+encodeURIComponent(msg);
+  modal(t("Pass this lead to the team","העברת הפנייה לטיפול הצוות"),`<p>${t("Your personal list stays private on your phone. Send this summary to the campaign coordinator so the team can take it from here:","הרשימה האישית שלך נשארת פרטית במכשיר. שלחו את התקציר הזה לרכז הגיוס כדי שהצוות ימשיך מכאן:")}</p>
+    <blockquote id="handoff-msg" class="quote-box">${esc(msg)}</blockquote>
+    <div class="actions"><a class="btn primary" href="${esc(wa)}" target="_blank" rel="noopener noreferrer">${icon("outreach","sm")}${t("Send via WhatsApp","שליחה בוואטסאפ")}</a>${act("copy-handoff",t("Copy message","העתקת ההודעה"),{icon:"copy"})}${act("close",t("Done","סיום"),{cls:"bare small"})}</div>`,t("Team handoff","העברה לצוות"));
+}
+actions["copy-handoff"]=()=>copyText($("#handoff-msg").textContent);
+actions["share-handoff"]=id=>openHandoffShare(quickDetails(id));
+actions["clear-circle"]=()=>{circleQuery="";render()};
+document.addEventListener("input",e=>{if(e.target.id==="circle-search"){circleQuery=e.target.value;$("#out-results").innerHTML=residentRows()}});
+actions["focus-person"]=id=>{circleFocus=id;render();Array.from(document.querySelectorAll(".star-node")).find(el=>el.dataset.id===id)?.focus({preventScroll:true})};
+actions["person-script"]=id=>{
+  const a=mine().find(p=>p.id===id),s=quickScript(a);
+  modal(t("A personal opening","פתיח אישי"),`<p>${t("Replace the brackets and make this sound like you. Nothing is sent automatically.","החליפו את הסוגריים והתאימו את המילים לסגנון שלכם. דבר לא נשלח אוטומטית.")}</p><blockquote id="quick-script" class="quote-box">${esc(s)}</blockquote><div class="actions">${jump("toolkit",t("All scripts","לכל הנוסחים"),"bare small")}${act("copy-quick",t("Copy text","העתקת הנוסח"),{cls:"primary",icon:"copy"})}</div>`,t("Conversation kit","ערכת שיחה"));
+};
+actions["copy-quick"]=()=>copyText($("#quick-script").textContent);
+actions["person-new"]=()=>{
+  modal(addLabel(),`<form id="quick-add"><p>${practice&&!STANDALONE?t("Use a fictional nickname in this practice workspace.","בסביבת התרגול משתמשים בכינוי פיקטיבי."):t("Use a private nickname. No phone number or email needed.","השתמשו בכינוי פרטי. אין צורך בטלפון או בדוא״ל.")}</p>
+    ${field(t("Their nickname","הכינוי שלהם"),input("alias","",`maxlength="60" required autocomplete="off" placeholder="${t("e.g. Circle A","למשל: מעגל א׳")}"`))}
+    ${field(t("Which project might interest them?","איזה מיזם עשוי לעניין אותם?"),select("project",`<option value="">${t("Choose a project","בחירת מיזם")}</option>`+opts(S.projects.map(p=>p.id),projectName,""),"required"))}
+    <details class="quick-extra"><summary>${t("Circle and reminder","מעגל ותזכורת")}</summary><div class="form-grid">${field(t("Relationship","הקשר ביניכם"),select("circle",opts(["first","second"],k=>l(CIRCLE[k]),"first")))}${field(t("First reminder","תזכורת ראשונה"),input("due",localDay(3),'type="date" required'))}</div></details>
+    ${savebar(t("Add to my circle","הוספה למעגל שלי"))}</form>`,peopleLabel());
+  $("#quick-add [name=alias]").focus();
+  formHandler($("#quick-add"),async d=>{
+    const before=new Set(mine().map(a=>a.id));
+    const p={...blankLead(S.user.id),alias:d.get("alias").trim(),project:d.get("project"),circle:d.get("circle"),due:d.get("due"),market:"other",country:"",
+      next:d.get("circle")==="second"?t("Ask for a warm introduction","לבקש חיבור אישי"):t("Invite them to a short conversation","להזמין לשיחה אישית קצרה")};
+    validateLead(p,null,S);await change("lead",p);circleFocus=mine().find(a=>!before.has(a.id)&&a.alias===p.alias)?.id||"";circleQuery="";saved();
+  });
+};
+const UPDATES={
+  contact:["I reached out","יצרתי קשר"],met:["We met","נפגשנו"],help:["Ask the team for help","בקשת עזרה מהצוות"],
+  intro:["I made the introduction","ערכתי את ההיכרות"],finished:["My follow-up is done","סיימתי את המעקב"],later:["Set a reminder","קביעת תזכורת"]
+};
+const UPDATE_ICONS={contact:"outreach",met:"team",intro:"link",finished:"check",help:"hand",later:"calendar"};
+function updateOptions(a){
+  const open=["identified","contacted","meeting"].includes(a.stage);
+  return [...(open?["contact",a.circle==="second"?"intro":"met"]:[]),...(["received","referred"].includes(a.stage)&&a.next?["finished"]:[]),
+    ...(!a.help&&a.stage!=="declined"?["help"]:[]),...(a.stage!=="declined"?["later"]:[])];
+}
+function quickDetails(id){const a=S.leads.find(p=>p.id===id);must(a,"missing");return a}
+actions["person-update"]=id=>{
+  const a=clone(quickDetails(id)),options=updateOptions(a),h=handoffLabel(a);
+  modal(a.alias,`<div class="quick-context"><span class="shape-icon lavender">${icon(PROJECT[a.project].icon)}</span><div><strong>${esc(projectName(a.project))}</strong><div class="tags">${personChips(a)}</div></div></div>
+    ${options.length?`<form id="quick-update"><fieldset class="update-choices"><legend>${t("What’s the update?","מה השתנה?")}</legend>${options.map(k=>`<label class="choice-tile"><input type="radio" name="outcome" value="${k}" required><span>${icon(UPDATE_ICONS[k])}${esc(l(UPDATES[k]))}</span></label>`).join("")}</fieldset>
+    <div id="quick-follow" class="stack" hidden>${field(t("Next step","הצעד הבא"),input("next","","maxlength='160'"))}${field(t("Remind me on","להזכיר לי בתאריך"),input("due",a.due||localDay(3),"type='date'"))}</div>
+    <div id="help-hint" hidden>${note(STANDALONE?t("Passing this lead prepares a ready-to-send WhatsApp or text summary for the campaign coordinator. Your private list stays on your phone.","העברת הפנייה תכין עבורך הודעת וואטסאפ או טקסט מוכנה לרכז הגיוס. הרשימה הפרטית נשארת רק במכשיר שלך."):t("This creates one task for the team. You’ll see here when it is picked up or completed.","הבקשה תיצור משימה אחת לצוות. כאן תוכלו לראות כשהטיפול יתחיל או יסתיים."))}${field(t("What do you need help with? (optional)","במה דרושה עזרה? (לא חובה)"),input("request","","maxlength='160'"))}</div>
+    ${savebar(t("Save update","שמירת העדכון"))}</form>`:note(t("No follow-up is scheduled after a decline.","לא נקבעת פנייה נוספת לאחר סירוב."))}
+    ${STANDALONE&&a.help?`<div class="actions top-gap">${act("share-handoff",t("Send handoff to team via WhatsApp / copy","שליחת הפנייה לצוות בוואטסאפ / העתקה"),{id,cls:"primary small",icon:"outreach"})}</div>`:""}
+    <details class="quick-extra"><summary>${t("More options","אפשרויות נוספות")}</summary><div class="actions">${act("lead-edit",t("Full record, gifts & settings","רשומה מלאה, תרומות והגדרות"),{id,cls:"small"})}${a.stage!=="declined"&&!a.pledged?act("person-decline",t("Record a decline","תיעוד סירוב"),{id,cls:"bare small"}):""}</div></details>`,h||peopleLabel());
+  const form=$("#quick-update");if(!form)return;
+  form.addEventListener("change",e=>{
+    if(e.target.name!=="outcome")return;
+    const k=e.target.value,needsDate=k!=="help"&&k!=="finished";
+    $("#quick-follow").hidden=!needsDate;$("#help-hint").hidden=k!=="help";
+    form.elements.next.required=needsDate;form.elements.due.required=needsDate;
+    form.elements.next.value=k==="met"?t("Agree the next step from our meeting","לסכם את הצעד הבא מהפגישה"):k==="contact"?t("Arrange a short conversation","לתאם שיחה קצרה"):k==="intro"?t("Check that both people connected","לוודא ששני הצדדים יצרו קשר"):a.next||t("Follow up as agreed","לחזור במועד שסוכם");
+    form.elements.due.value=k==="later"?localDay(7):localDay(k==="met"?1:3);
+  });
+  formHandler(form,async d=>{
+    const k=d.get("outcome");must(options.includes(k));
+    const p={...a};
+    if(k==="help"){p.help=true;if(d.get("request").trim()){p.next=d.get("request").trim();p.due=p.due||localDay(2)}}
+    else if(k==="finished"){p.next="";p.due=""}
+    else {p.next=d.get("next").trim();p.due=d.get("due");
+      if(k==="contact"&&p.stage==="identified")p.stage="contacted";if(k==="met"){p.stage="meeting";p.meetingHeld=true}if(k==="intro")p.stage="referred"}
+    validateLead(p,a,S);await change("lead",p);circleFocus="";
+    if(k==="help"&&STANDALONE){render();openHandoffShare(p,d.get("request").trim())}
+    else{saved();if(k==="help")notify(t("Sent to the team’s task board.","הבקשה נשלחה ללוח המשימות של הצוות."))}
+  });
+};
+actions["person-decline"]=id=>{
+  const a=clone(quickDetails(id));must(!a.pledged,"finance");
+  modal(t("End this approach?","לסיים את הפנייה?"),`<form id="quick-decline"><p>${t("This clears the reminder and closes any open handoff. The record stays in your circle.","התזכורת תוסר ובקשת עזרה פתוחה תיסגר. הרשומה תישאר במעגל שלך.")}</p>${savebar(t("Record decline","תיעוד סירוב"))}</form>`);
+  formHandler($("#quick-decline"),async()=>{await change("lead",{...a,stage:"declined",next:"",due:"",help:false});saved()});
+};
+views.resources=()=>`${deskRibbon(isManager())}${titleBlock(t("Adorim field guide","המדריך של אדורים"),t("What you need, when you need it.","כלים לרגע הנכון."),t("Choose a conversation starter, a project to discuss or a guide to the campaign.","כאן אפשר לבחור נוסח לשיחה, מיזם להצגה או מדריך לגיוס."))}
+  <div class="resource-grid">${[["toolkit","01",t("What should I say?","מה כדאי להגיד?"),t("Openings, introductions and thank-yous.","פתיחים, חיבורים והודעות תודה.")],["projects","02",t("What are we funding?","למה מגייסים?"),t("Project briefs, estimates and approved giving routes.","כרטיסי מיזם, אומדנים ומסלולי תרומה מאומתים.")],["playbook","03",t("How does this work?","איך זה עובד?"),t("An eight-week guide for volunteers and coordinators.","מדריך לשמונה שבועות לתושבים ולרכזים.")]].map(([k,n,head,sub],i)=>`<a class="resource-tile theme-${i}" href="#${k}"><div class="resource-glyph">${icon(k)}<b>${n}</b></div><h2>${esc(head)}</h2><p>${esc(sub)}</p><span>${esc(l(NAV[k]))}${icon("arrow","sm")}</span></a>`).join("")}</div>
+  <div class="download-strip">${icon("file")}<div><strong>${t("Bilingual donor brief","תקציר דו־לשוני לתורם")}</strong><small>${t("A shareable overview without contact details.","סקירה לשיתוף ללא פרטי קשר.")}</small></div>${act("brief",t("Print or save PDF","הדפסה או שמירה כ־PDF"),{icon:"print",cls:"small"})}</div>`;
+
+</script>
+  <script>
+"use strict";
+let boardUI={filter:"all",priority:"",owner:"",query:"",layout:"board",lane:"todo"},dragging=null;
+const taskFor=id=>{must(isManager(),"forbidden");const w=S.tasks.find(x=>x.id===id);must(w,"missing");return w};
+const taskLead=w=>w.leadId?S.leads.find(p=>p.id===w.leadId):null;
+const workTitle=w=>displayEntry(w.id,w.title)||t("Help with ","עזרה בקשר עם ")+(taskLead(w)?.alias||t("a conversation","אחד התורמים"));
+const workOwner=w=>w.assignee?ownerName(w.assignee):t("Unassigned","ללא אחראי");
+const lanes=["todo","doing","done"];
+const filters={open:["Open tasks","משימות פתוחות"],mine:["My open tasks","פתוחות שלי"],unassigned:["Unassigned","ללא אחראי"],overdue:["Overdue","באיחור"]};
+const isLate=w=>w.status!=="done"&&w.due<localDay();
+function inScope(w,k){return k==="all"||(w.status!=="done"&&(k==="open"|| (k==="mine"?w.assignee===S.user.id:k==="unassigned"?!w.assignee:isLate(w))))}
+function matchWork(){
+  const q=boardUI.query.trim().toLocaleLowerCase();
+  return S.tasks.filter(w=>inScope(w,boardUI.filter)&&(!boardUI.priority||w.priority===boardUI.priority)
+    &&(boardUI.owner===""||w.assignee===Number(boardUI.owner))&&(!q||[workTitle(w),taskLead(w)?.alias||"",workOwner(w)].some(v=>v.toLocaleLowerCase().includes(q))))
+    .sort((a,b)=>a.status==="done"&&b.status==="done"?b.completed.localeCompare(a.completed):
+      Number(isLate(b))-Number(isLate(a))||["high","normal","low"].indexOf(a.priority)-["high","normal","low"].indexOf(b.priority)||a.due.localeCompare(b.due)||workTitle(a).localeCompare(workTitle(b)));
+}
+function boardMeter(){
+  const counts=lanes.map(k=>S.tasks.filter(w=>w.status===k).length),total=S.tasks.length;
+  let start=0;
+  const arcs=counts.map((n,i)=>{const len=total?n/total*100:0,offset=start;start+=len;
+    return n?`<circle class="arc-${lanes[i]}" cx="60" cy="60" r="48" pathLength="100" stroke-dasharray="${Math.max(.1,len-(len<100?1.8:0))} 100" stroke-dashoffset="${-offset}"/>`:""}).join("");
+  return `<div class="board-meter"><svg viewBox="0 0 120 120" aria-hidden="true"><g fill="none" stroke-width="9" transform="rotate(-90 60 60)"><circle cx="60" cy="60" r="48" stroke="#48467d"/>${arcs}</g><text x="60" y="65" text-anchor="middle" fill="white" font-size="29" font-weight="700">${counts[0]+counts[1]}</text><text x="60" y="81" text-anchor="middle" fill="#dbd6fa" font-size="10">${t("OPEN","פתוחות")}</text></svg><div class="meter-legend">${lanes.map((k,i)=>`<span><i class="swatch ${k}"></i>${esc(l(taskState[k]))}<b>${counts[i]}</b></span>`).join("")}</div></div>`;
+}
+function workCard(w){
+  const a=taskLead(w),scope=a?t("Resident handoff","בקשת עזרה"):t("Team task","משימת צוות");
+  return `<article class="work-card lane-${w.status}" draggable="true" data-work="${esc(w.id)}"><div class="work-card-top"><span class="work-kind">${icon(a?"outreach":"flag","sm")}${scope}</span><span class="priority pr-${w.priority}">${esc(l(taskPriority[w.priority]))}</span></div>
+    <button class="task-title" type="button" data-act="task-edit" data-id="${esc(w.id)}">${esc(workTitle(w))}</button>
+    ${a?`<p class="work-excerpt"><bdi>${esc(a.alias)}</bdi> · ${esc(projectName(a.project))}${a.next?" · "+esc(displayEntry(a.id,a.next)):""}</p>`:w.notes?`<p class="work-excerpt">${esc(w.notes)}</p>`:""}
+    <div class="work-meta"><span class="owner-dot${w.assignee?" assigned":""}">${w.assignee?esc(initials(workOwner(w))):icon("person","sm")}</span><span>${esc(workOwner(w))}</span><span class="work-date ${isLate(w)?"late":""}">${icon(w.status==="done"?"check":"calendar","sm")}${esc((isLate(w)?t("Late · ","באיחור · "):"")+shortDate(w.status==="done"?w.completed.slice(0,10):w.due))}</span></div>
+    <div class="work-footer">${act(w.status==="todo"?"task-start":w.status==="doing"?"task-done":"task-reopen",w.status==="todo"?(w.assignee?t("Start","התחלה"):t("Take task","לקחת לטיפולי")):w.status==="doing"?t("Mark done","סימון כהושלם"):t("Reopen","פתיחה מחדש"),{id:w.id,cls:"task-step",icon:w.status==="doing"?"check":w.status==="done"?"refresh":"arrow"})}
+    ${mini("task-edit",t("Edit task: ","עריכת משימה: ")+workTitle(w),"pen",w.id)}</div></article>`;
+}
+function laneButton(k,n){return `<button type="button" data-act="board-lane" data-id="${k}" aria-pressed="${boardUI.lane===k}">${esc(l(taskState[k]))}<b>${n}</b></button>`}
+function workResults(){
+  const list=matchWork(),groups=lanes.map(k=>list.filter(w=>w.status===k)),filtered=!!(boardUI.filter!=="all"||boardUI.query||boardUI.priority||boardUI.owner!=="");
+  const count=`<div class="board-count" aria-live="polite">${t("Showing","מוצגות")} ${list.length} / ${S.tasks.length} ${t("tasks","משימות")}${filtered?act("board-clear",t("Clear filters","ניקוי מסננים"),{cls:"bare small"}):""}</div>`;
+  if(!list.length)return count+empty(filtered?t("No tasks match these filters.","אין משימות שמתאימות למסננים."):t("A clear board.","הלוח פנוי."),filtered?t("Clear a filter to see more work.","הסירו מסנן כדי לראות משימות נוספות."):t("Add the first team task. Resident requests for help will also appear here.","הוסיפו משימת צוות ראשונה. גם בקשות העזרה של התושבים יופיעו כאן."),filtered?act("board-clear",t("Show all tasks","הצגת כל המשימות")):act("task-new",t("New task","משימה חדשה"),{cls:"primary",icon:"plus"}));
+  if(boardUI.layout==="list")return `${count}<div class="work-list">${lanes.map((k,i)=>groups[i].length?`<section><h3 class="list-lane"><i class="swatch ${k}"></i>${esc(l(taskState[k]))} <b>${groups[i].length}</b></h3>${groups[i].map(workCard).join("")}</section>`:"").join("")}</div>`;
+  return `${count}<div class="mobile-lanes">${lanes.map((k,i)=>laneButton(k,groups[i].length)).join("")}</div><div class="work-board">${lanes.map((k,i)=>`<section class="work-lane ${boardUI.lane===k?"picked":""}" data-lane="${k}" aria-label="${esc(l(taskState[k]))}"><h3><span><i class="swatch ${k}"></i>${esc(l(taskState[k]))}</span><b>${groups[i].length}</b></h3><div class="lane-cards">${groups[i].map(workCard).join("")||`<div class="lane-empty">${icon("circle","sm")}<span>${t("No tasks here","אין כאן משימות")}</span></div>`}</div></section>`).join("")}</div>`;
+}
+function boardView(){
+  must(isManager(),"forbidden");
+  return `${deskRibbon(true)}<section class="board-hero"><div>${eyebrow(t("Adorim · team operations","אדורים · תפעול הצוות"))}<h1>${esc(boardLabel())}</h1><p>${t("Give every open task an owner and a next move.","לכל משימה פתוחה קובעים אחראי וצעד הבא.")}</p><div class="actions">${act("task-new",t("New task","משימה חדשה"),{cls:"lime",icon:"plus"})}${act("go-pipeline",t("Resident follow-ups","מעקב אחר פניות"),{cls:"on-dark",arrow:true})}</div></div>${boardMeter()}</section>
+  <div class="metric-strip">${Object.keys(filters).map((k,i)=>`<button type="button" class="metric-button metric-${k}" data-act="board-filter" data-id="${k}" aria-pressed="${k===boardUI.filter}"><span class="metric-symbol">${icon(["board","person","team","clock"][i])}</span><span><b>${S.tasks.filter(w=>inScope(w,k)).length}</b><small>${esc(l(filters[k]))}</small></span></button>`).join("")}</div>
+  <section class="board-section"><div class="board-heading"><div>${eyebrow(t("Work queue","תור העבודה"))}<h2>${t("Team tasks","משימות הצוות")}</h2></div><div class="layout-toggle">${["board","list"].map(k=>`<button type="button" data-act="board-layout" data-id="${k}" aria-pressed="${k===boardUI.layout}">${icon(k,"sm")}${k==="board"?t("Board","לוח"):t("List","רשימה")}</button>`).join("")}</div></div>
+  <div class="board-tools">${field(t("Find task","חיפוש משימה"),input("query",boardUI.query,`id="work-query" type="search" placeholder="${t("Title or nickname","כותרת או כינוי")}"`))}${field(t("Priority","עדיפות"),select("priority",`<option value="">${t("Any priority","כל העדיפויות")}</option>`+opts(Object.keys(taskPriority),k=>l(taskPriority[k]),boardUI.priority),'id="work-priority"'))}
+  ${field(t("Team owner","אחראי/ת בצוות"),select("owner",`<option value="">${t("Everyone","כולם")}</option>`+opts(["0",...S.members.filter(m=>m.role==="manager").map(m=>String(m.id))],k=>k==="0"?l(filters.unassigned):ownerName(Number(k)),boardUI.owner),'id="work-owner"'))}</div>
+  <div id="work-results">${workResults()}</div></section>`;
+}
+function resetBoardFilters(){Object.assign(boardUI,{filter:"all",priority:"",owner:"",query:""})}
+function chooseMatchingLane(){const list=matchWork();if(list.length&&!list.some(w=>w.status===boardUI.lane))boardUI.lane=list[0].status}
+function refocusBoard(key,id){(Array.from(document.querySelectorAll("[data-act]")).find(e=>e.dataset.act===key&&e.dataset.id===id&&e.offsetWidth)||$("#main"))?.focus({preventScroll:true})}
+actions["board-filter"]=id=>{const toggleOff=boardUI.filter===id;resetBoardFilters();boardUI.filter=toggleOff?"all":id;chooseMatchingLane();render();refocusBoard("board-filter",id)};
+actions["board-clear"]=()=>{resetBoardFilters();render();$("#work-query")?.focus({preventScroll:true})};
+actions["board-layout"]=id=>{boardUI.layout=id;render();refocusBoard("board-layout",id)};
+actions["board-lane"]=id=>{boardUI.lane=id;$("#work-results").innerHTML=workResults();refocusBoard("board-lane",id)};
+document.addEventListener("input",e=>{if(e.target.closest(".board-tools")){boardUI[e.target.name]=e.target.value;chooseMatchingLane();$("#work-results").innerHTML=workResults()}});
+actions["go-pipeline"]=()=>{teamTab="pipeline";if(location.hash==="#team")render();else location.hash="team"};
+function taskEditor(id=""){
+  must(isManager(),"forbidden");const w=id?clone(taskFor(id)):blankTask(),a=taskLead(w);
+  const owners=[0,...S.members.filter(m=>m.active&&m.role==="manager").map(m=>m.id)];
+  modal(id?t("Edit task","עריכת משימה"):t("New task","משימה חדשה"),`<form id="work-form">${a?`<div class="linked-person"><span class="shape-icon mint">${icon("outreach")}</span><div><span class="subtle-label">${t("Linked conversation","השיחה המקושרת")}</span><strong><bdi>${esc(a.alias)}</bdi> · ${esc(projectName(a.project))}</strong></div>${mini("lead-edit",t("Open person’s full record","פתיחת הרשומה המלאה"),"arrow",a.id)}</div>`:""}
+    ${field(t("Task title","כותרת המשימה"),input("title",w.title,`maxlength="100" ${a?`placeholder="${esc(workTitle(w))}"`:"required"}`))}
+    <div class="form-grid">${field(t("Team owner","אחראי/ת בצוות"),select("assignee",opts(owners,k=>k?ownerName(k):l(filters.unassigned),w.assignee)))}${field(t("Due date","תאריך יעד"),input("due",w.due,'type="date" required'))}
+    ${field(t("Priority","עדיפות"),select("priority",opts(Object.keys(taskPriority),k=>l(taskPriority[k]),w.priority)))}${field(t("Status","מצב"),select("status",opts(lanes,k=>l(taskState[k]),w.status)))}</div>
+    ${field(t("Team-only notes","הערות לצוות בלבד"),area("notes",w.notes,500),t("No donor contact details or sensitive information.","ללא פרטי קשר של תורמים או מידע רגיש."))}
+    ${a?note(t("Finishing this task closes the help request, not the relationship or any gift. Reopening it requests follow-up again.","השלמת המשימה סוגרת את בקשת העזרה בלבד, לא את הקשר או התרומה. פתיחה מחדש מחזירה את הבקשה לטיפול.")):""}
+    ${savebar(id?t("Save task","שמירת המשימה"):t("Create task","יצירת המשימה"))}</form>`,boardLabel());
+  const f=$("#work-form");f.elements.title.focus();f.elements.status.addEventListener("change",()=>{if(f.elements.status.value==="doing"&&f.elements.assignee.value==="0")f.elements.assignee.value=String(S.user.id)});
+  formHandler(f,async d=>{
+    const updated={...w,title:d.get("title").trim(),notes:d.get("notes").trim(),due:d.get("due"),priority:d.get("priority"),status:d.get("status"),assignee:Number(d.get("assignee"))};
+    must(updated.status!=="doing"||updated.assignee,"taskOwner");
+    await change("task",updated);boardUI.lane=updated.status;if(!id)resetBoardFilters();saved();
+  });
+}
+actions["task-new"]=()=>taskEditor();actions["task-edit"]=id=>taskEditor(id);
+let boardSaving=false;
+async function moveTask(w,status){
+  if(w.status===status)return;
+  must(!boardSaving,"taskBusy");boardSaving=true;
+  try{
+    await change("task",{...w,status,assignee:status==="doing"&&!w.assignee?S.user.id:w.assignee});
+    boardUI.lane=status;render();notify(t("Task moved to ","המשימה הועברה למצב: ")+l(taskState[status]));
+    refocusBoard("task-edit",w.id);
+  }finally{boardSaving=false}
+}
+actions["task-start"]=id=>moveTask(taskFor(id),"doing");
+actions["task-done"]=id=>moveTask(taskFor(id),"done");
+actions["task-reopen"]=id=>moveTask(taskFor(id),"todo");
+actions["track-followup"]=async id=>{
+  must(isManager(),"forbidden");const a=quickDetails(id);
+  if(!a.help)await change("lead",{...a,help:true});
+  const w=S.tasks.find(x=>x.leadId===id);must(w,"missing");render();taskEditor(w.id);
+};
+document.addEventListener("dragstart",e=>{
+  const card=e.target.closest(".work-board [data-work]");if(!card||!isManager())return;
+  dragging=clone(taskFor(card.dataset.work));e.dataTransfer.effectAllowed="move";e.dataTransfer.setData("text/plain","adorim-work");
+  card.classList.add("dragging");
+});
+function clearDrag(){dragging=null;document.querySelectorAll(".dragging,.drop-ready").forEach(el=>el.classList.remove("dragging","drop-ready"))}
+document.addEventListener("dragover",e=>{
+  const lane=e.target.closest("[data-lane]");if(!lane||!dragging)return;e.preventDefault();e.dataTransfer.dropEffect="move";
+  document.querySelectorAll(".drop-ready").forEach(el=>{if(el!==lane)el.classList.remove("drop-ready")});lane.classList.add("drop-ready");
+});
+document.addEventListener("drop",async e=>{
+  const lane=e.target.closest("[data-lane]");if(!lane||!dragging)return;e.preventDefault();
+  const w=dragging;clearDrag();try{await moveTask(w,lane.dataset.lane)}catch(err){notify(errors(err),true)}
+});
+document.addEventListener("dragend",clearDrag);
+
+let checkingBoard=false,syncWarning=false;
+function readyForSync(){return !practice&&S?.user&&["desk","outreach"].includes(activeRoute)&&!document.hidden&&!writing&&!dragging&&!boardSaving&&!$("#dialog").open&&!document.activeElement?.matches("input,textarea,select")}
+async function syncVisibleWork(){
+  if(checkingBoard||!readyForSync())return;
+  checkingBoard=true;const snapshot=S,epoch=stateEpoch;
+  try{
+    const updated=await api("state");
+    if(!readyForSync()||snapshot!==S||epoch!==stateEpoch)return;
+    syncWarning=false;
+    if(!updated.user||updated.user.id!==S.user.id){clearPrivateView();S=updated;loadProblem=updated.user?"":"expired";render();return}
+    if(JSON.stringify(updated)!==JSON.stringify(S)){
+      const current=document.activeElement,action=current?.dataset.act,id=current?.dataset.id;
+      S=updated;render();if(action)refocusBoard(action,id);
+    }
+  }catch(err){
+    if(!syncWarning){notify(t("Could not refresh shared work. Use Refresh to retry.","רענון העבודה המשותפת נכשל. נסו שוב באמצעות כפתור הרענון."),true);syncWarning=true}
+  }finally{checkingBoard=false}
+}
+if(!PORTABLE){window.addEventListener("focus",syncVisibleWork);document.addEventListener("visibilitychange",syncVisibleWork);setInterval(syncVisibleWork,45000)}
+
+</script>
+</body>
+</html>
